@@ -7,7 +7,9 @@ $(document).ready(function() {
 
     if ($("input[name=category]:checked").length) {
       $("input:checked").each(function() {
-        $(' [class="' + $(this).val() + '"]').show();
+        //$(' [class="' + $(this).val() + '"]').show();
+        $("." + $(this).val()).show();
+        console.log("." + $(this).val());
       });
     }
   });
