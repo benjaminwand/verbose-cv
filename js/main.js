@@ -1,15 +1,13 @@
 $(document).ready(function() {
-  $(".no-js").hide(); // hides no-js-warning
+  // hides no-js-warning
+  $(".no-js").hide();
 
   // filter food items with checkboxes
   $(".choices :checkbox").click(function() {
     $(".articles article").hide();
-
     if ($("input[name=category]:checked").length) {
       $("input:checked").each(function() {
-        //$(' [class="' + $(this).val() + '"]').show();
         $("." + $(this).val()).show();
-        console.log("." + $(this).val());
       });
     }
   });
