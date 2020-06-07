@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Benjamin Wand - Verbose CV</title>
-    <meta name="description" content="Many of the things Benjamin does" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example project</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -13,31 +11,32 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-    <main>
-      <h1>Benjamin Wand - Verbose CV</h1>
-
-      <p class="introduction">
-        As a generalist and prototyper, I'm publishing very different things on
-        various channels and since I ever was asked about it I'm struggeling
-        with what should be on my cv. Obviously the later depends on the
-        occasion but it might be nice having a place where it comes together,
-        for myself and for next time someone asks me "So, what do you do?"
-        <br />
-        This list can be seen as an electronic Scanners Daybook,
-        <a href="https://gostrengths.com/refuse-to-choose/">
-          as Barbara calls it</a
-        >, and the dream would be that I'll never again have to assemble a cv
-        because people will be satisfied with this list.
-        <br />
-        It will be substantial work to achive that, for now this page is very
-        incomplete. My goal is having a complete-ish 2020 soon and then add
-        current things constantly and add older things when I feel like it. If
-        you know me and there is a thing I should totally mention here -
-        <a href="mailto:cv@benjaminwand.com?subject=feedback"
-          >drop me a line!</a
-        >
-      </p>
-
+    <header>
+      <hgroup>
+        <h1>Benjamin Wand - Verbose CV</h1>
+        <p class="introduction">
+          As a generalist and prototyper, I'm publishing very different things
+          on various platforms and since I ever was asked about it I'm
+          struggeling with what should be on my cv. Obviously the later depends
+          on the occasion but it might be nice having a place where it comes
+          together, for myself and for next time someone asks me "So, what do
+          you do?"
+          <br />
+          This list can be seen as an electronic Scanners Daybook,
+          <a href="https://gostrengths.com/refuse-to-choose/">
+            as Barbara Sher used to call it</a
+          >, and the dream would be that I'll never again have to assemble a cv
+          because people will be satisfied with this list.
+          <br />
+          It will be substantial work to achive that, for now this page is very
+          incomplete. My goal is having a complete-ish 2020 soon and then add
+          current things constantly and add older things when I feel like it. If
+          you know me and there is a thing I should totally mention here -
+          <a href="mailto:cv@benjaminwand.com?subject=feedback"
+            >drop me a line!</a
+          >
+        </p>
+      </hgroup>
       <form class="choices">
         <label
           ><input type="checkbox" name="category" value="craft" checked />
@@ -62,153 +61,44 @@
           Others</label
         >
       </form>
-      <p class="no-js">The filtering works wit JavaScript, sorry for that.</p>
+      <p class="no-js">
+        The filtering works with JavaScript, sorry for that.
+      </p>
+    </header>
+    <main>
+      <div class="polaroids">
+        <div class="polaroid it">
+          <a href="projects/first_bar_chart_video.html">
+            <img src="img/thumbnail_first_barchart.jpg" />
+            <p>The first Bar Chart Video <br />May 12th, 202</p>
+          </a>
+        </div>
 
-      <section class="articles">
-        <article class="it">
-          <h3>The first Bar Chart Video</h3>
-          <p class="date">May 12th, 2020</p>
-          <p class="description">
-            In 2019 I started watching a data visualisation course and other
-            things that included
-            <a href="https://pandas.pydata.org">pandas</a> and
-            <a href="https://matplotlib.org">matplotlib</a> and never did
-            anything with that knowledge. But now we have the corona-crisis and
-            since I stare at data multiple times a day anyway, I thought I might
-            as well do something with it. Turns out, with
-            <a href="https://flourish.studio">flourish</a> the chart-making is
-            very easy once one has cleaned the data. I used the dataset from
-            <a href="github.com/CSSEGISandData">Johns Hopkins</a>, and will
-            update it every now and then.
-          </p>
+        <div class="polaroid craft it">
+          <a href="projects/cotton_mask.html">
+            <img src="img/thumbnail_cotton_mask.jpg" />
+            <p>Cotton Masks<br />April 2020</p>
+          </a>
+        </div>
 
-          <div
-            class="flourish-embed flourish-bar-chart-race"
-            data-src="visualisation/2361428"
-            data-url="https://flo.uri.sh/visualisation/2361428/embed"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-          </div>
-          <p class="update">Text last updated: May 25th 2020</p>
-        </article>
-
-        <article class="it craft">
-          <h3>
-            Sewing cotton face masks for charity and making a mask instruction
-            website
-          </h3>
-          <figure class="article_img">
-            <img
-              class="scaled"
-              src="img/cotton_mask.jpg"
-              alt="self-made cotton face mask"
-            />
-            <figcaption></figcaption>
-          </figure>
-          <p class="date">April 2020</p>
-          <p class="description">
-            At the beginning of the SARS-CoV-2 related stay-home-order I was
-            looking for something to engage in other than siting on the couch.
-            And since I am somewhat decently able to sew (which was actually my
-            first job as a young adult), it was obvious that sewing masks could
-            be a thing.
-          </p>
-          <p class="description">
-            I found a charity that would happily take masks from me,
-            <a href="http://www.delatorre-stiftung.de"
-              >Jenna de la Torre Stiftung</a
-            >, who does basic medical service for homeless people.
-          </p>
-          <p class="description">
-            But after sewing a few masks, I remembered that I actually don’t
-            like sewing and felt the need to entertain myself intellctually. It
-            was an incentive to optimize things, what would be the best
-            combination of aspects of self-made face masks for sewing and use? I
-            could use my knowledge about the process of sewing and pros and cons
-            regarding face mask features and my overall good understanding of
-            three-dimensional things to to judge what kind of mask has the over
-            all least disadvantages.
-          </p>
-          <p class="description">
-            And once I was there I set up a github pages site and
-            <a
-              href="https://benjaminwand.github.io/Cotton-Mask/instructions/BenjaminW-2.html"
-              >publish my instruction.</a
-            >
-            The website also includes an earlier mask type of mine and a mask
-            sewing instruction of
-            <a href="https://twitter.com/D_70WN">D_70WN</a>.
-          </p>
-          <p class="description">
-            Obviously what is good and what isn't is subjectice, other people
-            decided similar questions differently, based on their
-            mask-wearing-preferences, aesthetic preferences and sewing-process
-            likes and dislikes. I had conversations with other people who sew
-            face masks and we assembled a
-            <a href="https://benjaminwand.github.io/Cotton-Mask/tabelle.html"
-              >table of aspects of self-made face masks and their pros and
-              cons.</a
-            >
-            Except for sewing-laziness the motivation for my decisions were that
-            I wanted a robust and no-fuss mask that I could go jogging with and
-            I wanted to give others masks of a similar standard. A difference
-            though was that the Jenny-de-la-Torre-Stiftung wanted masks without
-            threads for easier cleaning and so they got masks without threads.
-          </p>
-
-          <p class="update">Text last updated: May 28th 2020</p>
-        </article>
-
-        <!-- class can be "hidden"  or "draft", also add tags here-->
-        <article class="management">
-          <h3>something with management</h3>
-          <p class="date"></p>
-          <p class="description">dummy text</p>
-          <figure>
-            <img src="" alt="" />
-            <figcaption></figcaption>
-          </figure>
-          <p class="update"></p>
-        </article>
-
-        <!-- class can be "hidden"  or "draft", also add tags here-->
-        <article class="others">
-          <h3>Soap Opera</h3>
-          <p class="date">Date: January</p>
-          <p class="description"></p>
-          <figure>
-            <img src="" alt="" />
-            <figcaption></figcaption>
-          </figure>
-          <p class="update"></p>
-        </article>
-
-        <!-- class can be "hidden"  or "draft", also add tags here-->
-        <article class="musical-instruments">
-          <h3>irgendwas mit Orgelbau</h3>
-          <p class="date"></p>
-          <p class="description"></p>
-          <figure>
-            <img src="" alt="" />
-            <figcaption></figcaption>
-          </figure>
-          <p class="update"></p>
-        </article>
-
-        <!-- class can be "hidden"  or "draft", also add tags here-->
-        <article class="">
-          <h3></h3>
-          <p class="date"></p>
-          <!-- craft / management / it / others -->
-          <p class="tags"></p>
-          <p class="description"></p>
-          <figure>
-            <img src="" alt="" />
-            <figcaption></figcaption>
-          </figure>
-          <p class="update"></p>
-        </article>
-      </section>
+        <div class="polaroid others management">
+          <img src="img/placeholder-image-250.png" />
+          <p>Image 3<br />more Text ...</p>
+        </div>
+        <div class="polaroid management others">
+          <img src="img/placeholder-image-250.png" />
+          <p>Image 3<br />more Text ...</p>
+        </div>
+        <div class="polaroid it">
+          <img src="img/placeholder-image-250.png" />
+          <p>Image 3<br />more Text ...</p>
+        </div>
+        <div class="polaroid it others">
+          <img src="img/placeholder-image-250.png" />
+          <p>Image 3<br />more Text ...</p>
+        </div>
+      </div>
     </main>
+    <footer>Hier sollen noch Social Media Links hin</footer>
   </body>
 </html>

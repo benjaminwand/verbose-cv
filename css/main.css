@@ -5,6 +5,12 @@ html {
   background-color: #fff;
 }
 
+body {
+  background: #fefefe;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
@@ -35,11 +41,24 @@ video {
    Author's custom styles
    ========================================================================== */
 
+h1 {
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
 .choices {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 article {
@@ -56,6 +75,63 @@ article img.scaled {
   width: 100%;
 }
 
+.polaroids {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.polaroid {
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  width: auto;
+}
+
+.polaroid img {
+  border: 12px solid #fff;
+  border-bottom: 70px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px #888;
+  -moz-box-shadow: 3px 3px 3px #888;
+  box-shadow: 3px 3px 3px #888;
+  height: auto;
+  max-width: 100%;
+}
+
+.polaroid p {
+  color: #888;
+  font: 500 18px/22px Arial, sans-serif;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.home_button {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+header {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid rgba(10, 10, 10, 0.25);
+  border-radius: 0;
+  background-color: #d7ecfa;
+  color: #0a0a0a;
+}
+
+main {
+  background-color: #f0f0ff;
+}
+
+.update {
+  display: block;
+  clear: left;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -65,12 +141,16 @@ article img.scaled {
 }
 
 @media only screen and (min-width: 35em) {
+  h1 {
+    font-size: 3rem;
+  }
   .choices {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
   }
+
   article figure {
     float: right;
     max-width: 55%;
