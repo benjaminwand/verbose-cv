@@ -6,9 +6,10 @@ html {
 }
 
 body {
-  background: #fefefe;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   margin: 0;
+
+  background: linear-gradient(to bottom, #aaeeff, #f0f0ff);
 }
 
 /*
@@ -51,18 +52,12 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-.choices {
+.choices fieldset {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 100%;
 
-  margin-left: auto;
-  margin-right: auto;
-}
-
-article {
-  clear: right;
+  background-color: #f9f9ff;
 }
 
 article figure {
@@ -119,12 +114,8 @@ header {
   padding: 1rem;
   border: 1px solid rgba(10, 10, 10, 0.25);
   border-radius: 0;
-  background-color: #d7ecfa;
+  //background-color: #d7ecfa;
   color: #0a0a0a;
-}
-
-main {
-  background-color: #f0f0ff;
 }
 
 .update {
@@ -140,15 +131,14 @@ main {
   display: none;
 }
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 40em) {
   h1 {
     font-size: 3rem;
   }
-  .choices {
+  .choices fieldset {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
   }
 
   article figure {
@@ -216,26 +206,6 @@ main {
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
   }
 
   img {
