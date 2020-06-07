@@ -6,7 +6,8 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial,
+    sans-serif;
   margin: 0;
   background: linear-gradient(to bottom, #dfefff, #efefff);
 }
@@ -51,8 +52,13 @@ h3 {
   flex-direction: column;
   justify-content: space-around;
   border: 2px solid #c5d8e1;
+  border-radius: 15px;
   background-color: #f9f9ff;
   margin: 0 1rem;
+}
+
+article p {
+  margin: 0.5rem 1rem;
 }
 
 article figure {
@@ -61,6 +67,7 @@ article figure {
   margin: 0.5em;
   padding: 0.5em;
   background-color: #fff;
+  clear: right;
 }
 article img.scaled {
   width: 100%;
@@ -80,8 +87,8 @@ article img.scaled {
 }
 
 .polaroid img {
-  border: 12px solid #fff;
-  border-bottom: 70px solid #fff;
+  border: 12px solid #fef9e7;
+  border-bottom: 70px solid #fef9e7;
   -webkit-box-shadow: 3px 3px 3px #888;
   -moz-box-shadow: 3px 3px 3px #888;
   box-shadow: 3px 3px 3px #888;
@@ -90,12 +97,14 @@ article img.scaled {
 }
 
 .polaroid p {
-  color: #888;
-  font: 500 18px/22px Arial, sans-serif;
+  color: royalblue;
   position: absolute;
   bottom: 0;
   text-align: center;
   width: 100%;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
 }
 
 .home_button {
@@ -109,6 +118,16 @@ header {
   margin: 0;
   padding: 1rem;
   color: #0a0a0a;
+}
+
+.date,
+.update {
+  color: grey;
+  font-family: monospace;
+}
+
+.indie_flower {
+  font-family: "Indie Flower", cursive;
 }
 
 /* ==========================================================================
