@@ -44,6 +44,10 @@ h1 {
 
 h3 {
   text-align: center;
+}
+
+.backtoindex {
+  text-align: center;
   margin: 1rem auto;
   color: grey;
 }
