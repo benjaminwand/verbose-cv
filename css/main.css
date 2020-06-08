@@ -142,6 +142,26 @@ header p {
   margin: 1rem;
 }
 
+footer {
+  background-color: #222;
+  margin: 0;
+  padding: 0;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem;
+}
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  list-style: none;
+  color: #dfefff;
+  font-weight: bold;
+  padding: 1em;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -179,6 +199,11 @@ header p {
     columns: 300px 3;
     column-gap: 40px;
     margin: 2rem 1.5rem;
+  }
+
+  footer ul {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
