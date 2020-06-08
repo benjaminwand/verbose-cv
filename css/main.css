@@ -53,13 +53,19 @@ h3 {
 }
 
 .choices fieldset {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   border: 2px solid #c5d8e1;
   border-radius: 15px;
   background-color: #fefaee;
   margin: 0 1rem;
+}
+.choices label {
+  display: block;
 }
 
 article p {
