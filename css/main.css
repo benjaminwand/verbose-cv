@@ -142,6 +142,13 @@ article img.scaled {
   color: grey;
   font-family: monospace;
 }
+article a {
+  text-decoration: none;
+  color: #2980b9;
+}
+article a:hover {
+  text-decoration: underline;
+}
 
 /* ===================== footer ========================== */
 footer {
