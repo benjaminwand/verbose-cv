@@ -239,6 +239,13 @@ footer a {
   .polaroid {
     margin: 3rem 0;
   }
+  article figure {
+    max-width: 40%;
+    float: right;
+  }
+  img.scaled {
+    //  max-width: 40%;
+  }
 
   a,
   a:visited {
