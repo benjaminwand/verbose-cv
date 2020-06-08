@@ -124,6 +124,7 @@ header p {
 }
 header a {
   text-decoration: none;
+  color: #2980b9;
 }
 
 .date,
