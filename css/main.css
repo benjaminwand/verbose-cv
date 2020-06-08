@@ -126,6 +126,9 @@ header a {
   text-decoration: none;
   color: #2980b9;
 }
+header a:hover {
+  text-decoration: underline;
+}
 
 .date,
 .update {
