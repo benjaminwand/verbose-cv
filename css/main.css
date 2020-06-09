@@ -59,7 +59,7 @@ h3 {
 }
 header {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   padding: 1rem;
   max-width: 80rem;
 }
@@ -74,11 +74,13 @@ header a:hover {
   text-decoration: underline;
 }
 header .columns {
-  margin: 2rem 1.5rem;
-  column-gap: 40px;
+  column-gap: 30px;
 }
 
 /* ===================== choices fieldset ========================== */
+.choices {
+  margin: 0 1rem;
+}
 .choices fieldset {
   display: -webkit-box;
   display: -moz-box;
@@ -89,7 +91,8 @@ header .columns {
   border: 2px solid #c5d8e1;
   border-radius: 15px;
   background-color: #fefaee;
-  margin: 0 1rem;
+  margin: 0;
+  //padding: auto 0;
 }
 .choices label {
   display: block;
@@ -176,7 +179,7 @@ footer a {
   display: inline-block;
   text-decoration: none;
   list-style: none;
-  color: #dfefff;
+  color: #fefaee;
   font-weight: bold;
   padding: 1em;
 }
@@ -204,11 +207,15 @@ footer a {
     font-size: 2.8rem;
     margin-top: 2rem;
   }
+  .choices {
+    max-width: 80rem;
+    margin: auto;
+  }
   .choices fieldset {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: auto calc(2rem + 2px);
+    margin: 0 1rem;
   }
   footer ul {
     flex-direction: row;
