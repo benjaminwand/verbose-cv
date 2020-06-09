@@ -59,8 +59,9 @@ h3 {
 }
 header {
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   padding: 1rem;
+  max-width: 80rem;
 }
 header p {
   margin: 0;
@@ -129,9 +130,14 @@ header .columns {
 /* ===================== article ========================== */
 article {
   margin-bottom: 3rem;
+  max-width: 80rem;
+  margin: auto;
 }
 article > * {
   margin: 0 1rem 0.65rem;
+}
+article h2 {
+  margin-left: 0;
 }
 article img {
   max-width: calc(100% - 1rem);
@@ -160,9 +166,10 @@ footer {
   padding: 0;
 }
 footer ul {
+  max-width: 80rem;
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 auto;
   padding: 1rem;
 }
 footer a {
@@ -186,6 +193,9 @@ footer a {
 }
 .hidden {
   display: none;
+}
+.draft {
+  color: grey;
 }
 
 /* ===================== desktop media query ========================== */
