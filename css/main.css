@@ -66,7 +66,12 @@ header a:hover {
   text-decoration: underline;
 }
 header .columns {
+  margin-top: 1.5rem;
   column-gap: 30px;
+}
+.projects {
+  display: block;
+  text-align: center;
 }
 
 /* =================== choices fieldset ======================= */
@@ -225,6 +230,9 @@ footer a {
   }
   .columns {
     columns: 350px 3;
+  }
+  .projects {
+    text-align: left;
   }
 }
 
