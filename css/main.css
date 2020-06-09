@@ -130,29 +130,14 @@ header .columns {
 article {
   margin-bottom: 3rem;
 }
-article p {
+article > * {
   margin: 0 1rem 0.65rem;
 }
-article figure {
-  max-width: 100%;
-  border: thin #c5d8e1 solid;
-  background-color: #fff;
-  clear: right;
-}
-article img.scaled {
-  width: 100%;
-}
 article img {
-  max-width: calc(100% - 2rem);
+  max-width: calc(100% - 1rem);
   border: thin #c5d8e1 solid;
-  margin: 0 1rem 0.5rem;
   padding: 0.5rem;
   background-color: #fff;
-}
-.date,
-.update {
-  color: grey;
-  font-family: monospace;
 }
 article a {
   text-decoration: none;
@@ -160,6 +145,12 @@ article a {
 }
 article a:hover {
   text-decoration: underline;
+}
+
+.date,
+.update {
+  color: grey;
+  font-family: monospace;
 }
 
 /* ===================== footer ========================== */
@@ -209,14 +200,10 @@ footer a {
     justify-content: space-around;
     margin: auto calc(2rem + 2px);
   }
-  article img.scaled {
-    width: 100%;
-  }
   footer ul {
     flex-direction: row;
     justify-content: space-around;
   }
-
   .columns {
     columns: 350px 3;
   }
