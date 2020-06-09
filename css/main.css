@@ -132,12 +132,13 @@ header .columns {
 
 /* ===================== article ========================== */
 article {
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   max-width: 80rem;
   margin: auto;
 }
 article > * {
   margin: 0 1rem 0.65rem;
+  clear: right;
 }
 article h2 {
   margin-left: 0;
@@ -160,6 +161,7 @@ article a:hover {
 .update {
   color: grey;
   font-family: monospace;
+  float: right;
 }
 
 /* ===================== footer ========================== */
