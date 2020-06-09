@@ -49,16 +49,6 @@ h3 {
 }
 
 /* ===================== headers ========================== */
-.backtoindex {
-  text-align: center;
-  margin: 1rem auto;
-  color: grey;
-}
-.home_button {
-  position: absolute;
-  top: 1em;
-  left: 1em;
-}
 header {
   position: relative;
   margin: 0 auto 1rem;
@@ -79,7 +69,7 @@ header .columns {
   column-gap: 30px;
 }
 
-/* ===================== choices fieldset ========================== */
+/* =================== choices fieldset ======================= */
 .choices {
   text-align: center;
   margin: 0 1rem;
