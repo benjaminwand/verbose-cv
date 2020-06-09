@@ -159,6 +159,7 @@ article a:hover {
   color: grey;
   font-family: monospace;
   float: right;
+  margin: 0 auto;
 }
 
 /* ===================== footer ========================== */
