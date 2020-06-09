@@ -40,10 +40,12 @@ h1 {
 }
 h2 {
   font-family: "Indie Flower", cursive;
+  padding-top: 1.5rem;
 }
 h3 {
   font-family: "Indie Flower", cursive;
   text-align: center;
+  padding-top: 1rem;
 }
 
 /* ===================== headers ========================== */
@@ -141,6 +143,9 @@ article > * {
 }
 article h2 {
   margin-left: 0;
+}
+article p {
+  margin-top: 0;
 }
 article img {
   max-width: calc(100% - 1rem);
