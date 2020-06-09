@@ -79,23 +79,22 @@ header .columns {
 
 /* ===================== choices fieldset ========================== */
 .choices {
+  text-align: center;
   margin: 0 1rem;
 }
-.choices fieldset {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+.choices ul {
+  text-align: left;
+  display: inline-flex;
   flex-direction: column;
   border: 2px solid #c5d8e1;
   border-radius: 15px;
   background-color: #fefaee;
   margin: 0;
-  //padding: auto 0;
+  padding: 1rem;
 }
-.choices label {
-  display: block;
+.choices li {
+  list-style: none;
+  padding: 0;
 }
 
 /* ===================== polaroids ========================== */
@@ -213,11 +212,13 @@ footer a {
     max-width: 80rem;
     margin: auto;
   }
-  .choices fieldset {
+  .choices ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 0 1rem;
+    padding: 0.5rem;
+    border-radius: 20px;
   }
   footer ul {
     flex-direction: row;
