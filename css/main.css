@@ -65,11 +65,10 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
-header .columns {
-  margin-top: 1.5rem;
-  column-gap: 30px;
+header h1 {
+  margin-bottom: 1.5rem;
 }
-.projects {
+.header_projects {
   display: block;
   text-align: center;
 }
@@ -230,8 +229,9 @@ footer a {
   }
   .columns {
     columns: 350px 3;
+    column-gap: 30px;
   }
-  .projects {
+  .header_projects {
     text-align: left;
   }
 }
