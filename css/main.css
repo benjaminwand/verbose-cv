@@ -178,7 +178,9 @@ article h2 + h3 {
   flex-basis: 20rem;
   flex-grow: 1;
 }
-
+article iframe {
+  max-width: 100%;
+}
 /* ===================== footer ========================== */
 footer {
   background-color: #222;
