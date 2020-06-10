@@ -166,6 +166,9 @@ article a:hover {
 article .columns ~ h2 {
   margin-top: 3rem;
 }
+article h2 + h3 {
+  padding-top: 0rem;
+}
 
 /* ===================== footer ========================== */
 footer {
