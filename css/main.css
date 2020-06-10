@@ -40,7 +40,6 @@ h1 {
 }
 h2 {
   font-family: "Indie Flower", cursive;
-  padding-top: 1.5rem;
 }
 h3 {
   font-family: "Indie Flower", cursive;
@@ -163,7 +162,9 @@ article a:hover {
   color: grey;
   font-family: monospace;
   float: right;
-  margin: 0 auto;
+}
+article .columns ~ h2 {
+  margin-top: 3rem;
 }
 
 /* ===================== footer ========================== */
