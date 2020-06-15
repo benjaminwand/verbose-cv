@@ -195,6 +195,7 @@ footer {
   background-color: #222;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 footer ul {
   max-width: 80rem;
@@ -246,6 +247,9 @@ footer a {
     margin: 0 1rem;
     padding: 0.5rem;
     border-radius: 20px;
+  }
+  .non-footer {
+    min-height: calc(100vh - 5rem); // makes footer stick down
   }
   footer ul {
     flex-direction: row;
