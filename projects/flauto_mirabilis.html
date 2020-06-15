@@ -41,15 +41,90 @@
         360° labial pipe / Flauto mirabilis
       </h1>
       <p class="date">February - April 2020</p>
+      <h2>An incoming request</h2>
       <section class="columns">
         <p>
-          there will be text and links
+          After not working on organ pipes since June 2019, I got a request from
+          thingiverse, which made me research and write organ related code
+          again, about labial pipes that have a 360° labium. All the information
+          is in the videos, therefore who likes text can read the text and who
+          likes to watch me talk can watch me talk.
         </p>
+        <p>
+          As far as I know, there are two companies who made such pipes so far.
+          <a href="https://www.orgelbau.ch/de/">Kuhn</a> calls them
+          <a href="https://www.orgelbau.ch/de/innovation-d.html"
+            >'Flauto mirabilis'</a
+          >
+          and builds them since 2003, and
+          <a href="http://www.hey-orgelbau.de">Hey</a> built one instrument
+          named 'Vox Maris' in 2012,
+          <a
+            href="https://www.hey-orgelbau.de/projekte/orgelneubau/vox_maris.html"
+            >here is the description on their own webpage</a
+          >
+          and it was described
+          <a
+            href="https://docplayer.org/44465256-L-action-reciproque-de-l-anche-et.html"
+            >in ISO 43</a
+          >.
+        </p>
+        <p>
+          Like I always did it when making labial pipes, I decided to use
+          plastic pipes and only 3d-print the intricate part.
+          <a
+            href="https://github.com/benjaminwand/3d-printed-labial-pipe/blob/master/0.22.0%20flauto%20mirabilis%20(Kuhn).scad"
+            >0.22</a
+          >
+          was the first file I made. It sounded surprizingly well but it was a
+          little bit finicky to print and I found that the upcut influences the
+          sound a lot and it was impossible to make that fixed without glueing
+          the pipe together, which I didn't want to since I had suddenly found
+          joy in intonation.
+        </p>
+
+        <p>
+          To fix those limitations, I wrote
+          <a
+            href="https://github.com/benjaminwand/3d-printed-labial-pipe/blob/master/0.23.0.scad"
+            >0.23</a
+          >, where the upcut can be adjusted with a screw, you can see it in the
+          image.
+        </p>
+
         <img
           class="scaled"
           src="../img/360_degree_labial_pipe.jpg"
           alt="3d-printed labial pipe with 360° labium"
         />
+        <p>
+          Those two models worked well given that the tube has an edge which
+          functions as a labium. Since this isn't always given, I wrote
+          <a
+            href="https://github.com/benjaminwand/3d-printed-labial-pipe/blob/master/0.24.0.scad"
+            >0.24</a
+          >, where the labium is printed as well.
+        </p>
+        <p>
+          Things I found:
+        </p>
+        <ul>
+          <li>
+            The slit has to be thin, figure out what your 3d-printer can do. If
+            it is too wide, you'll get no sound at all.
+          </li>
+          <li>The upcut has to be low.</li>
+          <li>
+            The pitch doesn't vary much with different air pressure, much less
+            than what I knew from normal labial pipes. I was specifically
+            looking for that because I knew that the Vox Maris has dynamic
+            abilities.
+          </li>
+        </ul>
+        <p>
+          Being an outdoor organ, the Vox Maris has to be loud, and also Kuhn
+          builds the Flauto mirabilis as high pressure stops.
+        </p>
         <iframe
           width="560"
           height="315"
@@ -57,7 +132,6 @@
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-          sandbox="allow-scripts allow-same-origin"
         >
           <a href="https://www.youtube-nocookie.com/embed/vt-ZFYpU6eM"
             >Video '360° labium flue pipes'</a
@@ -65,13 +139,7 @@
         </iframe>
 
         <p class="draft">
-          Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod
-          tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex
-          ea commodi consequat. Quis aute iure reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat
-          cupiditat non proident, sunt in culpa qui officia deserunt mollit anim
-          id est laborum.
+          There will be more text about the intonation video here.
         </p>
         <iframe
           width="560"
@@ -89,8 +157,7 @@
         </iframe>
 
         <p class="update">
-          Text last updated: no text yet, just a dummy page. At least the videos
-          are already there.
+          Text last updated:June 15th 2020
         </p>
       </section>
     </article>

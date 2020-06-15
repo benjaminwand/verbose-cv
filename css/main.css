@@ -150,6 +150,9 @@ article img {
   padding: 0.5rem;
   background-color: #fff;
 }
+article p + img {
+  margin-top: 1rem;
+}
 article a {
   text-decoration: none;
   color: #2980b9;
