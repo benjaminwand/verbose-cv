@@ -15,159 +15,156 @@
     />
   </head>
   <body>
-    <div class="non-footer">
-      <header class="header_projects">
-        <a class="backtoindex" href="../index.html">
-          <svg
-            class="bi bi-house"
-            width="2em"
-            height="2em"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
-            /></svg
-          >Benjamin Wand - Verbose CV
-        </a>
-      </header>
-      <article>
-        <h1 class="indie_flower">
-          360° labial pipe
-        </h1>
-        <p class="date">February - April 2020</p>
-        <h2>New pipes</h2>
-        <section class="columns">
-          <p>
-            After not working on organ pipes since June 2019, I got a request
-            from thingiverse, which made me research and write organ related
-            code again, about labial pipes that have a 360° labium. All the
-            information is in the videos, therefore who likes text can read the
-            text and who likes to watch me talk can watch me talk.
-          </p>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube-nocookie.com/embed/vt-ZFYpU6eM?html5=1"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-            <a href="https://www.youtube-nocookie.com/embed/vt-ZFYpU6eM"
-              >Video '360° labium flue pipes'</a
-            >
-          </iframe>
-          <p>
-            As far as I know, there are two companies who made such pipes so
-            far.
-            <a href="https://www.orgelbau.ch/de/">Kuhn</a> calls them
-            <a href="https://www.orgelbau.ch/de/innovation-d.html"
-              >'Flauto mirabilis'</a
-            >
-            and builds them since 2003, and
-            <a href="http://www.hey-orgelbau.de">Hey</a> built one instrument
-            named 'Vox Maris' in 2012,
-            <a
-              href="https://www.hey-orgelbau.de/projekte/orgelneubau/vox_maris.html"
-              >here is the description on their own webpage</a
-            >
-            and it was described
-            <a
-              href="https://docplayer.org/44465256-L-action-reciproque-de-l-anche-et.html"
-              >in ISO 43</a
-            >.
-          </p>
-          <p>
-            Like I always did it when making labial pipes, I decided to use
-            plastic pipes and only 3d-print the intricate part.
-            <a
-              href="https://github.com/benjaminwand/3d-printed-labial-pipe/blob/master/0.22.0%20flauto%20mirabilis%20(Kuhn).scad"
-              >0.22</a
-            >
-            was the first file I made. It sounded surprisingly well but it was a
-            little bit finicky to print and I found that the Cut-up influences
-            the sound a lot and it was impossible to make that fixed without
-            glueing the pipe together, which I didn't like to do since I had
-            suddenly found joy in intonation.
-          </p>
-
-          <p>
-            To fix those limitations, I wrote
-            <a
-              href="https://github.com/benjaminwand/3d-printed-labial-pipe/blob/master/0.23.0.scad"
-              >0.23</a
-            >, where the Cut-up can be adjusted with a screw, you can see it in
-            the image.
-          </p>
-
-          <img
-            class="scaled"
-            src="../img/360_degree_labial_pipe.jpg"
-            alt="3d-printed labial pipe with 360° labium"
+    <header class="header_projects">
+      <a class="backtoindex" href="../index.html">
+        <svg
+          class="bi bi-house"
+          width="2em"
+          height="2em"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
           />
-          <p>
-            Those two models worked well but require that the pipe has an edge
-            which functions as a labium. Since this isn't always given, I wrote
-            <a
-              href="https://github.com/benjaminwand/3d-printed-labial-pipe/blob/master/0.24.0.scad"
-              >0.24</a
-            >, where the labium is printed as well. Unfortunately it didn't
-            sound as well, which possibly is an issue of nozzle size, 0.4mm
-            might be too thick for such small pipes.
-          </p>
-          <p>
-            Things I found:
-          </p>
-          <ul>
-            <li>
-              The slit has to be thin, figure out what your 3d-printer can do.
-              If it is too wide, you won't get sound at all.
-            </li>
-            <li>The Cut-up has to be low-ish.</li>
-            <li>
-              The pitch doesn't vary much with different air pressure, much less
-              than what I knew from normal labial pipes. I was specifically
-              looking for that because I knew that the Vox Maris has dynamic
-              abilities.
-            </li>
-            <li>
-              Pipes with a 360° labium are candidates for high pressure (this
-              got confirmed by Kuhn, and the Vox Maris obviously is high
-              pressure too, it works with pneumatic tech).
-            </li>
-          </ul>
-        </section>
-        <h2>Introducing intonation</h2>
-        <section class="columns">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube-nocookie.com/embed/sdo6ddtFrxk?html5=1"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            sandbox="allow-scripts allow-same-origin"
-          >
-            <a href="https://www.youtube-nocookie.com/embed/sdo6ddtFrxk"
-              >Video 'labial pipes: tuning and voicing explained, and new tuning
-              mechanisms'</a
-            >
-          </iframe>
-          <p class="draft">
-            There will be more text about the intonation video here.
-          </p>
-        </section>
-        <p class="update">
-          Text last updated:June 15th 2020
+          <path
+            fill-rule="evenodd"
+            d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+          /></svg
+        >Benjamin Wand - Verbose CV
+      </a>
+    </header>
+    <article>
+      <h1 class="indie_flower">
+        360° labial pipe
+      </h1>
+      <p class="date">February - April 2020</p>
+      <h2>New pipes</h2>
+      <section class="columns">
+        <p>
+          After not working on organ pipes since June 2019, I got a request from
+          thingiverse, which made me research and write organ related code
+          again, about labial pipes that have a 360° labium. All the information
+          is in the videos, therefore who likes text can read the text and who
+          likes to watch me talk can watch me talk.
         </p>
-      </article>
-    </div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/vt-ZFYpU6eM?html5=1"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+          <a href="https://www.youtube-nocookie.com/embed/vt-ZFYpU6eM"
+            >Video '360° labium flue pipes'</a
+          >
+        </iframe>
+        <p>
+          As far as I know, there are two companies who made such pipes so far.
+          <a href="https://www.orgelbau.ch/de/">Kuhn</a> calls them
+          <a href="https://www.orgelbau.ch/de/innovation-d.html"
+            >'Flauto mirabilis'</a
+          >
+          and builds them since 2003, and
+          <a href="http://www.hey-orgelbau.de">Hey</a> built one instrument
+          named 'Vox Maris' in 2012,
+          <a
+            href="https://www.hey-orgelbau.de/projekte/orgelneubau/vox_maris.html"
+            >here is the description on their own webpage</a
+          >
+          and it was described
+          <a
+            href="https://docplayer.org/44465256-L-action-reciproque-de-l-anche-et.html"
+            >in ISO 43</a
+          >.
+        </p>
+        <p>
+          Like I always did it when making labial pipes, I decided to use
+          plastic pipes and only 3d-print the intricate part.
+          <a
+            href="https://github.com/benjaminwand/3d-printed-labial-pipe/blob/master/0.22.0%20flauto%20mirabilis%20(Kuhn).scad"
+            >0.22</a
+          >
+          was the first file I made. It sounded surprisingly well but it was a
+          little bit finicky to print and I found that the Cut-up influences the
+          sound a lot and it was impossible to make that fixed without glueing
+          the pipe together, which I didn't like to do since I had suddenly
+          found joy in intonation.
+        </p>
+
+        <p>
+          To fix those limitations, I wrote
+          <a
+            href="https://github.com/benjaminwand/3d-printed-labial-pipe/blob/master/0.23.0.scad"
+            >0.23</a
+          >, where the Cut-up can be adjusted with a screw, you can see it in
+          the image.
+        </p>
+
+        <img
+          class="scaled"
+          src="../img/360_degree_labial_pipe.jpg"
+          alt="3d-printed labial pipe with 360° labium"
+        />
+        <p>
+          Those two models worked well but require that the pipe has an edge
+          which functions as a labium. Since this isn't always given, I wrote
+          <a
+            href="https://github.com/benjaminwand/3d-printed-labial-pipe/blob/master/0.24.0.scad"
+            >0.24</a
+          >, where the labium is printed as well. Unfortunately it didn't sound
+          as well, which possibly is an issue of nozzle size, 0.4mm might be too
+          thick for such small pipes.
+        </p>
+        <p>
+          Things I found:
+        </p>
+        <ul>
+          <li>
+            The slit has to be thin, figure out what your 3d-printer can do. If
+            it is too wide, you won't get sound at all.
+          </li>
+          <li>The Cut-up has to be low-ish.</li>
+          <li>
+            The pitch doesn't vary much with different air pressure, much less
+            than what I knew from normal labial pipes. I was specifically
+            looking for that because I knew that the Vox Maris has dynamic
+            abilities.
+          </li>
+          <li>
+            Pipes with a 360° labium are candidates for high pressure (this got
+            confirmed by Kuhn, and the Vox Maris obviously is high pressure too,
+            it works with pneumatic tech).
+          </li>
+        </ul>
+      </section>
+      <h2>Introducing intonation</h2>
+      <section class="columns">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/sdo6ddtFrxk?html5=1"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          sandbox="allow-scripts allow-same-origin"
+        >
+          <a href="https://www.youtube-nocookie.com/embed/sdo6ddtFrxk"
+            >Video 'labial pipes: tuning and voicing explained, and new tuning
+            mechanisms'</a
+          >
+        </iframe>
+        <p class="draft">
+          There will be more text about the intonation video here.
+        </p>
+      </section>
+      <p class="update">
+        Text last updated:June 15th 2020
+      </p>
+    </article>
     <footer class="no-print">
       <ul>
         <li><a href="https://github.com/benjaminwand">Github</a></li>
