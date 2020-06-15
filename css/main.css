@@ -152,6 +152,14 @@ article img {
 }
 article p + img {
   margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+article iframe {
+  max-width: 100%;
+}
+article p + iframe {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
 }
 article a {
   text-decoration: none;
@@ -181,9 +189,6 @@ article h2 + h3 {
 .onerow {
   flex-basis: 20rem;
   flex-grow: 1;
-}
-article iframe {
-  max-width: 100%;
 }
 /* ===================== footer ========================== */
 footer {
