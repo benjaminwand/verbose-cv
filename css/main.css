@@ -147,7 +147,7 @@ article p {
 }
 article img {
   max-width: calc(100% - 1rem);
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
   border: thin #c5d8e1 solid;
@@ -155,11 +155,11 @@ article img {
   background-color: #fff;
 }
 article p + img {
-  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 article iframe {
   max-width: 100%;
+  margin: auto;
 }
 article p + iframe {
   margin-top: 0rem;
