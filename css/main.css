@@ -88,7 +88,7 @@ header h1 {
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
   margin: 0;
   padding: 1rem;
@@ -106,6 +106,10 @@ header h1 {
   text-align: center;
   max-width: 80rem;
   flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .polaroid {
   display: inline-block;
@@ -259,6 +263,7 @@ footer a {
     margin: 0 1rem;
     padding: 0.5rem;
     border-radius: 20px;
+    justify-content: space-around;
   }
   .choices li {
     min-width: 0;
