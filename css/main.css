@@ -81,15 +81,20 @@ header h1 {
 }
 .choices ul {
   text-align: left;
-  display: inline-flex;
-  flex-direction: column;
+
   border: 2px solid #c5d8e1;
   border-radius: 15px;
   background-color: #fefaee;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
   margin: 0;
   padding: 1rem;
 }
 .choices li {
+  min-width: 12rem; /* due to longest word 'musical instruments'*/
   list-style: none;
   padding: 0;
 }
@@ -236,7 +241,7 @@ footer a {
 }
 
 /* ===================== desktop media query ========================== */
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 50em) {
   header {
     width: calc(100% - 2rem);
     text-align: left;
@@ -251,12 +256,12 @@ footer a {
     width: 100%;
   }
   .choices ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     margin: 0 1rem;
     padding: 0.5rem;
     border-radius: 20px;
+  }
+  .choices li {
+    min-width: 0;
   }
   .columns {
     columns: 350px 3;
