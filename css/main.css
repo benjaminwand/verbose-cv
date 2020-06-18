@@ -33,6 +33,7 @@ video {
 
 /* ===================== headlines ========================== */
 h1 {
+  font-size: calc(1.2rem + 2vw);
   text-align: center;
   font-style: normal;
   font-weight: normal;
@@ -250,10 +251,6 @@ footer a {
     width: calc(100% - 2rem);
     text-align: left;
   }
-  h1 {
-    font-size: 2.8rem;
-    margin-top: 2rem;
-  }
   .choices {
     max-width: 80rem;
     margin: auto;
@@ -272,6 +269,8 @@ footer a {
     columns: 350px 3;
     column-gap: 30px;
   }
+}
+@media only screen and (min-width: 32em) {
   footer ul {
     flex-direction: row;
     justify-content: space-around;
