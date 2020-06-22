@@ -91,11 +91,12 @@ header h1 {
   justify-content: center;
   flex-direction: row;
   margin: 0;
-  padding: 1rem;
+  padding: 0.85rem;
 }
 .choices li {
   min-width: 12em; /* due to longest word 'musical instruments'*/
   list-style: none;
+  padding: 0.15em;
 }
 
 /* ===================== polaroids ========================== */
