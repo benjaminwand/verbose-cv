@@ -78,8 +78,6 @@ header h1 {
   flex-shrink: 0;
   flex-grow: 0;
   display: inline;
-  font-size: 1.2rem;
-  font-weight: 300;
 }
 .choices ul {
   text-align: left;
@@ -274,10 +272,6 @@ footer a {
   footer ul {
     flex-direction: row;
     justify-content: space-around;
-  }
-  .choices {
-    font-size: 1rem;
-    font-weight: 400;
   }
 }
 
