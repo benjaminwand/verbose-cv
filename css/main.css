@@ -183,7 +183,7 @@ article a:hover {
   text-decoration: underline;
 }
 article .columns ~ h2 {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
 article h2 + h3 {
   padding-top: 0rem;
