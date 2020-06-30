@@ -13,7 +13,7 @@ body {
   color: #222;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 /*
@@ -121,8 +121,6 @@ header h1 {
 .polaroid img {
   border: 12px solid #fefaee;
   border-bottom: 70px solid #fefaee;
-  -webkit-box-shadow: 3px 3px 3px #888;
-  -moz-box-shadow: 3px 3px 3px #888;
   box-shadow: 3px 3px 3px #888;
   height: auto;
   max-width: 100%;
@@ -230,7 +228,8 @@ footer a {
   font-family: "Indie Flower", cursive;
 }
 .break_avoid {
-  break-inside: avoid-column;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
 }
 .flourish-bar-chart-race {
   margin: 1rem;
@@ -263,8 +262,10 @@ footer a {
     min-width: 0;
   }
   .columns {
-    columns: 350px 3;
-    column-gap: 30px;
+    -moz-columns: 350px 3;
+         columns: 350px 3;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
   article h2 {
     margin-left: 0;
