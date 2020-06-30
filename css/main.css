@@ -116,6 +116,7 @@ header h1 {
   margin: 10px;
   position: relative;
   width: auto;
+  max-height: 335px;
 }
 .polaroid img {
   border: 12px solid #fefaee;
