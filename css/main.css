@@ -13,7 +13,7 @@ body {
   color: #222;
   min-height: 100vh;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 /*
@@ -29,6 +29,13 @@ img,
 svg,
 video {
   vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
 }
 
 /* ===================== headlines ========================== */
@@ -62,11 +69,7 @@ header p {
   margin: 0;
 }
 header a {
-  text-decoration: none;
   color: #2980b9;
-}
-header a:hover {
-  text-decoration: underline;
 }
 header h1 {
   margin-bottom: 1.5rem;
@@ -171,11 +174,7 @@ article p + iframe {
   margin-bottom: 1rem;
 }
 article a {
-  text-decoration: none;
   color: #2980b9;
-}
-article a:hover {
-  text-decoration: underline;
 }
 article .columns ~ h2 {
   margin-top: 3.5rem;
@@ -216,7 +215,6 @@ footer ul {
 }
 footer a {
   display: inline-block;
-  text-decoration: none;
   list-style: none;
   color: #fefaee;
   font-weight: bold;
