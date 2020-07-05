@@ -33,8 +33,10 @@ video {
 
 a {
   text-decoration: none;
+  color: #2980b9;
 }
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: underline;
 }
 
@@ -67,9 +69,6 @@ header {
 }
 header p {
   margin: 0;
-}
-header a {
-  color: #2980b9;
 }
 header h1 {
   margin-bottom: 1.5rem;
@@ -173,9 +172,6 @@ article p + iframe {
   margin-top: 0rem;
   margin-bottom: 1rem;
 }
-article a {
-  color: #2980b9;
-}
 article .columns ~ h2 {
   margin-top: 3.5rem;
 }
@@ -212,6 +208,7 @@ footer ul {
   flex-direction: column;
   margin: 0 auto;
   padding: 1rem;
+  list-style: none;
 }
 footer a {
   display: inline-block;
@@ -227,7 +224,7 @@ footer a {
 }
 .break_avoid {
   -moz-column-break-inside: avoid;
-       break-inside: avoid-column;
+  break-inside: avoid-column;
 }
 .flourish-bar-chart-race {
   margin: 1rem;
@@ -261,9 +258,9 @@ footer a {
   }
   .columns {
     -moz-columns: 350px 3;
-         columns: 350px 3;
+    columns: 350px 3;
     -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
   }
   article h2 {
     margin-left: 0;
@@ -347,5 +344,45 @@ footer a {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+
+/* ===================== dark mode ============================= */
+/* Palette URL: http://paletton.com/#uid=73G1t0kxfgsueaMrYhfI1l+D7tF */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(to bottom, #081b39, #132f5b);
+    color: silver;
+  }
+  a {
+    color: #99de00;
+  }
+
+  .choices ul {
+    background-color: #44042a;
+    border: 2px solid #EC9700;
+    color: #EC9700;
+  }
+
+  .polaroid img {
+    border: 12px solid #395004;
+    border-bottom: 70px solid #395004;
+    box-shadow: 3px 3px 3px #99de00;
+  }
+  .polaroid:hover img {
+    box-shadow: 3px 3px 3px white;
+  }
+  .polaroid p {
+    color: silver;
+  }
+  .polaroid:hover p {
+    color: white;
+  }
+
+  footer {
+    background-color: #1a1a1a;
+  }
+  footer a {
+    color: silver;
   }
 }
