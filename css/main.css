@@ -83,9 +83,8 @@ header h1 {
 }
 .choices fieldset {
   text-align: left;
-
   border: 2px solid #c5d8e1;
-  border-radius: 15px;
+  border-radius: 25px;
   background-color: #fefaee;
 }
 .choices ul {
@@ -107,10 +106,9 @@ header h1 {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-weight: bold;
   color: #222;
-  padding: 0 0.7rem;
-  background-color: #c5d8e1;
+  padding: 0.2rem 0.7rem;
+  background-color: inherit;
   border: 2px solid #c5d8e1;
   border-radius: 15px;
 }
@@ -372,32 +370,42 @@ footer a {
 /* Palette URL: http://paletton.com/#uid=73G1t0kxfgsueaMrYhfI1l+D7tF */
 @media (prefers-color-scheme: dark) {
   body {
-    background: linear-gradient(to bottom, #132540, #041624);
+    background: linear-gradient(to bottom, #030c1c, #020e24);
     color: silver;
   }
   a {
-    color: rgb(80, 133, 239);
+    color: #2980b9;
   }
 
   .choices fieldset {
-    background-color: #132f4b;
-    border: 1px solid yellow;
-    color: yellow;
+    background-color: #06152e;
+    border: 2px solid #a88800;
+  }
+  .choices legend {
+    /*font-weight: lighter;
+    letter-spacing: 0.08em;*/
+    border: 2px solid #a88800;
+    color: #a88800;
   }
 
-  .polaroid img {
-    border: 12px solid #132f4b;
-    border-bottom: 70px solid #132f4b;
-    box-shadow: 3px 3px 3px rgb(80, 133, 239);
+  .polaroid figure {
+    border: 12px solid #031e4c; /*#132f4b;*/
+    box-shadow: 3px 3px 3px #5085EF;
   }
-  .polaroid:hover img {
-    box-shadow: 3px 3px 3px yellow;
+  .polaroid:hover figure {
+    box-shadow: 3px 3px 3px #a88800;
+    border: 12px solid #2a1100;
   }
-  .polaroid p {
-    color: rgb(80, 133, 239);
+  .polaroid figcaption {
+    color: #5085EF;
+    background-color: #031e4c;
   }
-  .polaroid:hover p {
-    color: yellow;
+  .polaroid:hover figcaption {
+    color: #a88800;
+    background-color: #2a1100;
+  }
+  .polaroid:hover a {
+    text-decoration: none;
   }
 
   footer {
