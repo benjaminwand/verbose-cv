@@ -117,8 +117,7 @@ header h1 {
 
 /* ===================== polaroids ========================== */
 .polaroids {
-  margin: 0 auto;
-  padding: 20px;
+  margin: 0.5rem auto;
   text-align: center;
   max-width: 80rem;
   flex-grow: 1;
@@ -129,27 +128,32 @@ header h1 {
 }
 .polaroid {
   display: inline-block;
-  margin: 10px;
-  position: relative;
   width: auto;
-  max-height: 335px;
-}
-.polaroid img {
-  border: 12px solid #fefaee;
-  border-bottom: 70px solid #fefaee;
-  box-shadow: 3px 3px 3px #888;
-  height: auto;
   max-width: 100%;
+  transition: all ease 0.6s;
 }
-.polaroid p {
+.polaroid figure {
+  border: 12px solid #fefaee;
+  border-bottom: 7px solid #fefaee;
+  box-shadow: 3px 3px 3px #888;
+  -webkit-margin-start: 10px;
+  margin-inline-start: 10px;
+  -webkit-margin-end: 10px;
+  margin-inline-end: 10px;
+}
+
+.polaroid figcaption {
   color: #2980b9;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
+  background-color: #fefaee;
+  min-height: 52px;
   font-family: "Indie Flower", cursive;
   font-size: 1.2em;
-  margin-bottom: 0.5em;
+  text-align: center;
+  padding: 0.8rem 0 0 0;
+}
+.polaroid:hover {
+  transform: scale(1.03) rotate(0.5deg);
+  z-index: 999;
 }
 
 /* ===================== article ========================== */
@@ -261,7 +265,7 @@ footer a {
   }
   .choices {
     max-width: 80rem;
-    margin: auto ;
+    margin: auto;
     width: 100%;
   }
   .choices ul {
