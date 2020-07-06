@@ -61,7 +61,7 @@ h3 {
 
 /* ===================== headers ========================== */
 header {
-  margin: 0 auto 1rem;
+  margin: 0 auto;
   padding: 1rem;
   max-width: 80rem;
   flex-shrink: 0;
@@ -81,24 +81,40 @@ header h1 {
   flex-grow: 0;
   display: inline;
 }
-.choices ul {
+.choices fieldset  {
   text-align: left;
 
   border: 2px solid #c5d8e1;
   border-radius: 15px;
   background-color: #fefaee;
 
+
+
+}
+.choices ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row;
-  margin: 0;
-  padding: 0.85rem;
+  flex-direction: row;  margin: 0;
+    padding: 0.85rem;
 }
 .choices li {
   min-width: 12em; /* due to longest word 'musical instruments'*/
   list-style: none;
   padding: 0.15em;
+  color: #2980b9;
+}
+.choices legend {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: bold;
+  color: #222;
+  padding: 0 0.7rem;
+  background-color: #c5d8e1;
+  border: 2px solid #c5d8e1;
+  border-radius: 15px;
 }
 
 /* ===================== polaroids ========================== */
@@ -235,6 +251,9 @@ footer a {
 .draft {
   color: grey;
 }
+.center {
+  text-align: center;
+}
 
 /* ===================== desktop media query ========================== */
 @media only screen and (min-width: 50em) {
@@ -351,32 +370,32 @@ footer a {
 /* Palette URL: http://paletton.com/#uid=73G1t0kxfgsueaMrYhfI1l+D7tF */
 @media (prefers-color-scheme: dark) {
   body {
-    background: linear-gradient(to bottom, #081b39, #132f5b);
+    background: linear-gradient(to bottom, #132540, #041624);
     color: silver;
   }
   a {
-    color: #99de00;
+    color: rgb(80, 133, 239);
   }
 
-  .choices ul {
-    background-color: #44042a;
-    border: 2px solid #EC9700;
-    color: #EC9700;
+  .choices fieldset {
+    background-color: #132f4b;
+    border: 1px solid yellow;
+    color: yellow;
   }
 
   .polaroid img {
-    border: 12px solid #395004;
-    border-bottom: 70px solid #395004;
-    box-shadow: 3px 3px 3px #99de00;
+    border: 12px solid #132f4b;
+    border-bottom: 70px solid #132f4b;
+    box-shadow: 3px 3px 3px rgb(80, 133, 239);
   }
   .polaroid:hover img {
-    box-shadow: 3px 3px 3px white;
+    box-shadow: 3px 3px 3px yellow;
   }
   .polaroid p {
-    color: silver;
+    color: rgb(80, 133, 239);
   }
   .polaroid:hover p {
-    color: white;
+    color: yellow;
   }
 
   footer {
