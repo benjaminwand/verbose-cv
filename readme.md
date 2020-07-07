@@ -11,7 +11,7 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 * ‘helping each other’ meeting (new format but happened only once)
 * jewellery: little chairs
 * blacksmith: kitchen table thing
-* clavichord
+* clavichord +1
 * trumpet
 * SHA choir
 * voctoknopf
@@ -22,8 +22,8 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 ** zacharias pipe
 ** Nachtigall May 2018
 (check youtube videos for further organ topics)
-* Soap Opera / study at UdK
-* paleo dishes
+* Soap Opera / study at UdK +1
+* paleo dishes +1
 * weeping willow lamp
 * bidet file March 2020
 * library signs April 2019
