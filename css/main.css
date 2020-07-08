@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  text-align: justify;
 }
 
 /*
@@ -52,6 +53,7 @@ h1 {
 }
 h2 {
   font-family: "Indie Flower", cursive;
+  text-align: center;
 }
 h3 {
   font-family: "Indie Flower", cursive;
@@ -259,7 +261,6 @@ footer a {
 @media only screen and (min-width: 50em) {
   header {
     width: calc(100% - 2rem);
-    text-align: left;
   }
   .choices {
     max-width: 80rem;
@@ -278,8 +279,8 @@ footer a {
   .columns {
     -moz-columns: 350px 3;
     columns: 350px 3;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
   }
   article h2 {
     margin-left: 0;
@@ -390,14 +391,14 @@ footer a {
 
   .polaroid figure {
     border: 12px solid #031e4c; /*#132f4b;*/
-    box-shadow: 3px 3px 3px #5085EF;
+    box-shadow: 3px 3px 3px #5085ef;
   }
   .polaroid:hover figure {
     box-shadow: 3px 3px 3px #a88800;
     border: 12px solid #2a1100;
   }
   .polaroid figcaption {
-    color: #5085EF;
+    color: #5085ef;
     background-color: #031e4c;
   }
   .polaroid:hover figcaption {

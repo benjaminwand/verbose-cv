@@ -10,7 +10,7 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 * practicing pandas with corona data (maybe add that to the bar chart video)
 * ‘helping each other’ meeting (new format but happened only once)
 * jewellery: little chairs
-* blacksmith: kitchen table thing
+* blacksmith: kitchen table thing April/May 2017
 * clavichord +1
 * trumpet
 * SHA choir
