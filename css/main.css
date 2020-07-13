@@ -301,14 +301,20 @@ footer a {
 @media only screen and (min-width: 32em) {
   footer {
     background: #efefff;
-    border-bottom: 30px solid #222;
-    width: 100%;
+    border-bottom: 30px solid transparent;
+    -moz-border-image: url("../img/day_sky_bg.jpg") 0 0 30 0; /* Old firefox */
+    -webkit-border-image: url("../img/day_sky_bg.jpg") 0 0 30 0;
+    -o-border-image: url("../img/day_sky_bg.jpg") 0 0 30 0;
+    border-image: url("../img/day_sky_bg.jpg") 0 0 30 0;
+    -o-border-image: repeat;
+    border-image-repeat: repeat;
   }
   footer ul {
     flex-direction: row;
     justify-content: space-around;
     margin: 0 auto -0.35em auto;
     padding: 0;
+    width: 100%;
   }
   footer a {
     color: #222;
@@ -399,7 +405,16 @@ footer a {
 /* Palette URL: http://paletton.com/#uid=73G1t0kxfgsueaMrYhfI1l+D7tF */
 @media (prefers-color-scheme: dark) {
   body {
-    background: linear-gradient(to bottom, #030c1c, #020e24);
+    /*background: linear-gradient(to bottom, #030c1c, #020e24);*/
+    background: linear-gradient(
+      to bottom,
+      #030c1c 0%,
+      #020e24 50%,
+      #576e71 70%,
+      #e1c45e 90%,
+      #b26339 100%
+    );
+    /*background: linear-gradient(to bottom, #010A10 30%,#59230B 80%,#2F1107 100%);*/
     color: silver;
   }
   a {
@@ -438,9 +453,16 @@ footer a {
   }
 
   footer {
-    background-color: #1a1a1a;
+    background-color: inherit;
+    border-bottom: 30px solid transparent;
+    -moz-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Old firefox */
+    -webkit-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Safari */
+    -o-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Opera */
+    border-image: url("../img/night_sky_bg.jpg") 0 0 30 0;
+    -o-border-image: repeat;
+    border-image-repeat: repeat;
   }
   footer a {
-    color: silver;
+    color: #111;
   }
 }
