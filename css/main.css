@@ -405,7 +405,6 @@ footer a {
 /* Palette URL: http://paletton.com/#uid=73G1t0kxfgsueaMrYhfI1l+D7tF */
 @media (prefers-color-scheme: dark) {
   body {
-    /*background: linear-gradient(to bottom, #030c1c, #020e24);*/
     background: linear-gradient(
       to bottom,
       #030c1c 0%,
@@ -414,7 +413,6 @@ footer a {
       #e1c45e 90%,
       #b26339 100%
     );
-    /*background: linear-gradient(to bottom, #010A10 30%,#59230B 80%,#2F1107 100%);*/
     color: silver;
   }
   a {
@@ -426,14 +424,12 @@ footer a {
     border: 2px solid #a88800;
   }
   .choices legend {
-    /*font-weight: lighter;
-    letter-spacing: 0.08em;*/
     border: 2px solid #a88800;
     color: #a88800;
   }
 
   .polaroid figure {
-    border: 12px solid #031e4c; /*#132f4b;*/
+    border: 12px solid #031e4c;
     box-shadow: 3px 3px 3px #5085ef;
   }
   .polaroid:hover figure {
