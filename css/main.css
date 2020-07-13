@@ -88,7 +88,7 @@ header h1 {
   margin-bottom: 1.5rem;
 }
 .header_projects {
-  font-family: 'playfair_displayregular';
+  font-family: "playfair_displayregular";
 }
 
 /* =================== choices fieldset ======================= */
@@ -236,7 +236,6 @@ footer {
   flex-shrink: 0;
 }
 footer ul {
-  max-width: 80rem;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -300,12 +299,36 @@ footer a {
   }
 }
 @media only screen and (min-width: 32em) {
+  /*footer {
+    background: #efefff;
+    border-bottom: 30px solid #222;
+    width: 100%;
+  }*/
   footer ul {
     flex-direction: row;
     justify-content: space-around;
+    /*  margin: 0 auto;
+    padding: 0 auto;*/
   }
+  /*footer li {
+    position: relative;
+  }
+  footer a {
+    color: #222;
+    text-shadow: 0 0 2px LightYellow;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: -22px;
+    right: 10%;
+    left: 0;
+    box-sizing: border-box;
+  }
+  footer a:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px yellow;
+  }*/
 }
-
 /* ===================== print ========================== */
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
