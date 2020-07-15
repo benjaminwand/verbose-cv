@@ -82,6 +82,9 @@ header h1 {
 .header_projects {
   font-family: "playfair_displayregular";
 }
+hgroup {
+  margin-top: 2rem;
+}
 
 /* =================== choices fieldset ======================= */
 .choices {
