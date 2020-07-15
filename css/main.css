@@ -14,8 +14,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  text-align: justify;
-  text-justify: inter-character;
 }
 
 @font-face {
@@ -56,20 +54,15 @@ a:focus {
 h1 {
   font-size: calc(1.2rem + 2vw);
   text-align: center;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.4;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
   font-family: "playfair_displayregular";
 }
 h2 {
-  font-family: "playfair_displayregular";
   text-align: center;
+  font-family: "playfair_displayregular";
 }
 h3 {
-  font-family: "playfair_displayregular";
   text-align: center;
+  font-family: "playfair_displayregular";
   padding-top: 1rem;
 }
 
