@@ -270,9 +270,6 @@ footer a {
 
 /* ===================== desktop media query ========================== */
 @media only screen and (min-width: 50em) {
-  header {
-    width: calc(100% - 2rem);
-  }
   .choices {
     max-width: 80rem;
     margin: auto;
@@ -287,6 +284,11 @@ footer a {
   .choices li {
     min-width: 0;
   }
+}
+@media only screen and (min-width: 32em) {
+  header {
+    width: calc(100% - 2rem);
+  }
   .columns {
     -moz-columns: 350px 3;
     columns: 350px 3;
@@ -297,8 +299,6 @@ footer a {
     text-align: left;
     margin-left: 0;
   }
-}
-@media only screen and (min-width: 32em) {
   footer {
     background: #efefff;
     border-bottom: 30px solid transparent;
