@@ -14,6 +14,7 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 ** zacharias pipe
 ** Nachtigall May 2018
 (check youtube videos for further organ topics)
+* library signs April 2019
 * c3auti management + QuietQube
 * ‘helping each other’ meeting (new format but happened only once)
 * jewellery: little chairs
@@ -25,7 +26,6 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 * Soap Opera / study at UdK +1
 * paleo dishes +1
 * weeping willow lamp
-* library signs April 2019
 * Fairydust cookie cutter December 2019, Photo from Twitter, files in thingiverse
 * tied up Kurt Krömer 2014
 * All I Can Eat / Hackathon Salzburg
