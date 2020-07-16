@@ -463,6 +463,6 @@ footer a {
     transform: scale(1) rotate(0deg);
   }
   .polaroid:hover figure {
-    box-shadow: 3px 3px 3px #a88800;
+    box-shadow: 3px 3px 3px slategrey;
   }
 }
