@@ -165,6 +165,9 @@ hgroup {
   transform: scale(1.03) rotate(0.5deg);
   z-index: 999;
 }
+.polaroid:hover a {
+  text-decoration: none;
+}
 
 /* ===================== article ========================== */
 article {
@@ -439,9 +442,6 @@ footer a {
     color: #a88800;
     background-color: #2a1100;
   }
-  .polaroid:hover a {
-    text-decoration: none;
-  }
 
   footer {
     background-color: inherit;
@@ -455,5 +455,14 @@ footer a {
   }
   footer a {
     color: #111;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .polaroid:hover {
+    transform: scale(1) rotate(0deg);
+  }
+  .polaroid:hover figure {
+    box-shadow: 3px 3px 3px #a88800;
   }
 }
