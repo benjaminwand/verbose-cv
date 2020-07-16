@@ -5,16 +5,8 @@ This is a portfolio website in the making which can be seen at https://benjaminw
 Here I’m listing a couple of things that I want to add later, which is rather for myself, but please tell me if you want to read more about a specific thing.
 
 * DIvoC LightningTalks
-* c3auti management + QuietQube
+* bidet file March 2020
 * painting basement + learnings
-* practicing pandas with corona data (maybe add that to the bar chart video)
-* ‘helping each other’ meeting (new format but happened only once)
-* jewellery: little chairs
-* blacksmith: kitchen table thing April/May 2017
-* clavichord +1
-* trumpet
-* SHA choir
-* voctoknopf
 * various organ things:
 ** talks
 ** 45° labium pipes / adjustable labium pipes
@@ -22,10 +14,17 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 ** zacharias pipe
 ** Nachtigall May 2018
 (check youtube videos for further organ topics)
+* c3auti management + QuietQube
+* ‘helping each other’ meeting (new format but happened only once)
+* jewellery: little chairs
+* blacksmith: kitchen table thing April/May 2017
+* clavichord +1
+* trumpet
+* SHA choir
+* voctoknopf
 * Soap Opera / study at UdK +1
 * paleo dishes +1
 * weeping willow lamp
-* bidet file March 2020
 * library signs April 2019
 * Fairydust cookie cutter December 2019, Photo from Twitter, files in thingiverse
 * tied up Kurt Krömer 2014
