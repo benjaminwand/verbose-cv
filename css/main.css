@@ -141,6 +141,7 @@ hgroup {
   width: auto;
   max-width: 100%;
   transition: all ease 0.6s;
+  z-index: 1;
 }
 .polaroid figure {
   border: 12px solid #fefaee;
@@ -406,12 +407,21 @@ footer a {
     background: linear-gradient(
       to bottom,
       #030c1c 0%,
-      #020e24 50%,
-      #576e71 70%,
-      #e1c45e 90%,
-      #b26339 100%
+      #020e24 70%,
+      #576e71 100%
     );
     color: silver;
+    text-shadow: 0px 0px 1px black;
+  }
+  ::-moz-selection {
+    background: #030c1c;
+    color: #silver;
+    text-shadow: none;
+  }
+  ::selection {
+    background: #030c1c;
+    color: #silver;
+    text-shadow: none;
   }
   a {
     color: #2980b9;
@@ -443,8 +453,18 @@ footer a {
     background-color: #2a1100;
   }
 
+  .date, .update{
+    color: silver;
+  }
+
   footer {
-    background-color: inherit;
+    background: linear-gradient(
+      to bottom,
+      rgba(87, 110, 113, 0),
+      #e1c45e 80%,
+      #b26339
+    );
+    border-top: 0;
     border-bottom: 30px solid transparent;
     -moz-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Old firefox */
     -webkit-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Safari */
@@ -452,17 +472,19 @@ footer a {
     border-image: url("../img/night_sky_bg.jpg") 0 0 30 0;
     -o-border-image: repeat;
     border-image-repeat: repeat;
+    padding-top: 5rem; /* moving the background up*/
+    margin-top: -5rem;
   }
   footer a {
     color: #111;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  .polaroid:hover {
-    transform: scale(1) rotate(0deg);
-  }
-  .polaroid:hover figure {
-    box-shadow: 3px 3px 3px slategrey;
+  @media (prefers-reduced-motion: reduce) {
+    .polaroid:hover {
+      transform: scale(1) rotate(0deg);
+    }
+    .polaroid:hover figure {
+      box-shadow: 3px 3px 3px slategrey;
+    }
   }
 }
