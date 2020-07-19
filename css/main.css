@@ -293,6 +293,8 @@ footer a {
     columns: 350px 3;
     -moz-column-gap: 25px;
     column-gap: 25px;
+    widows: 2;
+    orphans: 2;
   }
   article h2 {
     text-align: left;
@@ -425,6 +427,11 @@ footer a {
   }
   a {
     color: #2980b9;
+  }
+  footer a::-moz-selection {
+  }
+  footer a::selection {
+    background: yellow;
   }
 
   .choices fieldset {
