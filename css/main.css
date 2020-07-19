@@ -463,7 +463,7 @@ footer a {
       background: linear-gradient(
         to bottom,
         rgba(87, 110, 113, 0),
-        #e1c45e 80%,
+        #e1c45e 90%,
         #b26339
       );
       border-top: 0;
@@ -474,8 +474,8 @@ footer a {
       border-image: url("../img/night_sky_bg.jpg") 0 0 30 0;
       -o-border-image: repeat;
       border-image-repeat: repeat;
-      padding-top: 5rem; /* moving the background up*/
-      margin-top: -5rem;
+      padding-top: 6rem; /* moving the background up*/
+      margin-top: -6rem;
     }
     footer a {
       color: #111;
