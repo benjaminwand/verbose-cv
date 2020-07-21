@@ -145,7 +145,6 @@ hgroup {
 }
 .polaroid figure {
   border: 12px solid #fefaee;
-  border-bottom: 7px solid #fefaee;
   box-shadow: 3px 3px 3px #888;
   -webkit-margin-start: 10px;
   margin-inline-start: 10px;
@@ -157,6 +156,7 @@ hgroup {
   color: #2980b9;
   background-color: #fefaee;
   min-height: 52px;
+  margin: auto -12px; /*making sure there can be text on the whole width of the polaroid*/
   font-family: "Indie Flower", cursive;
   font-size: 1.2em;
   text-align: center;
