@@ -26,6 +26,5 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 * Soap Opera / study at UdK +1
 * paleo dishes +1
 * weeping willow lamp
-* Fairydust cookie cutter December 2019, Photo from Twitter, files in thingiverse
 * tied up Kurt Krömer 2014
 * All I Can Eat / Hackathon Salzburg
