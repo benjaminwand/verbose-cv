@@ -112,6 +112,10 @@ hgroup {
   padding: 0.15em;
   color: #2980b9;
 }
+.choices li:hover {
+  text-decoration: underline;
+}
+
 .choices legend {
   width: auto;
   margin-left: auto;
@@ -425,9 +429,10 @@ footer a {
     text-shadow: none;
   }
   a {
-    color: #2980b9;
+    color: #a88800;
   }
   footer a::-moz-selection {
+    background: yellow;
   }
   footer a::selection {
     background: yellow;
@@ -439,6 +444,10 @@ footer a {
   }
   .choices legend {
     border: 2px solid #a88800;
+    color: silver;
+  }
+
+  .choices li {
     color: #a88800;
   }
 
@@ -451,11 +460,10 @@ footer a {
     border: 12px solid #2a1100;
   }
   .polaroid figcaption {
-    color: #5085ef;
+    color: #a88800;
     background-color: #031e4c;
   }
   .polaroid:hover figcaption {
-    color: #a88800;
     background-color: #2a1100;
   }
 
@@ -487,13 +495,13 @@ footer a {
       color: #111;
     }
   }
+}
 
-  @media (prefers-reduced-motion: reduce) {
-    .polaroid:hover {
-      transform: scale(1) rotate(0deg);
-    }
-    .polaroid:hover figure {
-      box-shadow: 3px 3px 3px slategrey;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .polaroid:hover {
+    transform: scale(1) rotate(0deg);
+  }
+  .polaroid:hover figure {
+    box-shadow: 3px 3px 3px slategrey;
   }
 }
