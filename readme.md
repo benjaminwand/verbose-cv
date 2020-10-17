@@ -28,3 +28,4 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 * weeping willow lamp
 * tied up Kurt Krömer 2014
 * All I Can Eat / Hackathon Salzburg
+* shepard tones implementation in ruby/soundpi
