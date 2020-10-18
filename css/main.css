@@ -417,7 +417,7 @@ footer a {
       to bottom,
       #030c1c 0%,
       #020e24 70%,
-      #576e71 100%
+      #2e3b47 100%
     );
     color: silver;
     text-shadow: 0px 0px 1px black;
@@ -480,9 +480,10 @@ footer a {
     footer {
       background: linear-gradient(
         to bottom,
-        rgba(87, 110, 113, 0),
-        #e1c45e 90%,
-        #b26339
+        rgba(46, 59, 71, 0),
+        rgba(87, 110, 113, 0.5),
+        #ab974f 90%,
+        #b35e30
       );
       border-top: 0;
       border-bottom: 30px solid transparent;
@@ -492,8 +493,8 @@ footer a {
       border-image: url("../img/night_sky_bg.jpg") 0 0 30 0;
       -o-border-image: repeat;
       border-image-repeat: repeat;
-      padding-top: 6rem; /* moving the background up*/
-      margin-top: -6rem;
+      padding-top: 10rem; /* moving the background up*/
+      margin-top: -10rem;
     }
     footer a {
       color: #111;
