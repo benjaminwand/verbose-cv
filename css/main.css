@@ -154,6 +154,9 @@ hgroup {
   -webkit-margin-end: 10px;
   margin-inline-end: 10px;
 }
+.polaroid figure:hover {
+  box-shadow: 3px 3px 3px #555;
+}
 
 .polaroid figcaption {
   color: #2980b9;
@@ -461,7 +464,10 @@ footer a {
 
   .polaroid figure {
     border: 12px solid #031e4c;
-    box-shadow: 3px 3px 3px #5085ef;
+    box-shadow: 0 0 1px white;
+  }
+  .polaroid figure:hover {
+    box-shadow: 0 0 3px white;
   }
   .polaroid figcaption {
     color: #a88800;
@@ -505,8 +511,5 @@ footer a {
 @media (prefers-reduced-motion: reduce) {
   .polaroid:hover {
     transform: scale(1) rotate(0deg);
-  }
-  .polaroid:hover figure {
-    box-shadow: 3px 3px 3px slategrey;
   }
 }
