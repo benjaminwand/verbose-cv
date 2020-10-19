@@ -463,16 +463,9 @@ footer a {
     border: 12px solid #031e4c;
     box-shadow: 3px 3px 3px #5085ef;
   }
-  .polaroid:hover figure {
-    box-shadow: 3px 3px 3px #a88800;
-    border: 12px solid #2a1100;
-  }
   .polaroid figcaption {
     color: #a88800;
     background-color: #031e4c;
-  }
-  .polaroid:hover figcaption {
-    background-color: #2a1100;
   }
 
   article img {
