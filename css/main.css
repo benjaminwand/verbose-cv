@@ -435,6 +435,10 @@ footer a {
   a {
     color: #a88800;
   }
+  img {
+    -webkit-filter: brightness(0.75);
+    filter: brightness(0.75);
+  }
   footer a::-moz-selection {
     background: yellow;
   }
@@ -471,34 +475,37 @@ footer a {
     background-color: #2a1100;
   }
 
+  article img {
+    background-color: silver;
+  }
+
   .date,
   .update {
     color: silver;
   }
-
-  @media (prefers-color-scheme: dark) and (min-width: 32em) {
-    footer {
-      background: linear-gradient(
-        to bottom,
-        rgba(46, 59, 71, 0),
-        rgba(87, 110, 113, 0.5),
-        #ab974f 90%,
-        #b35e30
-      );
-      border-top: 0;
-      border-bottom: 30px solid transparent;
-      -moz-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Old firefox */
-      -webkit-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Safari */
-      -o-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Opera */
-      border-image: url("../img/night_sky_bg.jpg") 0 0 30 0;
-      -o-border-image: repeat;
-      border-image-repeat: repeat;
-      padding-top: 10rem; /* moving the background up*/
-      margin-top: -10rem;
-    }
-    footer a {
-      color: #111;
-    }
+}
+@media (prefers-color-scheme: dark) and (min-width: 32em) {
+  footer {
+    background: linear-gradient(
+      to bottom,
+      rgba(46, 59, 71, 0),
+      rgba(87, 110, 113, 0.5),
+      #ab974f 90%,
+      #b35e30
+    );
+    border-top: 0;
+    border-bottom: 30px solid transparent;
+    -moz-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Old firefox */
+    -webkit-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Safari */
+    -o-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Opera */
+    border-image: url("../img/night_sky_bg.jpg") 0 0 30 0;
+    -o-border-image: repeat;
+    border-image-repeat: repeat;
+    padding-top: 10rem; /* moving the background up*/
+    margin-top: -10rem;
+  }
+  footer a {
+    color: #111;
   }
 }
 
