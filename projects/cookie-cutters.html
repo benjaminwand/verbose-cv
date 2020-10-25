@@ -137,8 +137,12 @@
         </p>
       </section>
 
-      <h3>Locating points</h3>
+      <h3>Choosing points</h3>
       <section class="columns">
+        <img
+          src="../img/letter_d.jpg"
+          alt="typographic letter 'd', where the points that define the Bézier-curves are added"
+        />
         <p>
           When a Bézier curve starts at one side, it first starts going towards
           the second point and then the influence of the third point grows
@@ -146,11 +150,10 @@
           think of it as that the derivative function at the start of the curve
           points towards the second point.
         </p>
-        <img src="../img/letter_d.jpg" alt="typographic letter 'd'" />
 
         <p>
-          That is why in typography the start and end points of the curves are
-          commonly set at
+          And this is why, in typography, the start and end points of the curves
+          are commonly set at
         </p>
         <ul>
           <li>the pointy ends of the letter and</li>
@@ -164,10 +167,15 @@
           points inbetween.
         </p>
         <p>
-          Take a look at the bottom left curve of the letter d. Notice thet all
-          four point are either on the x or the y axis. And now take a look at
-          the two ajecent curves. You'll see that one of them is located on the
-          x and the other one
+          Take a look at the bottom left curve of the letter d, between point 10
+          and 13. Notice that all four point are either on the x or the y axis.
+          And now take a look at the two ajecent curves, 7-10 and 13-16. You'll
+          notice that point 9 is located on the x axis as well and point 14 n
+          the y-axis. Having point 9, 10 and 11 in one axis provides a smooth
+          curve around point 10, and the easiest way to make that happen is
+          locating all of them with the same y-value (0), the same way as the
+          continuous nature of the curve arount point 13 ensures by points 12,
+          13 and 14 all having the same x-value(0).
         </p>
       </section>
       <h2>There will be a demo video</h2>
