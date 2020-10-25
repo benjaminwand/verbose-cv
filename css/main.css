@@ -182,6 +182,8 @@ article {
   max-width: 80rem;
   margin: auto;
   flex-grow: 1;
+
+  text-align: center;
 }
 article > * {
   margin: 0 1rem 0.65rem;
@@ -189,6 +191,7 @@ article > * {
 }
 article p {
   margin-top: 0;
+  text-align: left;
 }
 article figure {
   padding: 0;
@@ -196,9 +199,8 @@ article figure {
 }
 article img {
   max-width: calc(100% - 1rem);
+
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
   border: thin #c5d8e1 solid;
   padding: 0.5rem;
   background-color: #fff;
@@ -219,6 +221,9 @@ article .columns ~ h2 {
 }
 article h2 + h3 {
   padding-top: 0rem;
+}
+article ul {
+  text-align: left;
 }
 .date,
 .update {
