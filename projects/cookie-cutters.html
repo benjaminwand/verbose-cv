@@ -123,7 +123,7 @@
           >
         </iframe>
       </section>
-      <h3>It is a curve ... but we'll calculate points</h3>
+      <h3>It is a curve ... and we'll calculate points</h3>
       <section class="columns">
         <p>
           <a href="https://youtu.be/pnYccz1Ha34"
@@ -136,7 +136,7 @@
           Essentially, a Bézier curve is a curve described by a couple of points
           and a formula, and is used in computer graphics, for instance
           typography. In case of a cookie cutter, I use it to model things that
-          are curv-ish but not exactly round like a circle or ellipse.
+          are curvy but not exactly round like a circle or ellipse.
         </p>
         <p>
           In mathematics, things can be infinite and curves can be perfectly
@@ -156,6 +156,7 @@
           by the end points and no middle-points that curve it, it could be
           calculated like this:
         </p>
+
         <pre> <code class="Java">// two points
 p1 = [5, 7.5];
 p2 = [7, 2];
@@ -171,12 +172,19 @@ for (i = [0 : 1/n : 1])
 // displaying the end points
 for (i = [p1, p2]) translate(i)
   color("black") sphere(0.2);</code> </pre>
+        <p>
+          <span class="i"
+            >(Please copy the code into OpenSCAD to watch it rendered)
+          </span>
+        </p>
+
         <h4>... used recursively</h4>
         <p>
           If a third point gets added and the curve gets curvy, the formula
           <span class="nobr code">'p1 * [0...1] + p2 * [1...0]' </span> gets
           called recursively.
         </p>
+
         <pre> <code class="Java">p1 = [5, 7.5];
 p2 = [7, 2];
 p3 = [1, 1.7];
