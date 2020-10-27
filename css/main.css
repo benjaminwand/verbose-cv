@@ -225,6 +225,9 @@ article h2 + h3 {
 article ul {
   text-align: left;
 }
+article code {
+  text-align: left;
+}
 .date,
 .update {
   color: grey;
@@ -240,6 +243,9 @@ article ul {
 .onerow {
   flex-basis: 20rem;
   flex-grow: 1;
+}
+.nobr {
+  white-space: nowrap;
 }
 /* ===================== footer ========================== */
 footer {

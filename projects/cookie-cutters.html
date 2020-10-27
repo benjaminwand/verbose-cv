@@ -18,6 +18,18 @@
       content="Making cookie cutters and teaching how to design and code cookie cutters."
     />
     <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="../css/atelier-heath-light.css" />
+    <link
+      rel="stylesheet"
+      media=" (prefers-color-scheme: dark)"
+      href="../css/a11y-dark.css"
+    />
+    <script src="../js/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </head>
   <body>
     <header class="header_projects">
@@ -110,7 +122,7 @@
           >
         </iframe>
       </section>
-      <h3>Points between points</h3>
+      <h3>It is a curve ... but we'll calculate points</h3>
       <section class="columns">
         <p>
           <a href="https://youtu.be/pnYccz1Ha34"
@@ -118,23 +130,64 @@
             curves.</a
           >
         </p>
+        <p></p>
         <p>
           Essentially, a Bézier curve is a curve described by a couple of points
           and a formula, and is used in computer graphics, for instance
           computer-described typography. In case of a cookie cutter, I use it to
           model things that are curv-ish but not exactly round like a circle or
           ellipse.
-          <br />
+        </p>
+        <p>
           In mathematics, things can be infinite and curves can be perfectly
           smooth, but in computer graphics curvy things are approximated by
           points and tiny flat surfaces. This is why in the algorithms used, I
           calculate many points as the basis of what is going on.
         </p>
+      </section>
+      <h3>Mathematical definition</h3>
+      <section class="columns">
+        <h4>The algorithm: p1 * i + p2 * (1-i)</h4>
         <p>
-          The most commonly used amount of points used is four. The first and
-          the last point are the both ends of the curve and the points between
-          make the curve curvy, like the sides of the fairydust rocket.
+          In the not very useful case of a Bézier curve that would only be
+          defined by the end points and no middle-points that curve it, it could
+          be calculated like this:
         </p>
+        <pre> <code>  // two points
+  p1 = [5, 7.5];
+  p2 = [7, 2];
+
+  // how many points will be calculated
+  n = 15;
+
+  // calculating points between p1 and p2
+  for (i = [0 : 1/n : 1])
+      translate( p1 * i + p2 * (1-i) )
+          sphere(0.2);
+
+  // displaying the end points
+  for (i = [p1, p2]) translate(i)
+      color("black") sphere(0.2);</code> </pre>
+        <h4>... used recursively</h4>
+        <p>
+          If a third point gets added and the curve gets curvy, the formula
+          <span class="nobr">'p1 * i + p2 * (1-i)' </span> gets called
+          recursively.
+        </p>
+        <pre> <code>  p1 = [5, 7.5];
+  p2 = [7, 2];
+  p3 = [1, 1.7];
+  n = 15;
+
+  // a Bézier curve [p1, p2, p3]
+  for (i = [0 : 1/n : 1])
+      translate(
+            (p1 * i + p2 * (1-i)) * i
+            + (p2 * i + p3 * (1-i)) * (1-i) )
+              sphere(0.2);
+
+  for (i = [p1, p2, p3]) translate(i)
+      color("black") sphere(0.2);</code> </pre>
       </section>
 
       <h3>Choosing locations for points</h3>
@@ -143,6 +196,12 @@
           src="../img/letter_d.jpg"
           alt="typographic letter 'd', where the points that define the Bézier-curves are added"
         />
+
+        <p>
+          The most commonly used amount of points used is four. The first and
+          the last point are the both ends of the curve and the points between
+          make the curve curvy, like the sides of the fairydust rocket.
+        </p>
         <p>
           When a Bézier curve starts at one side, it first starts going towards
           the second point and then the influence of the third point grows
