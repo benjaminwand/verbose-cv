@@ -247,6 +247,9 @@ article code {
 .nobr {
   white-space: nowrap;
 }
+.code {
+  font-family: monospace;
+}
 /* ===================== footer ========================== */
 footer {
   background-color: #222;

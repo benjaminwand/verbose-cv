@@ -147,47 +147,50 @@
       </section>
       <h3>Mathematical definition</h3>
       <section class="columns">
-        <h4>The algorithm: p1 * i + p2 * (1-i)</h4>
+        <h4>
+          The formula:
+          <span class="code">p1 * [0...1] + p2 * [1...0]</span>
+        </h4>
         <p>
           In the not very useful case of a Bézier curve that would only be
           defined by the end points and no middle-points that curve it, it could
           be calculated like this:
         </p>
-        <pre> <code class="Java">  // two points
-  p1 = [5, 7.5];
-  p2 = [7, 2];
+        <pre> <code class="Java">// two points
+p1 = [5, 7.5];
+p2 = [7, 2];
 
-  // how many points will be calculated
-  n = 15;
+// how many points will be calculated
+n = 15;
 
-  // calculating points between p1 and p2
-  for (i = [0 : 1/n : 1])
-      translate( p1 * i + p2 * (1-i) )
-          sphere(0.2);
+// calculating points between p1 and p2
+for (i = [0 : 1/n : 1])
+  translate( p1 * i + p2 * (1-i) )
+    sphere(0.2);
 
-  // displaying the end points
-  for (i = [p1, p2]) translate(i)
-      color("black") sphere(0.2);</code> </pre>
+// displaying the end points
+for (i = [p1, p2]) translate(i)
+  color("black") sphere(0.2);</code> </pre>
         <h4>... used recursively</h4>
         <p>
           If a third point gets added and the curve gets curvy, the formula
-          <span class="nobr">'p1 * i + p2 * (1-i)' </span> gets called
-          recursively.
+          <span class="nobr code">'p1 * [0...1] + p2 * [1...0]' </span> gets
+          called recursively.
         </p>
-        <pre> <code class="Java">  p1 = [5, 7.5];
-  p2 = [7, 2];
-  p3 = [1, 1.7];
-  n = 15;
+        <pre> <code class="Java">p1 = [5, 7.5];
+p2 = [7, 2];
+p3 = [1, 1.7];
+n = 15;
 
-  // a Bézier curve [p1, p2, p3]
-  for (i = [0 : 1/n : 1])
-      translate(
-            (p1 * i + p2 * (1-i)) * i
-            + (p2 * i + p3 * (1-i)) * (1-i) )
-              sphere(0.2);
+// a Bézier curve [p1, p2, p3]
+for (i = [0 : 1/n : 1])
+  translate(
+      (p1 * i + p2 * (1-i)) * i
+    + (p2 * i + p3 * (1-i)) * (1-i) )
+      sphere(0.2);
 
-  for (i = [p1, p2, p3]) translate(i)
-      color("black") sphere(0.2);</code> </pre>
+for (i = [p1, p2, p3]) translate(i)
+  color("black") sphere(0.2);</code> </pre>
       </section>
 
       <h3>Choosing locations for points</h3>
