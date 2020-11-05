@@ -228,12 +228,10 @@ article h2 + h3 {
 article ul {
   text-align: left;
 }
-article code {
+article code , pre{
   text-align: left;
 }
-article p + pre {
-  margin: -1.5em auto;
-}
+
 .date,
 .update {
   color: grey;
