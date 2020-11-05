@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benjamin Wand - Cookie Cutters</title>
+    <meta
+      name="description"
+      content="Making cookie cutters and teaching how to design and code cookie cutters."
+    />
+    <meta name="keywords" content="OpenSCAD, 3d-modeling, cookies" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="../img/keksbild.jpg" />
+    <meta
+      property="og:description"
+      content="Making cookie cutters and teaching how to design and code cookie cutters."
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="../css/a11y-light.css" />
+    <link
+      rel="stylesheet"
+      media=" (prefers-color-scheme: dark)"
+      href="../css/a11y-dark.css"
+    />
+    <script src="../js/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <header class="header_projects">
+      <a class="backtoindex" href="../index.html">
+        <svg
+          class="bi bi-house"
+          width="2em"
+          height="2em"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+          /></svg
+        >Benjamin Wand - Verbose CV
+      </a>
+    </header>
+    <article>
+      <h1>
+        Bézier curves in OpenSCAD
+      </h1>
+      <p class="date">September / October 2020 2019</p>
+      <h2>The video</h2>
+      <section class="columns">
+        <p>
+          <a href="cookie-cutters.html">Writing cookie cutters</a> made me
+          explore
+          <a href="https://en.wikipedia.org/wiki/Bézier_curve">Bézier curves</a
+          >, and since I was unsatisfied with the OpenSCAD code I found online,
+          I wrote my own and made a tutorial video.
+        </p>
+        <p>
+          In the text below, I describe the same things as in the video, you
+          have the choice whether you want to watch or read.
+        </p>
+        <p>
+          The code from the video can be found
+          <a href="https://github.com/benjaminwand/cookie-cutters"
+            >in this repository</a
+          >
+          in the older 'teaching examples'.
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/tOx5UI8GGns"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+          <a href="https://www.youtube-nocookie.com/embed/tOx5UI8GGns"
+            >Bézier curve tutorial</a
+          >
+        </iframe>
+      </section>
+      <h2>It is a curve ... and we'll calculate points</h2>
+
+      <section class="columns">
+        <p>
+          Essentially, a Bézier curve is a curve described by a couple of points
+          and a formula, and is used in computer graphics, for instance
+          typography. In case of a cookie cutter, I use it to model things that
+          are curvy but not exactly round like a circle or ellipse.
+        </p>
+        <p>
+          In mathematics, things can be infinite and curves can be perfectly
+          smooth, but in computer graphics curvy things are approximated by
+          points and tiny flat surfaces. This is why in the algorithms used, I
+          calculate many points as the basis of what is going on.
+        </p>
+      </section>
+      <h2>Mathematical definition</h2>
+
+      <h3>
+        The formula:
+        <span class="code">p1 * [0...1] + p2 * [1...0]</span>
+      </h3>
+      <section class="columns">
+        <p>
+          In the (not very useful) case of a Bézier curve that is only defined
+          by the end points and no middle-points that curve it, it could be
+          calculated like this:
+        </p>
+
+        <pre> <code class="Java">// two points
+p1 = [5, 7.5];
+p2 = [7, 2];
+
+// how many points will be calculated
+n = 15;
+
+// calculating points between p1 and p2
+for (i = [0 : 1/n : 1])
+  translate( p1 * i + p2 * (1-i) )
+    sphere(0.2);
+
+// displaying the end points
+for (i = [p1, p2]) translate(i)
+  color("black") sphere(0.2);</code> </pre>
+        <p>
+          Please copy the code into OpenSCAD to watch it rendered.
+        </p>
+      </section>
+      <h3>... used recursively</h3>
+      <section class="columns">
+        <p>
+          If a third point gets added and the curve gets curvy, the formula
+          <span class="nobr code">'p1 * [0...1] + p2 * [1...0]' </span> gets
+          called recursively.
+        </p>
+
+        <pre> <code class="Java">p1 = [5, 7.5];
+p2 = [7, 2];
+p3 = [1, 1.7];
+n = 15;
+
+// a Bézier curve [p1, p2, p3]
+for (i = [0 : 1/n : 1])
+  translate(
+      (p1 * i + p2 * (1-i)) * i
+    + (p2 * i + p3 * (1-i)) * (1-i) )
+      sphere(0.2);
+
+for (i = [p1, p2, p3]) translate(i)
+  color("black") sphere(0.2);</code> </pre>
+      </section>
+
+      <h2>The production code ...</h2>
+
+      <section class="columns">
+        <p>
+          For easier copy-pasting, the code is displayed in one go, and
+          commented below. <br />
+          Please play with fs and the points to explore how it works.
+        </p>
+        <pre> <code class="Java">// --- VARIABLES ---
+// roughly the size of parts of curves
+fs = 0.5;
+
+// points
+p1 = [5.5, 0];
+p2 = [1.5, 0];
+p3 = [0, 2];
+p4 = [0, 7];
+
+// --- FUNCTIONS AND MODULES ---
+// calculates the amount of points
+// from distance of two points and fs
+function fn(a, b) =
+  round(sqrt(pow(a[0]-b[0],2)
+  + pow(a[1]-b[1], 2))/fs);
+
+// calculate each individual point
+function b_pts(pts, n, idx) =
+  len(pts)>2 ?
+    b_pts([for(i=[0:len(pts)-2])
+        pts[i]], n, idx) * n*idx
+      + b_pts([for(i=[1:len(pts)-1])
+        pts[i]], n, idx) * (1-n*idx)
+    : pts[0] * n*idx
+      + pts[1] * (1-n*idx);
+
+// calculate fn() for given points,
+// call b_pts() and concatenate points
+function b_curv(pts) =
+  let (fn=fn(pts[0], pts[len(pts)-1]))
+    [for (i= [0:fn])
+      concat(b_pts(pts, 1/fn, i))];
+
+// displaying points as a rainbow
+module rainbow (points) {
+for (i= [0 : len(points)-1 ])
+  color([cos(20*i)/2+0.5,
+    -sin(20*i)/2+0.5,
+    -cos(20*i)/2+0.5,
+    1])
+  translate(points[i]) sphere(0.5, $fn=10);
+}
+
+// --- THE ACTUAL MODEL ---
+// calculating the points
+points = b_curv([p1, p2, p3, p4]);
+
+// displaying the calculated points
+rainbow(points);
+
+// displaying [p1 .. p4]
+for (i=[p1, p2, p3, p4])
+  translate(i) color("black")
+    cylinder(1, 0.2, 0.2, $fn=10);
+</code> </pre>
+      </section>
+      <h2>... commented</h2>
+      <section class="columns">
+        <h3>fs</h3>
+        <p>
+          Unlike 'n' in the section before, we will work with a number of points
+          that is calculated from the first and last point of the curve, and a
+          variable fs, which works roughly like $fs, it says how large
+          approximately the distance between the calculated points shall be.
+        </p>
+        <p>
+          Recursive functions are expensive in computing power and, depending
+          what you do with it, OpenSCAD is already slow. The point of fs being a
+          global variable here is that you can use a 'larger' number during most
+          of the production and calculate a finely grained model only when you
+          need it.
+        </p>
+        <p>
+          As you can tell from the rendered file, the distance of the points is
+          not perfectly even, but usually good enough, after all we are behind
+          the curve and not the points.
+        </p>
+        <h3>function fn( )</h3>
+        <p>
+          fn( ) calculates a number, which will be the number of the points of a
+          curve, from the distance of two points and fs.
+        </p>
+        <h3>functions b_pts( ) and b_curv( )</h3>
+        <p>
+          In the production code, I split the points-calculating mechanism into
+          two functions, where b_pts( ) is the same regardless of what the model
+          does and b_curv( ) can vary, depending on what I plan to do with the
+          Bézier curve. Furthermore I find it, with this separation, easier to
+          read and maintain.
+        </p>
+        <p>
+          b_pts( ) contains the recursive mechanism and returns a number. It is
+          called for each point separately. It is called with an array of points
+          'pts', a number in how many points the curve will be calculated 'n',
+          and a number which of the points will be calculated 'idx'. <br />
+          It asks: 'Am I given more than two points in the array 'pts'?' And if
+          yes, it calls itself for the first to the second-last point multiplied
+          by n*idx and adds calling itself for the second to the last point,
+          multiplied with 1-n*idx. <br />
+          If the number of points in the array is two, it does the familiar 'p1
+          * i + p2 * (1-i)' thing.
+        </p>
+        <p>
+          In 'b_curv()', which is called with an array of points 'pts', the
+          calculation of the points is organized. It calls fn( ) with the first
+          and last point in 'pts' to get the variable fn. And then from zero to
+          fn, it calls b_pts( ) in order to calculate each point, and
+          concatenates them.
+        </p>
+        <p>
+          If the item modeled it a cookie-cutter, I already use b_curv as a
+          module to build shapes.
+        </p>
+        <h3>rainbow ( )</h3>
+        <p>
+          The module 'rainbow ( )' receives an array of points and displays them
+          in a colorful manner so they are visible and provide a sense how they
+          are ordered in the array. The module has
+          <a href="https://github.com/benjaminwand/OpenSCAD-rainbow"
+            >its own repository.
+          </a>
+        </p>
+      </section>
+
+      <h2>Choosing locations for points</h2>
+      <section class="columns">
+        <img
+          src="../img/letter_d.jpg"
+          alt="typographic letter 'd', where the points that define the Bézier-curves are added"
+        />
+
+        <p>
+          The most commonly used amount of points is four, this is also called
+          'cubic curve'. The first and the last point are the both ends of the
+          curve and the points between make the curve curvy.
+        </p>
+        <p>
+          When a Bézier curve starts at one side, it first starts going towards
+          the second point and then the influence of the third point grows
+          stronger and so on. If differential calculus feels familiar to you,
+          think of it as that the derivative function at the start of the curve
+          points towards the second point.
+        </p>
+
+        <p>
+          And this is why, in typography, the start and end points of the curves
+          are commonly set at
+        </p>
+        <ul>
+          <li>the pointy ends of the letter and</li>
+          <li>
+            the most right, left, top and bottom points of a curvy shape.
+          </li>
+        </ul>
+        <p>
+          This can be observed in the image of the letter d, where the red dots
+          are the starts and ends of the curves and the black dots are the
+          points in-between.
+        </p>
+        <p>
+          Take a look at the bottom left curve of the letter d, between points
+          10 and 13. Notice that all four point are either on the x or the y
+          axis. And now take a look at the two adjacent curves, 7-10 and 13-16.
+          You'll notice that point 9 is located on the x axis as well and point
+          14 n the y-axis. Having point 9, 10 and 11 in one axis provides a
+          smooth curve around point 10, and the easiest way to make that happen
+          is locating all of them with the same y-value (0), the same way as the
+          continuous nature of the curve around point 13 ensures by points 12,
+          13 and 14 all having the same x-value (0).
+        </p>
+      </section>
+      <h2>There will be a demo video</h2>
+      <p>
+        Soon, I will make a video where I model a cookie cutter, to demonstrate
+        the concepts from the existing video.
+      </p>
+      <h2>Further readings</h2>
+      <ul>
+        <li>
+          <a href="https://youtu.be/pnYccz1Ha34">
+            Guidev: Bezier Curves Explained
+          </a>
+        </li>
+        <li>
+          <a
+            href="http://learn.scannerlicker.net/2014/04/16/bezier-curves-and-type-design-a-tutorial/"
+            >Scannerlicker: Bézier Curves and Type Design</a
+          >
+        </li>
+      </ul>
+      <p class="update">Text last updated: November 5th, 2020</p>
+    </article>
+    <footer class="no-print">
+      <ul>
+        <li><a href="https://github.com/benjaminwand">Github</a></li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCE8TuNtWTf4_s8Lz4yzQ6WQ"
+            >Youtube</a
+          >
+        </li>
+        <li><a href="https://twitter.com/benjaminwand">Twitter</a></li>
+        <li>
+          <a href="https://www.thingiverse.com/bettercallitart/about"
+            >Thingiverse</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instructables.com/member/better%20call%20it%20art/"
+            >Instructables</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
