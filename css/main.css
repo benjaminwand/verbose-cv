@@ -185,8 +185,7 @@ article {
   max-width: 80rem;
   margin: auto;
   flex-grow: 1;
-
-  text-align: center;
+text-align: center;
 }
 article > * {
   margin: 0 1rem 0.65rem;
@@ -202,7 +201,6 @@ article figure {
 }
 article img {
   max-width: calc(100% - 1rem);
-
   display: inline-block;
   border: thin #c5d8e1 solid;
   padding: 0.5rem;
@@ -228,7 +226,8 @@ article h2 + h3 {
 article ul {
   text-align: left;
 }
-article code , pre{
+article code,
+pre {
   text-align: left;
 }
 
