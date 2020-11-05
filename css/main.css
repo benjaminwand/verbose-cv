@@ -61,7 +61,7 @@ h2 {
 h3 {
   text-align: center;
   font-family: "playfair_displayregular";
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 h4 {
   font-family: "playfair_displayregular";
@@ -185,7 +185,7 @@ article {
   max-width: 80rem;
   margin: auto;
   flex-grow: 1;
-text-align: center;
+  text-align: center;
 }
 article > * {
   margin: 0 1rem 0.65rem;
@@ -427,7 +427,8 @@ footer a {
   }
 
   h2,
-  h3 {
+  h3,
+  h4 {
     page-break-after: avoid;
   }
 }
