@@ -194,10 +194,14 @@ for (i = [p1, p2, p3]) translate(i)
   color("black") sphere(0.2);</code> </pre>
       </section>
 
-      <h3>Production code</h3>
+      <h3>The production code ...</h3>
 
       <section class="columns">
-        <pre> <code class="Java">// VARIABLES
+        <p>
+          For easier copy-paste, the code is displayed in one go, and commented
+          below.
+        </p>
+        <pre> <code class="Java">// --- VARIABLES ---
 // roughly the size of parts of curves
 fs = 0.5;
 
@@ -207,9 +211,9 @@ p2 = [1.5, 0];
 p3 = [0, 2];
 p4 = [0, 7];
 
-// FUNCTIONS AND MODULES
-// calculating the amount of points
-// from the first and the last point and fs
+// --- FUNCTIONS AND MODULES ---
+// calculates the amount of points
+// from distance of two points and fs
 function fn(a, b) =
   round(sqrt(pow(a[0]-b[0],2)
   + pow(a[1]-b[1], 2))/fs);
@@ -240,7 +244,7 @@ for (i= [0 : len(points)-1 ])
     1])
   translate(points[i]) sphere(0.5);}
 
-// ACTUAL MODEL
+// --- THE ACTUAL MODEL ---
 // calculating the points
 points = b_curv([p1, p2, p3, p4]);
 
@@ -252,6 +256,20 @@ for (i=[p1, p2, p3, p4])
   translate(i) color("black")
     cylinder(1, 0.2, 0.2, $fn=10);
 </code> </pre>
+      </section>
+      <h3>... commented</h3>
+      <section class="columns">
+        <h4>fs</h4>
+        <p>
+          Unlike 'n' in the section before, we will work with a number of points
+          that is calculated from the first and last point of the curve, and a
+          variable fs, which works roughly like $fs, it says how large
+          approximately the distance between the calculated points shall be.
+        </p>
+        <h4>function fn()</h4>
+        <p>fn() calculates a number of points from two points and fs.</p>
+        <h4>function b_pts() and b_curv()</h4>
+        <p>In the production code, I split</p>
       </section>
       <h3>Choosing locations for points</h3>
       <section class="columns">
