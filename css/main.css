@@ -421,7 +421,8 @@ footer a {
 
   p,
   h2,
-  h3 {
+  h3,
+  h4 {
     orphans: 3;
     widows: 3;
   }

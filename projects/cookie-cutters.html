@@ -266,11 +266,38 @@ for (i=[p1, p2, p3, p4])
           variable fs, which works roughly like $fs, it says how large
           approximately the distance between the calculated points shall be.
         </p>
-        <h4>function fn()</h4>
-        <p>fn() calculates a number of points from two points and fs.</p>
-        <h4>function b_pts() and b_curv()</h4>
-        <p>In the production code, I split</p>
+        <p>
+          Recursive functions are expensive in computing power and, depending
+          what you do with it, OpenSCAD is already slow. The point of fs being a
+          global variable here is that you can use a 'larger' number during most
+          of the production and calculate a finely grained model only when you
+          need it.
+        </p>
+        <h4>function fn( )</h4>
+        <p>
+          fn( ) calculates a number, which will be the number of the points of a
+          curve, from the distance of two points and fs.
+        </p>
+        <h4>functions b_pts( ) and b_curv( )</h4>
+        <p>
+          In the production code, I split the points-calculating mechanism into
+          two functions, where b_pts( ) is the same regardless of what the model
+          does and b_curv( ) can vary, depending on what I plan to do with the
+          Bézier curve. They also do distinctive, different things, therefore I
+          find it easier to read and maintain that way.
+        </p>
+        <p>
+          b_pts( ) contains the recursive function and returns a number. It is
+          given an array of points 'pts', a number 'n' in how many points the
+          curve will be calculated, and a number 'idx', which of the points will
+          be calculated. <br />
+          It asks: 'Am I given more than two points in the array 'pts'?' And if
+          yes, it calls itself for the first to the second-last point multiplied
+          by n*idx and adds calling itself for the second to the last point,
+          multiplied with 1-n*idx.
+        </p>
       </section>
+
       <h3>Choosing locations for points</h3>
       <section class="columns">
         <img
@@ -337,7 +364,7 @@ for (i=[p1, p2, p3, p4])
           >
         </li>
       </ul>
-      <p class="update">Text last updated: October 29th, 2020</p>
+      <p class="update">Text last updated: November 5th, 2020</p>
     </article>
     <footer class="no-print">
       <ul>
