@@ -243,7 +243,8 @@ for (i= [0 : len(points)-1 ])
     -sin(20*i)/2+0.5,
     -cos(20*i)/2+0.5,
     1])
-  translate(points[i]) sphere(0.5);}
+  translate(points[i]) sphere(0.5, $fn=10);
+}
 
 // --- THE ACTUAL MODEL ---
 // calculating the points
@@ -273,6 +274,11 @@ for (i=[p1, p2, p3, p4])
           global variable here is that you can use a 'larger' number during most
           of the production and calculate a finely grained model only when you
           need it.
+        </p>
+        <p>
+          As you can tell from the rendered file, the distance of the points is
+          not perfectly even, but usually good enough, after all we are behind
+          the curve and not the points.
         </p>
         <h4>function fn( )</h4>
         <p>
