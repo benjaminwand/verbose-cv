@@ -198,8 +198,9 @@ for (i = [p1, p2, p3]) translate(i)
 
       <section class="columns">
         <p>
-          For easier copy-paste, the code is displayed in one go, and commented
-          below.
+          For easier copy-pasting, the code is displayed in one go, and
+          commented below. <br />
+          Please play with fs and the points to explore how it works.
         </p>
         <pre> <code class="Java">// --- VARIABLES ---
 // roughly the size of parts of curves
@@ -283,18 +284,40 @@ for (i=[p1, p2, p3, p4])
           In the production code, I split the points-calculating mechanism into
           two functions, where b_pts( ) is the same regardless of what the model
           does and b_curv( ) can vary, depending on what I plan to do with the
-          Bézier curve. They also do distinctive, different things, therefore I
-          find it easier to read and maintain that way.
+          Bézier curve. Furthermore I find it, with this separation, easier to
+          read and maintain.
         </p>
         <p>
-          b_pts( ) contains the recursive function and returns a number. It is
-          given an array of points 'pts', a number 'n' in how many points the
-          curve will be calculated, and a number 'idx', which of the points will
-          be calculated. <br />
+          b_pts( ) contains the recursive mechanism and returns a number. It is
+          called for each point separately. It is called with an array of points
+          'pts', a number in how many points the curve will be calculated 'n',
+          and a number which of the points will be calculated 'idx'. <br />
           It asks: 'Am I given more than two points in the array 'pts'?' And if
           yes, it calls itself for the first to the second-last point multiplied
           by n*idx and adds calling itself for the second to the last point,
-          multiplied with 1-n*idx.
+          multiplied with 1-n*idx. <br />
+          If the number of points in the array is two, it does the familiar 'p1
+          * i + p2 * (1-i)' thing.
+        </p>
+        <p>
+          In 'b_curv()', which is called with an array of points 'pts', the
+          calculation of the points is organized. It calls fn( ) with the first
+          and last point in 'pts' to get the variable fn. And then from zero to
+          fn, it calls b_pts( ) in order to calculate each point, and
+          concatenates them.
+        </p>
+        <p>
+          If the item modeled it a cookie-cutter, I already use b_curv as a
+          module to build shapes.
+        </p>
+        <h4>rainbow ( )</h4>
+        <p>
+          The module 'rainbow ( )' receives an array of points and displays them
+          in a colorful manner so they are visible and provide a sense how they
+          are ordered in the array. The module has
+          <a href="https://github.com/benjaminwand/OpenSCAD-rainbow"
+            >its own repository.
+          </a>
         </p>
       </section>
 
