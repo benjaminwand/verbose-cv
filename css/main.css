@@ -1,6 +1,6 @@
 html {
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 body {
@@ -319,12 +319,10 @@ footer a {
     width: calc(100% - 2rem);
   }
   .columns {
-    -moz-columns: 350px 3;
-    columns: 350px 3;
+    -moz-columns: 350px 2;
+    columns: 350px 2;
     -moz-column-gap: 25px;
     column-gap: 25px;
-    widows: 2;
-    orphans: 2;
   }
   article h2 {
     text-align: left;
@@ -447,6 +445,7 @@ footer a {
     color: silver;
     text-shadow: 0px 0px 1px black;
   }
+
   ::-moz-selection {
     background: #030c1c;
     color: #silver;
