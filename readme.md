@@ -6,17 +6,15 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 
 * DIvoC LightningTalks
 * bidet file March 2020
-* painting basement + learnings
 * various organ things:
 ** talks
 ** 45° labium pipes / adjustable labium pipes
 ** fog horn
 ** zacharias pipe
-** Nachtigall May 2018
+** winddruck messen in mmh2o
 (check youtube videos for further organ topics)
 * library signs April 2019
 * c3auti management + QuietQube
-* ‘helping each other’ meeting (new format but happened only once)
 * jewellery: little chairs
 * blacksmith: kitchen table thing April/May 2017
 * clavichord +1
