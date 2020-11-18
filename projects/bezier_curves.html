@@ -76,7 +76,7 @@
           <a href="https://github.com/benjaminwand/cookie-cutters"
             >in this repository</a
           >
-          in the older 'teaching examples'.
+          in the folder 'teaching examples'.
         </p>
 
         <iframe
@@ -274,11 +274,11 @@ for (i=[p1, p2, p3, p4])
           yes, it calls itself for the first to the second-last point multiplied
           by n*idx and adds calling itself for the second to the last point,
           multiplied with 1-n*idx. <br />
-          If the number of points in the array is two, it does the familiar 'p1
-          * i + p2 * (1-i)' thing.
+          If the number of points in the array is two, it does the familiar
+          <span class="code">'p1 * [0...1] + p2 * [1...0]'</span> thing.
         </p>
         <p>
-          In 'b_curv()', which is called with an array of points 'pts', the
+          In b_curv( ), which is called with an array of points 'pts', the
           calculation of the points is organized. It calls fn( ) with the first
           and last point in 'pts' to get the variable fn. And then from zero to
           fn, it calls b_pts( ) in order to calculate each point, and
@@ -341,12 +341,14 @@ for (i=[p1, p2, p3, p4])
           You'll notice that point 9 is located on the x axis as well and point
           14 n the y-axis. Having point 9, 10 and 11 in one axis provides a
           smooth curve around point 10, and the easiest way to make that happen
-          is locating all of them with the same y-value (0), the same way as the
+          is locating all of them with the same y-value (0). Similarly, the
           continuous nature of the curve around point 13 ensures by points 12,
           13 and 14 all having the same x-value (0).
         </p>
       </section>
-      <h2>There will be a demo video</h2>
+      <h2>Live coding video</h2>
+      <section class="columns"></section>
+
       <p>
         Soon, I will make a video where I model a cookie cutter, to demonstrate
         the concepts from the existing video.
