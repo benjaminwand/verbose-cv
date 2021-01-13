@@ -4,6 +4,7 @@ This is a portfolio website in the making which can be seen at https://benjaminw
 ## Future topics
 Here I’m listing a couple of things that I want to add later, which is rather for myself, but please tell me if you want to read more about a specific thing.
 
+* Wilder Wein pflanzen
 * DIvoC LightningTalks
 * bidet file March 2020
 * various organ things:
@@ -14,7 +15,6 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 ** winddruck messen in mmh2o
 (check youtube videos for further organ topics)
 * library signs April 2019
-* c3auti management + QuietQube
 * jewellery: little chairs
 * blacksmith: kitchen table thing April/May 2017
 * clavichord +1
