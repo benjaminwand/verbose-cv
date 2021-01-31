@@ -219,8 +219,14 @@ article p + iframe {
   margin-top: 0rem;
   margin-bottom: 1rem;
 }
+article p + h3 {
+  padding: 0;
+}
 article .columns ~ h2 {
   margin-top: 3.5rem;
+}
+article .columns h3:first-of-type {
+  padding: 0;
 }
 article h2 + h3 {
   padding-top: 0rem;
