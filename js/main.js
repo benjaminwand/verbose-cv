@@ -1,7 +1,4 @@
 $(document).ready(function() {
-  // hides no-js-warning
-  $(".no-js").hide();
-
   // filter food items with checkboxes
   $(".choices :checkbox").click(function() {
     $(".polaroid").hide();
@@ -12,3 +9,6 @@ $(document).ready(function() {
     }
   });
 });
+
+// no-js handling
+for (let el of document.querySelectorAll(".js")) el.style.display = "block";
