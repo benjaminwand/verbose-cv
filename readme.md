@@ -7,6 +7,7 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 * Wilder Wein pflanzen
 * DIvoC LightningTalks
 * bidet file March 2020
+* Holz Grippe für Küchen Dinge
 * various organ things:
 ** talks
 ** 45° labium pipes / adjustable labium pipes
