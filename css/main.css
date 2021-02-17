@@ -155,7 +155,7 @@ hgroup {
 .polaroid {
   transition: all ease 0.6s;
   z-index: 1;
-  min-width: 90%;
+  min-width: 87.5%;
 }
 .polaroid figure {
   border: 15px solid #fefaee;
