@@ -158,10 +158,10 @@ hgroup {
 .polaroid {
   transition: all ease 0.6s;
   z-index: 1;
-  width: 100%;
+  min-width: 90%;
 }
 .polaroid figure {
-  border: 12px solid #fefaee;
+  border: 15px solid #fefaee;
   box-shadow: 3px 3px 3px #888;
   -webkit-margin-start: 10px;
   margin-inline-start: 10px;
@@ -500,7 +500,7 @@ footer a {
   }
 
   .polaroid figure {
-    border: 12px solid #031e4c;
+    border: 15px solid #031e4c;
     box-shadow: 0 0 1px white;
   }
   .polaroid figure:hover {
