@@ -310,7 +310,6 @@ footer a {
 /* ===================== desktop media query ========================== */
 @media only screen and (min-width: 50em) {
   .choices {
-    max-width: 80rem;
     margin: auto;
     width: 100%;
   }
@@ -350,7 +349,7 @@ footer a {
     justify-content: space-around;
     margin: 0 auto -0.35em auto;
     padding: 0;
-    width: 100%;
+    max-width: 75rem;
   }
   footer a {
     color: #222;
