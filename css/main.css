@@ -517,6 +517,7 @@ footer a {
   .date,
   .update {
     color: silver;
+    text-shadow: 0 0 5px black;
   }
 }
 @media (prefers-color-scheme: dark) and (min-width: 32em) {
