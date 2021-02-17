@@ -23,6 +23,7 @@ body {
     min-content
     auto
     min-content;
+  align-items: start;
 }
 
 @font-face {
@@ -195,8 +196,6 @@ hgroup {
 article {
   grid-column-start: 2;
   padding-bottom: 3rem;
-  max-width: 80rem;
-  margin: auto;
   text-align: center;
 }
 article > * {
