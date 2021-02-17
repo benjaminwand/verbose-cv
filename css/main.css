@@ -60,7 +60,7 @@ a:focus {
   text-decoration: underline;
 }
 
-/* ===================== headlines ========================== */
+/* ===================== headlines ======================== */
 h1 {
   font-size: calc(1.2rem + 2vw);
   text-align: center;
@@ -102,7 +102,7 @@ hgroup {
   margin-bottom: 1rem;
 }
 
-/* =================== choices fieldset ======================= */
+/* =================== choices fieldset ===================== */
 .choices {
   margin: 0 1rem;
   display: inline;
@@ -145,7 +145,7 @@ hgroup {
   border-radius: 15px;
 }
 
-/* ===================== polaroids ========================== */
+/* ===================== polaroids ======================== */
 .polaroids {
   grid-column-start: 2;
   display: grid;
@@ -193,7 +193,7 @@ hgroup {
   text-decoration: none;
 }
 
-/* ===================== article ========================== */
+/* ===================== article ======================== */
 article {
   grid-column-start: 2;
   padding-bottom: 3rem;
@@ -316,7 +316,7 @@ footer a {
   text-align: center;
 }
 
-/* ===================== desktop media query ========================== */
+/* ================== desktop media query ==================== */
 @media only screen and (min-width: 50em) {
   .choices {
     margin: auto;
@@ -447,7 +447,7 @@ footer a {
   }
 }
 
-/* ===================== dark mode ============================= */
+/* ===================== dark mode ========================== */
 /* Palette URL: http://paletton.com/#uid=73G1t0kxfgsueaMrYhfI1l+D7tF */
 @media (prefers-color-scheme: dark) {
   body {
