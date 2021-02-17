@@ -116,15 +116,12 @@ hgroup {
   background-color: #fefaee;
 }
 .choices ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
   margin: 0;
   padding: 0.85rem;
 }
 .choices li {
-  min-width: 12em; /* due to longest word 'musical instruments'*/
   list-style: none;
   padding: 0.15em;
   color: #2980b9;
@@ -323,13 +320,12 @@ footer a {
     width: 100%;
   }
   .choices ul {
+    display: flex;
     margin: 0 1rem;
     padding: 0.5rem;
     border-radius: 20px;
     justify-content: space-around;
-  }
-  .choices li {
-    min-width: 0;
+    margin: 0;
   }
 }
 @media only screen and (min-width: 32em) {
