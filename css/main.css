@@ -152,6 +152,7 @@ hgroup {
   column-gap: 1rem;
   justify-items: center;
 }
+
 .polaroid {
   transition: all ease 0.6s;
   z-index: 1;
@@ -182,8 +183,24 @@ hgroup {
 .polaroid img {
   width: 100%;
 }
+
+.polaroid:nth-child(2n) {
+  transform: rotate(4deg);
+}
+.polaroid:nth-child(2n + 1) {
+  transform: rotate(-4deg);
+}
+.polaroid:nth-child(3n){
+  transform: rotate(2.5deg);
+}
+.polaroid:nth-child(3n + 1) {
+  transform: rotate(-2.5deg);
+}
+.polaroid:nth-child(7n + 1) {
+  transform: rotate(1.5deg);
+}
 .polaroid:hover {
-  transform: scale(1.03) rotate(0.5deg);
+  transform: scale(1.03) rotate(1.5deg);
   z-index: 999;
 }
 .polaroid:hover a {
@@ -543,7 +560,19 @@ footer a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .polaroid:hover {
-    transform: scale(1) rotate(0deg);
+  .polaroid:nth-child(2n):hover {
+    transform: rotate(4deg);
+  }
+  .polaroid:nth-child(2n + 1):hover {
+    transform: rotate(-4deg);
+  }
+  .polaroid:nth-child(3n):hover {
+    transform: rotate(2.5deg);
+  }
+  .polaroid:nth-child(3n + 1):hover {
+    transform: rotate(-2.5deg);
+  }
+  .polaroid:nth-child(7n + 1):hover {
+    transform: rotate(1.5deg);
   }
 }
