@@ -224,6 +224,7 @@ article p {
 article figure {
   padding: 0;
   margin: 0;
+  display: inline-block;
 }
 article img {
   max-width: calc(100% - 1rem);
