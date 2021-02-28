@@ -190,7 +190,7 @@ hgroup {
 .polaroid:nth-child(2n + 1) {
   transform: rotate(-4deg);
 }
-.polaroid:nth-child(3n){
+.polaroid:nth-child(3n) {
   transform: rotate(2.5deg);
 }
 .polaroid:nth-child(3n + 1) {
@@ -293,24 +293,41 @@ pre {
 footer {
   grid-column-start: 1;
   grid-column-end: 4;
-  background-color: #222;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  background: #efefff;
+  border-bottom: 30px solid transparent;
+  -moz-border-image: url("../img/day_sky_bg.jpg") 0 0 30 0; /* Old firefox */
+  -webkit-border-image: url("../img/day_sky_bg.jpg") 0 0 30 0;
+  -o-border-image: url("../img/day_sky_bg.jpg") 0 0 30 0;
+  border-image: url("../img/day_sky_bg.jpg") 0 0 30 0;
+  -o-border-image: repeat;
+  border-image-repeat: repeat;
 }
 footer ul {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 1rem;
+  flex-direction: row;
+  justify-content: space-around;
+    margin: 0 auto -0.1em auto;
+  padding: 0;
+  max-width: 75rem;
   list-style: none;
 }
+footer li {
+  text-align: right;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  -webkit-text-orientation: sideways;
+  text-orientation: sideways;
+}
 footer a {
-  display: inline-block;
-  list-style: none;
-  color: #fefaee;
+  color: #222;
+  text-shadow: 0 0 1px LightYellow;
+  margin-bottom: 0;
+  padding: 0;
   font-weight: bold;
-  padding: 1em;
+}
+footer a:hover {
+  text-decoration: none;
+  text-shadow: 0 0 5px yellow;
 }
 
 /* ===================== details ========================== */
@@ -357,32 +374,15 @@ footer a {
     text-align: left;
     margin-left: 0;
   }
-  footer {
-    background: #efefff;
-    border-bottom: 30px solid transparent;
-    -moz-border-image: url("../img/day_sky_bg.jpg") 0 0 30 0; /* Old firefox */
-    -webkit-border-image: url("../img/day_sky_bg.jpg") 0 0 30 0;
-    -o-border-image: url("../img/day_sky_bg.jpg") 0 0 30 0;
-    border-image: url("../img/day_sky_bg.jpg") 0 0 30 0;
-    -o-border-image: repeat;
-    border-image-repeat: repeat;
-  }
   footer ul {
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0 auto -0.35em auto;
-    padding: 0;
-    max-width: 75rem;
+  margin: 0 auto -0.35em auto;
   }
-  footer a {
-    color: #222;
-    text-shadow: 0 0 1px LightYellow;
-    margin-bottom: 0;
-    padding: 0;
-  }
-  footer a:hover {
-    text-decoration: none;
-    text-shadow: 0 0 5px yellow;
+  footer li {
+    text-align: right;
+    -ms-writing-mode: lr-tb;
+        writing-mode: horizontal-tb;
+    -webkit-text-orientation: mixed;
+    text-orientation: mixed;
   }
 }
 /* ===================== print ========================== */
@@ -493,6 +493,28 @@ footer a {
     -webkit-filter: brightness(0.75);
     filter: brightness(0.75);
   }
+  footer {
+    background: linear-gradient(
+      to bottom,
+      rgba(46, 59, 71, 0),
+      rgba(87, 110, 113, 0.5),
+      #ab974f 90%,
+      #b35e30
+    );
+    border-top: 0;
+    border-bottom: 30px solid transparent;
+    -moz-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Old firefox */
+    -webkit-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Safari */
+    -o-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Opera */
+    border-image: url("../img/night_sky_bg.jpg") 0 0 30 0;
+    -o-border-image: repeat;
+    border-image-repeat: repeat;
+    padding-top: 10rem; /* moving the background up*/
+    margin-top: -10rem;
+  }
+  footer a {
+    color: #111;
+  }
   footer a::-moz-selection {
     background: yellow;
   }
@@ -533,30 +555,6 @@ footer a {
   .update {
     color: silver;
     text-shadow: 0 0 5px black;
-  }
-}
-@media (prefers-color-scheme: dark) and (min-width: 32em) {
-  footer {
-    background: linear-gradient(
-      to bottom,
-      rgba(46, 59, 71, 0),
-      rgba(87, 110, 113, 0.5),
-      #ab974f 90%,
-      #b35e30
-    );
-    border-top: 0;
-    border-bottom: 30px solid transparent;
-    -moz-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Old firefox */
-    -webkit-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Safari */
-    -o-border-image: url("../img/night_sky_bg.jpg") 0 0 30 0; /* Opera */
-    border-image: url("../img/night_sky_bg.jpg") 0 0 30 0;
-    -o-border-image: repeat;
-    border-image-repeat: repeat;
-    padding-top: 10rem; /* moving the background up*/
-    margin-top: -10rem;
-  }
-  footer a {
-    color: #111;
   }
 }
 
