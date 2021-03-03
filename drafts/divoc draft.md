@@ -16,3 +16,5 @@
 * angels -> angelbadge
 * VOC was basically absent
 * auch Vortrag gehalten
+
+We gave talk about it https://media.ccc.de/v/rc3-11385-divoc_forever
