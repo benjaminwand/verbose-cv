@@ -20,6 +20,7 @@ Here I’m listing a couple of things that I want to add later, which is rather 
   * winddruck messen in mmh2o
 (check youtube videos for further organ topics)
 * trumpet
+* 1.10. 2018 Loft in OpenSCAD https://www.youtube.com/watch?v=zaBSSgS3MOA&t=2s https://github.com/benjaminwand/OpenScad-random/tree/main/modules/loft%20module
 ### 2017
 * blacksmith: kitchen table thing April/May 2017
 * SHA choir
