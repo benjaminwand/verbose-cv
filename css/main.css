@@ -100,8 +100,6 @@ h2 {
 h3 {
   text-align: center;
   padding-top: 1.5rem;
-  -moz-column-break-after: avoid-column;
-  break-after: avoid-column;
 }
 
 /* ===================== headers ========================== */
@@ -268,6 +266,8 @@ article p + iframe {
 }
 article p + h3 {
   padding: 0;
+  -moz-column-break-after: avoid-column;
+  break-after: avoid-column; /* not working yet */
 }
 article .columns ~ h2 {
   margin-top: 3.5rem;
@@ -311,6 +311,10 @@ pre {
 .i {
   font-style: italic;
 }
+.inline-block { /* hack to get something like break-after: avoid-column; */
+  display: inline-block;
+}
+
 /* ===================== footer ========================== */
 footer {
   grid-column-start: 1;
