@@ -86,7 +86,13 @@ h1, h2, h3, h4 {
 h1 {
   font-size: calc(1.2rem + 2.5vw);
   text-align: center;
-  margin: 2em auto;
+}
+.index h1 {
+  margin: 4.5rem auto 3.5rem;
+}
+.header-projects h1 {
+  background: red;
+  margin: 1rem auto;
 }
 h2 {
   text-align: center;
@@ -100,7 +106,7 @@ h3 {
 
 /* ===================== headers ========================== */
 header {
-  margin: 0 auto 1.25rem auto;
+  margin: 0 auto;
   width: 100%;
   grid-column-start: 2;
   grid-column-end: 3;
@@ -108,11 +114,9 @@ header {
 header p {
   margin: 0;
 }
-header h1 {
-/*  margin-bottom: 1.5rem;*/
-}
 .header_projects {
   font-family: 'Neumann', serif;
+  margin-top: 0.5rem;
 }
 hgroup {
   margin-top: 2rem;
@@ -168,6 +172,7 @@ hgroup {
   -moz-column-gap: 1rem;
   column-gap: 1rem;
   justify-items: center;
+  margin: 1.5rem 0;
 }
 
 .polaroid {
