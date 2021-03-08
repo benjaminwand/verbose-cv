@@ -46,12 +46,12 @@ body {
 }
 @font-face {
   font-family: 'Indie Flower';
-  src: url(./IndieFlower-Regular.eot);
-  src: url(./IndieFlower-Regular.eot?#iefix) format('embedded-opentype'),
-       url(./IndieFlower-Regular.otf) format('otf'),
-       url(./IndieFlower-Regular.ttf) format('truetype'),
-       url(./IndieFlower-Regular.woff) format('woff'),
-       url(./IndieFlower-Regular.woff2) format('woff2');
+  src: url(../fonts/IndieFlower-Regular.eot);
+  src: url(../fonts/IndieFlower-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/IndieFlower-Regular.otf) format('otf'),
+       url(../fonts/IndieFlower-Regular.ttf) format('truetype'),
+       url(../fonts/IndieFlower-Regular.woff) format('woff'),
+       url(../fonts/IndieFlower-Regular.woff2) format('woff2');
 }
 
 
