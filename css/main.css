@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", Roboto, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   background: linear-gradient(to bottom, #dfefff, #efefff);
   color: #222;
@@ -27,14 +27,33 @@ body {
 }
 
 @font-face {
-  font-family: "playfair_displayregular";
-  src: url("../fonts/playfairdisplay-variablefont_wght-webfont.woff2")
-      format("woff2"),
-    url("../fonts/playfairdisplay-variablefont_wght-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Neumann';
+  src: url(../fonts/td-neumann.eot);
+  src: url(../fonts/td-neumann.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/td-neumann.otf) format('otf'),
+       url(../fonts/td-neumann.ttf) format('truetype'),
+       url(../fonts/td-neumann.woff) format('woff'),
+       url(../fonts/td-neumann.woff2) format('woff2');
 }
+@font-face {
+  font-family: 'Poppins';
+  src: url(../fonts/Poppins-Regular.eot);
+  src: url(../fonts/Poppins-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/Poppins-Regular.otf) format('otf'),
+       url(../fonts/Poppins-Regular.ttf) format('truetype'),
+       url(../fonts/Poppins-Regular.woff) format('woff'),
+       url(../fonts/Poppins-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Indie Flower';
+  src: url(./IndieFlower-Regular.eot);
+  src: url(./IndieFlower-Regular.eot?#iefix) format('embedded-opentype'),
+       url(./IndieFlower-Regular.otf) format('otf'),
+       url(./IndieFlower-Regular.ttf) format('truetype'),
+       url(./IndieFlower-Regular.woff) format('woff'),
+       url(./IndieFlower-Regular.woff2) format('woff2');
+}
+
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -61,24 +80,21 @@ a:focus {
 }
 
 /* ===================== headlines ======================== */
+h1, h2, h3, h4 {
+  font-family: 'Neumann', serif;
+}
 h1 {
   font-size: calc(1.2rem + 2vw);
   text-align: center;
-  font-family: "playfair_displayregular";
 }
 h2 {
   text-align: center;
-  font-family: "playfair_displayregular";
 }
 h3 {
   text-align: center;
-  font-family: "playfair_displayregular";
   padding-top: 1.5rem;
   -moz-column-break-after: avoid-column;
   break-after: avoid-column;
-}
-h4 {
-  font-family: "playfair_displayregular";
 }
 
 /* ===================== headers ========================== */
@@ -95,7 +111,7 @@ header h1 {
   margin-bottom: 1.5rem;
 }
 .header_projects {
-  font-family: "playfair_displayregular";
+  font-family: 'Neumann', serif;
 }
 hgroup {
   margin-top: 2rem;
@@ -323,6 +339,7 @@ footer a {
   text-shadow: 0 0 1px LightYellow;
   margin-bottom: 0;
   padding: 0;
+  font-family: 'Neumann';
   font-weight: bold;
 }
 footer a:hover {
@@ -375,7 +392,7 @@ footer a:hover {
     margin-left: 0;
   }
   footer ul {
-  margin: 0 auto -0.35em auto;
+  margin: 0 auto -0.4em auto;
   }
   footer li {
     text-align: right;
