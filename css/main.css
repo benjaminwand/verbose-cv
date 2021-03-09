@@ -391,6 +391,9 @@ footer a:hover {
   }
 }
 @media only screen and (min-width: 32em) {
+  p {
+    max-width: 60ch;
+  }
   .columns {
     -moz-columns: 350px 2;
     columns: 350px 2;
