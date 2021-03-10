@@ -436,19 +436,33 @@ footer a:hover {
     box-shadow: none;
     text-shadow: none;
   }
+  html {
+    font-size: 12pt;
+  }
 
   .no-print {
     display: none;
   }
-  .polaroid img {
+  .columns {
+    -moz-columns: 2;
+    columns: 2;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
+  }
+  .choices {
+    margin: auto;
+    width: 100%;
+  }
+  .choices ul {
+    display: flex;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    justify-content: space-around;
+    margin: 0;
+  }
+  article iframe {
     display: none;
-  }
-  .polaroid {
-    margin: 3rem 0;
-  }
-  article figure {
-    max-width: 40%;
-    float: right;
   }
 
   a,
@@ -457,11 +471,17 @@ footer a:hover {
   }
 
   a[href]:after {
-    content: " (" attr(href) ")";
+    content: " → (" attr(href) ")";
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
 
   abbr[title]:after {
     content: " (" attr(title) ")";
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
 
   /*
