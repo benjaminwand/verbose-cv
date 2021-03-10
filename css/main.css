@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   background: linear-gradient(to bottom, #dfefff, #efefff);
   color: #222;
@@ -27,33 +27,32 @@ body {
 }
 
 @font-face {
-  font-family: 'Neumann';
+  font-family: "Neumann";
   src: url(../fonts/td-neumann.eot);
-  src: url(../fonts/td-neumann.eot?#iefix) format('embedded-opentype'),
-       url(../fonts/td-neumann.otf) format('otf'),
-       url(../fonts/td-neumann.ttf) format('truetype'),
-       url(../fonts/td-neumann.woff) format('woff'),
-       url(../fonts/td-neumann.woff2) format('woff2');
+  src: url(../fonts/td-neumann.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/td-neumann.otf) format("otf"),
+    url(../fonts/td-neumann.ttf) format("truetype"),
+    url(../fonts/td-neumann.woff) format("woff"),
+    url(../fonts/td-neumann.woff2) format("woff2");
 }
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   src: url(../fonts/Poppins-Regular.eot);
-  src: url(../fonts/Poppins-Regular.eot?#iefix) format('embedded-opentype'),
-       url(../fonts/Poppins-Regular.otf) format('otf'),
-       url(../fonts/Poppins-Regular.ttf) format('truetype'),
-       url(../fonts/Poppins-Regular.woff) format('woff'),
-       url(../fonts/Poppins-Regular.woff2) format('woff2');
+  src: url(../fonts/Poppins-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/Poppins-Regular.otf) format("otf"),
+    url(../fonts/Poppins-Regular.ttf) format("truetype"),
+    url(../fonts/Poppins-Regular.woff) format("woff"),
+    url(../fonts/Poppins-Regular.woff2) format("woff2");
 }
 @font-face {
-  font-family: 'Indie Flower';
+  font-family: "Indie Flower";
   src: url(../fonts/IndieFlower-Regular.eot);
-  src: url(../fonts/IndieFlower-Regular.eot?#iefix) format('embedded-opentype'),
-       url(../fonts/IndieFlower-Regular.otf) format('otf'),
-       url(../fonts/IndieFlower-Regular.ttf) format('truetype'),
-       url(../fonts/IndieFlower-Regular.woff) format('woff'),
-       url(../fonts/IndieFlower-Regular.woff2) format('woff2');
+  src: url(../fonts/IndieFlower-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/IndieFlower-Regular.otf) format("otf"),
+    url(../fonts/IndieFlower-Regular.ttf) format("truetype"),
+    url(../fonts/IndieFlower-Regular.woff) format("woff"),
+    url(../fonts/IndieFlower-Regular.woff2) format("woff2");
 }
-
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -80,19 +79,21 @@ a:focus {
 }
 
 /* ===================== headlines ======================== */
-h1, h2, h3, h4 {
-  font-family: 'Neumann', serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Neumann", serif;
 }
 h1 {
   font-size: calc(1.2rem + 2.5vw);
   text-align: center;
 }
 .index h1 {
-  margin: 4.5rem auto 3.5rem;
+  margin: 5rem auto 3.5rem;
 }
-.header-projects h1 {
-  background: red;
-  margin: 1rem auto;
+.header_projects h1 {
+  margin: 0.5 auto;
 }
 h2 {
   text-align: center;
@@ -113,8 +114,8 @@ header p {
   margin: 0;
 }
 .header_projects {
-  font-family: 'Neumann', serif;
-  margin-top: 0.5rem;
+  font-family: "Neumann", serif;
+  margin-top: 1rem;
 }
 hgroup {
   margin-top: 2rem;
@@ -311,7 +312,8 @@ pre {
 .i {
   font-style: italic;
 }
-.inline-block { /* hack to get something like break-after: avoid-column; */
+.inline-block {
+  /* hack to get something like break-after: avoid-column; */
   display: inline-block;
 }
 
@@ -332,7 +334,7 @@ footer ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-    margin: 0 auto -0.1em auto;
+  margin: 0 auto -0.1em auto;
   padding: 0;
   max-width: 75rem;
   list-style: none;
@@ -349,7 +351,7 @@ footer a {
   text-shadow: 0 0 1px LightYellow;
   margin-bottom: 0;
   padding: 0;
-  font-family: 'Neumann';
+  font-family: "Neumann";
   font-weight: bold;
 }
 footer a:hover {
@@ -405,12 +407,12 @@ footer a:hover {
     margin-left: 0;
   }
   footer ul {
-  margin: 0 auto -0.4em auto;
+    margin: 0 auto -0.4em auto;
   }
   footer li {
     text-align: right;
     -ms-writing-mode: lr-tb;
-        writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
     -webkit-text-orientation: mixed;
     text-orientation: mixed;
   }
