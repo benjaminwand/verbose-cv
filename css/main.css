@@ -102,6 +102,9 @@ h3 {
   text-align: center;
   padding-top: 1.5rem;
 }
+p, .ch65 {
+  max-width: 65ch;
+}
 
 /* ===================== headers ========================== */
 header {
@@ -232,7 +235,7 @@ hgroup {
 article {
   grid-column-start: 2;
   padding-bottom: 3rem;
-  text-align: center;
+/*  text-align: center;*/
 }
 article > * {
   margin: 0 1rem 0.65rem;
@@ -392,16 +395,15 @@ footer a:hover {
     margin: 0;
   }
 }
-@media only screen and (min-width: 32em) {
-  p {
-    max-width: 60ch;
-  }
+@media (min-width: 32em) and (min-height: 500px) {
   .columns {
     -moz-columns: 350px 2;
     columns: 350px 2;
     -moz-column-gap: 25px;
     column-gap: 25px;
   }
+}
+@media (min-width: 32em) {
   article h2 {
     text-align: left;
     margin-left: 0;
