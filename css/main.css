@@ -235,7 +235,6 @@ hgroup {
 /* ===================== article ======================== */
 article {
   grid-column-start: 2;
-  padding-bottom: 3rem;
 }
 article > * {
   margin: 0 1rem 0.65rem;
@@ -397,6 +396,9 @@ footer a:hover {
   }
 }
 @media (min-width: 32em) {
+  article {
+    padding-bottom: 2rem;
+  }
   article h2 {
     text-align: left;
     margin-left: 0;
@@ -555,6 +557,38 @@ footer a:hover {
     -webkit-filter: brightness(0.75);
     filter: brightness(0.75);
   }
+
+  .choices fieldset {
+    background-color: #06152e;
+    border: 2px solid #a88800;
+  }
+  .choices legend {
+    border: 2px solid #a88800;
+    color: silver;
+  }
+
+  .choices li {
+    color: #a88800;
+  }
+
+  .polaroid figure {
+    border: 15px solid #031e4c;
+    box-shadow: 0 0 1px white;
+  }
+  .polaroid figure:hover {
+    box-shadow: 0 0 3px white;
+  }
+  .polaroid figcaption {
+    color: #a88800;
+    background-color: #031e4c;
+  }
+
+  article {
+    padding-bottom: 5rem;
+  }
+  article img {
+    background-color: silver;
+  }
   footer {
     background: linear-gradient(
       to bottom,
@@ -582,35 +616,6 @@ footer a:hover {
   }
   footer a::selection {
     background: yellow;
-  }
-
-  .choices fieldset {
-    background-color: #06152e;
-    border: 2px solid #a88800;
-  }
-  .choices legend {
-    border: 2px solid #a88800;
-    color: silver;
-  }
-
-  .choices li {
-    color: #a88800;
-  }
-
-  .polaroid figure {
-    border: 15px solid #031e4c;
-    box-shadow: 0 0 1px white;
-  }
-  .polaroid figure:hover {
-    box-shadow: 0 0 3px white;
-  }
-  .polaroid figcaption {
-    color: #a88800;
-    background-color: #031e4c;
-  }
-
-  article img {
-    background-color: silver;
   }
 
   .date,
