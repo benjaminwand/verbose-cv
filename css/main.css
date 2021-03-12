@@ -102,8 +102,9 @@ h3 {
   text-align: center;
   padding-top: 1.5rem;
 }
-p, .ch65 {
-  max-width: 65ch;
+p,
+.ch65 {
+  max-width: 70ch;
 }
 
 /* ===================== headers ========================== */
@@ -235,7 +236,6 @@ hgroup {
 article {
   grid-column-start: 2;
   padding-bottom: 3rem;
-/*  text-align: center;*/
 }
 article > * {
   margin: 0 1rem 0.65rem;
@@ -273,6 +273,7 @@ article p + h3 {
   -moz-column-break-after: avoid-column;
   break-after: avoid-column; /* not working yet */
 }
+
 article .columns ~ h2 {
   margin-top: 3.5rem;
 }
@@ -395,18 +396,13 @@ footer a:hover {
     margin: 0;
   }
 }
-@media (min-width: 32em) and (min-height: 500px) {
-  .columns {
-    -moz-columns: 350px 2;
-    columns: 350px 2;
-    -moz-column-gap: 25px;
-    column-gap: 25px;
-  }
-}
 @media (min-width: 32em) {
   article h2 {
     text-align: left;
     margin-left: 0;
+  }
+  article h3 {
+    text-align: left;
   }
   footer ul {
     margin: 0 auto -0.4em auto;
@@ -417,6 +413,18 @@ footer a:hover {
     writing-mode: horizontal-tb;
     -webkit-text-orientation: mixed;
     text-orientation: mixed;
+  }
+}
+@media (min-width: 32em) and (min-height: 500px) {
+  .columns {
+    -moz-columns: 350px 2;
+    columns: 350px 2;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
+  }
+
+  article h3 {
+    text-align: center;
   }
 }
 /* ===================== print ========================== */
@@ -608,8 +616,7 @@ footer a:hover {
   .date,
   .update {
     color: silver;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 1),
-      0px 8px 13px rgba(0, 0, 0, 0.8),
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 1), 0px 8px 13px rgba(0, 0, 0, 0.8),
       0px 18px 23px rgba(0, 0, 0, 0.5);
   }
 }
