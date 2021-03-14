@@ -152,6 +152,7 @@ hgroup {
 }
 .choices li:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .choices legend {
