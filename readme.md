@@ -10,11 +10,9 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 ### 2019
 * library signs April 2019
 * All I Can Eat / Hackathon Salzburg
-* shepard tones implementation in ruby/soundpi januar 2019 https://www.youtube.com/watch?v=uoUQ61lwgCE
 ### 2018
 * 1.10. 2018 Loft in OpenSCAD https://www.youtube.com/watch?v=zaBSSgS3MOA&t=2s https://github.com/benjaminwand/OpenScad-random/tree/main/modules/loft%20module
 * various organ things:
-  * talks
   * 45° labium pipes / adjustable labium pipes
   * fog horn
   * zacharias pipe
