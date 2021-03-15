@@ -43,58 +43,51 @@
           /></svg
         >Benjamin Wand - Verbose CV
       </a>
-      <h1>Shepard tones implementation in Sonic Pi</h1>
+      <h1>Shepard tones implementation in Sonic&nbsp;Pi</h1>
       <p class="date">January 2019</p>
     </header>
     <article>
       <h2>About</h2>
       <section class="columns">
         <p>
-          In my own words, I'd explain Shepard tones like that: you'd press all
-          keys on a piano with the same name, for instance all f-keys, at the
-          same time, and the ones in the middle harder than the very high or low
-          ones, so that the volume would be distributed like a bell curve and
-          the tones outside of the piano just disappear under the hearing
-          threshold, see the image below.
+          In my own words I'd explain
+          <a href="https://en.wikipedia.org/wiki/Shepard_tone">Shepard tones</a>
+          like that: you'd press all keys on a piano with the same name, for
+          instance all f-keys, at the same time, and the ones in the middle
+          harder than the very high or low ones, so that the volume would be
+          distributed like a bell curve and the tones outside of the piano just
+          disappear under the hearing threshold, see the image below.
         </p>
         <img src="../img/streifen.jpg" alt="shepard tones under a bell curve" />
         <p>
-          In case of f you'd end up with an f without a specific octave. When
+          In case of f you'd end up with an f without a specific height. When
           playing an upward or downward scale, the tones seem to go up or down
-          but never leave the hearing threshold, it can go forever, and this is
-          a common effect in film music, for instance in
+          but never leave the hearing range as long as the bell curve stays in
+          place. Such a Shepard scale can go on for an extended period of time,
+          and this is a common effect in film music, for instance in
           <a href="https://www.youtube.com/watch?v=KKkCP7ovMQA">Dunkirk</a>,
           where the sound seems to rise indefinitely.
         </p>
 
-        <p class="draft">
-          The next paragraph is unfinished. <br />
-          * original article by ?shepard <br />
-          *
+        <p>
+          The original publication "Circularity in Judgements of Relative Pitch"
+          by Roger Shepard was published in 1964 in the Journal of the
+          Acoustical Society of America.
+        </p>
+        <p>
+          <a href="https://youtu.be/Gn0A9Fa_APg"
+            >Shepard tones are implemented in SuperCollider</a
+          >
+          but I wasn't able to understand the code and so I wrote
           <a
             href="https://github.com/benjaminwand/Sonic-Pi-Shepard-tones-function"
-            >on github
-          </a>
+            >a Shepard tone implementation in Sonic Pi</a
+          >, my first and only Ruby project.
         </p>
       </section>
 
       <h2>Contradictory sound</h2>
       <section class="columns">
-        <p>
-          As one ingredient, in electronic music there can be a sliding scale,
-          unlike on a piano with its discrete tones. <br />
-          As a second ingredient, in my Sonic Pi code the placement of the bell
-          curve is one of the parameters, and it can be moved over time.
-          Practical aspects of what your ears and your speakers are able to
-          aside, the bell curve can even be moved into the hearing range and out
-          of it.
-          <br />
-          I used the possibility to slide the bell curve and slide the pitch for
-          this experiment: the bell curve moves from a high pitch to a low pitch
-          and the frequency goes the other way, the sound gets higher and lower
-          at the same time. <br />
-          It is published in a video format to make it easier to understand.
-        </p>
         <iframe
           width="560"
           height="315"
@@ -103,6 +96,19 @@
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+        <p>
+          In electronic music there can be a sliding scale, unlike on a piano
+          with its discrete tones. <br />
+          The placement of the bell curve is one of the parameters in my Sonic
+          Pi code, and it can be moved over time. Practical aspects of what your
+          ears and your speakers are able to aside, the bell curve can even be
+          moved into the hearing range and out of it.
+          <br />
+          For the small composition in the video I used the possibility to slide
+          the bell curve and slide the pitch, the bell curve moves from a high
+          pitch to a low pitch and the frequency goes the other way, the sound
+          gets higher and lower at the same time.
+        </p>
       </section>
 
       <p class="update">Text last updated: March 15th, 2021</p>
