@@ -61,10 +61,10 @@
         <img src="../img/streifen.jpg" alt="shepard tones under a bell curve" />
         <p>
           In case of f you'd end up with an f without a specific height. When
-          playing an upward or downward scale, the tones seem to go up or down
+          playing an upward or downward scale, the tones seem to go up (or down)
           but never leave the hearing range as long as the bell curve stays in
-          place. Such a Shepard scale can go on for an extended period of time,
-          and this is a common effect in film music, for instance in
+          place. Such a Shepard scale can go on for a long time, and this is a
+          common effect in film music, for instance in
           <a href="https://www.youtube.com/watch?v=KKkCP7ovMQA">Dunkirk</a>,
           where the sound seems to rise indefinitely.
         </p>
@@ -82,7 +82,10 @@
           <a
             href="https://github.com/benjaminwand/Sonic-Pi-Shepard-tones-function"
             >a Shepard tone implementation in Sonic Pi</a
-          >, my first and only Ruby project.
+          >, my first and only Ruby project. The code is much shorter than in
+          the SuperCollider implementation and it comes with options like chords
+          of Shepard tones, alternative synths (meaning others than sine waves)
+          and the positioning of the bell curve as a parameter.
         </p>
       </section>
 
@@ -99,13 +102,13 @@
         <p>
           In electronic music there can be a sliding scale, unlike on a piano
           with its discrete tones. <br />
-          The placement of the bell curve is one of the parameters in my Sonic
-          Pi code, and it can be moved over time. Practical aspects of what your
-          ears and your speakers are able to aside, the bell curve can even be
-          moved into the hearing range and out of it.
+          In my implementation of Shepard tones the placement of the bell curve
+          can be moved while the sound is playing. Practical aspects of what
+          your ears and your speakers are able to aside, the bell curve can even
+          be moved into the hearing range and out of it.
           <br />
           For the small composition in the video I used the possibility to slide
-          the bell curve and slide the pitch, the bell curve moves from a high
+          both the bell curve and the pitch, the bell curve moves from a high
           pitch to a low pitch and the frequency goes the other way, the sound
           gets higher and lower at the same time.
         </p>
