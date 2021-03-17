@@ -435,7 +435,7 @@ footer a:hover {
     text-orientation: mixed;
   }
 }
-@media (min-width: 32em) and (min-height: 500px) {
+@media only screen and (min-width: 32em) and (min-height: 500px) {
   .columns {
     -moz-columns: 350px 2;
     columns: 350px 2;
@@ -491,6 +491,21 @@ footer a:hover {
     justify-content: space-around;
     margin: 0;
   }
+  .polaroids {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .polaroid {
+    width: 30vw;
+    min-width: 20vw;
+    page-break-inside: avoid;
+  }
+  .polaroid a {
+    page-break-inside: avoid;
+  }
+  .polaroid a[href]:after {
+    content: "";
+  }
+
   article iframe {
     display: none;
   }
