@@ -180,7 +180,7 @@ hgroup {
 }
 
 .polaroid {
-  transition: all ease 0.6s;
+  transition: ease 0.7s;
   z-index: 1;
   min-width: 87.5%;
 }
@@ -191,6 +191,7 @@ hgroup {
   margin-inline-start: 10px;
   -webkit-margin-end: 10px;
   margin-inline-end: 10px;
+  transition: ease 0.6s;
 }
 .polaroid figure:hover {
   box-shadow: 3px 3px 3px #555;
