@@ -18,3 +18,6 @@
 * auch Vortrag gehalten
 
 We gave talk about it https://media.ccc.de/v/rc3-11385-divoc_forever
+
+## r2r
+* https://media.ccc.de/v/divoc-reboot-to-respawn-2021-9-lightning-talks
