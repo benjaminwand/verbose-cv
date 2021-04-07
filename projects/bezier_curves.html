@@ -60,6 +60,20 @@
     <article>
       <h2>The video</h2>
       <section class="columns">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/tOx5UI8GGns"
+          srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/tOx5UI8GGns?autoplay=1><img src=https://img.youtube.com/vi/tOx5UI8GGns/hqdefault.jpg alt='Bézier curve tutorial'><span>▶</span></a>"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="tuning and voicing explained"
+        >
+          <a href="https://www.youtube-nocookie.com/embed/tOx5UI8GGns"
+            >Bézier curve tutorial</a
+          ></iframe
+        >
         <p>
           <a href="cookie-cutters.html">Writing cookie cutters</a> made me
           explore
@@ -78,20 +92,6 @@
           >
           in the folder 'teaching examples'.
         </p>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/tOx5UI8GGns"
-          srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/tOx5UI8GGns?autoplay=1><img src=https://img.youtube.com/vi/tOx5UI8GGns/hqdefault.jpg alt='Bézier curve tutorial'><span>▶</span></a>"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          title="tuning and voicing explained"
-        >
-          <a href="https://www.youtube-nocookie.com/embed/tOx5UI8GGns"
-            >Bézier curve tutorial</a
-          ></iframe
-        >
       </section>
       <h2>It is a curve ... and we'll calculate points</h2>
 
@@ -346,6 +346,22 @@ for (i=[p1, p2, p3, p4])
           13 and 14 all having the same x-value (0).
         </p>
       </section>
+      <h2>Other applications</h2>
+      <section class="columns">
+        <p>
+          Bézier curves can be used for many things, for instance I made a
+          <a
+            href="https://github.com/benjaminwand/OpenScad-random/blob/main/items/Balkon.scad"
+            >balustrade balcony</a
+          >
+          in OpenSCAD using Bézier curves.
+        </p>
+        <img
+          src="../img/balustrade.jpg"
+          alt="typographic letter 'd', where the points that define the Bézier-curves are added"
+        />
+      </section>
+
       <h2>Live coding video</h2>
       <section class="columns">
         <iframe
