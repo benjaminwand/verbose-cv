@@ -184,7 +184,8 @@ hgroup {
   z-index: 1;
   min-width: 87.5%;
 }
-.polaroid figure {
+.polaroid figure,
+.polaroid a figure {
   border: 15px solid #fefaee;
   box-shadow: 3px 3px 3px #888;
   -webkit-margin-start: 10px;
@@ -193,12 +194,11 @@ hgroup {
   margin-inline-end: 10px;
   transition: ease 0.6s;
 }
-.polaroid figure:hover {
+.polaroid a figure:hover {
   box-shadow: 3px 3px 3px #555;
 }
 
 .polaroid figcaption {
-  color: #2980b9;
   background-color: #fefaee;
   min-height: 52px;
   margin: auto -12px; /*making sure there can be text on the whole width of the polaroid*/
@@ -206,6 +206,9 @@ hgroup {
   font-size: 1.2em;
   text-align: center;
   padding: 0.8rem 0 0 0;
+}
+.polaroid a figcaption {
+  color: #2980b9;
 }
 .polaroid img {
   width: 100%;
@@ -605,16 +608,19 @@ footer a:hover {
     color: #a88800;
   }
 
-  .polaroid figure {
+  .polaroid figure,
+  .polaroid a figure {
     border: 15px solid #031e4c;
     box-shadow: 0 0 1px white;
   }
-  .polaroid figure:hover {
+  .polaroid a figure:hover {
     box-shadow: 0 0 3px white;
   }
   .polaroid figcaption {
-    color: #a88800;
     background-color: #031e4c;
+  }
+  .polaroid a figcaption {
+    color: #a88800;
   }
 
   article {
