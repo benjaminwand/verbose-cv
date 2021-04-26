@@ -1,0 +1,1 @@
+1.10. 2018 Loft in OpenSCAD https://www.youtube.com/watch?v=zaBSSgS3MOA&t=2s https://github.com/benjaminwand/OpenScad-random/tree/main/modules/loft%20module
