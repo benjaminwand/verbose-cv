@@ -229,7 +229,7 @@ hgroup {
 .polaroid:nth-child(7n + 1) {
   transform: rotate(1.5deg);
 }
-.polaroid:hover {
+.polaroid a figure:hover {
   transform: scale(1.03) rotate(1.5deg);
   z-index: 999;
 }
@@ -667,19 +667,8 @@ footer a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .polaroid:nth-child(2n):hover {
-    transform: rotate(4deg);
-  }
-  .polaroid:nth-child(2n + 1):hover {
-    transform: rotate(-4deg);
-  }
-  .polaroid:nth-child(3n):hover {
-    transform: rotate(2.5deg);
-  }
-  .polaroid:nth-child(3n + 1):hover {
-    transform: rotate(-2.5deg);
-  }
-  .polaroid:nth-child(7n + 1):hover {
-    transform: rotate(1.5deg);
+
+  .polaroid:nth-child(1n) a figure:hover {
+    transform: rotate(0deg);
   }
 }
