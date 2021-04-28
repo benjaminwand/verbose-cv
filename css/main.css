@@ -608,14 +608,14 @@ footer a:hover {
 
   .polaroid figure,
   .polaroid a figure {
-    border: 15px solid #031e4c;
-    box-shadow: 0 0 1px white;
+    border: 15px solid hsl(218, 60%, 10%);
+    box-shadow: 0 0 2px white;
   }
   .polaroid a figure:hover {
-    box-shadow: 0 0 3px white;
+    box-shadow: 0 0 5px white;
   }
   .polaroid figcaption {
-    background-color: #031e4c;
+    background-color: hsl(218, 60%, 10%);
   }
   .polaroid a figcaption {
     color: #a88800;
