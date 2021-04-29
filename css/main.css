@@ -180,7 +180,6 @@ hgroup {
 }
 
 .polaroid {
-  transition: ease 0.7s;
   z-index: 1;
   min-width: 87.5%;
 }
@@ -198,7 +197,7 @@ hgroup {
 .polaroid figcaption {
   background-color: #fefaee;
   min-height: 52px;
-  margin: auto -12px; /*making sure there can be text on the whole width of the polaroid*/
+  margin: auto -12px; /* making sure there can be text on the whole width of the polaroid */
   font-family: "Indie Flower", cursive;
   font-size: 1.2em;
   text-align: center;
