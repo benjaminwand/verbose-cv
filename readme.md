@@ -15,7 +15,6 @@ Here I’m listing a couple of things that I want to add later, which is rather 
   * winddruck messen in mmh2o
 (check youtube videos for further organ topics)
 ### 2017
-* SHA choir https://media.ccc.de/v/SHA2017-348-lightning_talks_day_4#t=2531
 * voctoknopf
 ### 2016
 * Soap Opera / study at UdK +1
