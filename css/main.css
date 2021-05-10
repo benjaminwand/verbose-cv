@@ -209,21 +209,22 @@ hgroup {
 .polaroid img {
   width: 100%;
 }
-
-.polaroid:nth-child(2n) {
-  transform: rotate(4deg);
-}
-.polaroid:nth-child(2n + 1) {
-  transform: rotate(-4deg);
-}
-.polaroid:nth-child(3n) {
-  transform: rotate(2.5deg);
-}
-.polaroid:nth-child(3n + 1) {
-  transform: rotate(-2.5deg);
-}
-.polaroid:nth-child(7n + 1) {
-  transform: rotate(1.5deg);
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .polaroid:nth-child(2n) {
+    transform: rotate(4deg);
+  }
+  .polaroid:nth-child(2n + 1) {
+    transform: rotate(-4deg);
+  }
+  .polaroid:nth-child(3n) {
+    transform: rotate(2.5deg);
+  }
+  .polaroid:nth-child(3n + 1) {
+    transform: rotate(-2.5deg);
+  }
+  .polaroid:nth-child(7n + 1) {
+    transform: rotate(1.5deg);
+  }
 }
 .polaroid a figure:hover {
   box-shadow: 3px 3px 3px #555;
@@ -664,7 +665,6 @@ footer a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   .polaroid:nth-child(1n) a figure:hover {
     transform: rotate(0deg);
   }
