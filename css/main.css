@@ -250,7 +250,7 @@ article p {
 article figure {
   padding: 0;
   margin: 0;
-  display: inline-block;
+  display: block;
 }
 article img {
   max-width: calc(100% - 1rem);
@@ -315,6 +315,7 @@ pre {
   color: grey;
   font-family: monospace;
   float: right;
+  margin-right: 1em;
 }
 .fake-table {
   display: flex;
