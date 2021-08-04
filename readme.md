@@ -22,6 +22,5 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 * paleo dishes +1
 
 * Öffi LangstreckenZug-Logo
-* Teilbarkeitsregeln unterschiedlicher Basen
 
 
