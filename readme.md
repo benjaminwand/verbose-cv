@@ -20,6 +20,8 @@ Here I’m listing a couple of things that I want to add later, which is rather 
 * Soap Opera / study at UdK +1
 ### 2014
 * paleo dishes +1
-* tied up Kurt Krömer 2014
+
+* Öffi LangstreckenZug-Logo
+* Teilbarkeitsregeln unterschiedlicher Basen
 
 
