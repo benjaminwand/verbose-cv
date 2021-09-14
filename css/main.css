@@ -192,6 +192,7 @@ hgroup {
   -webkit-margin-end: 10px;
   margin-inline-end: 10px;
   transition: ease 0.6s;
+  background-color: #fefaee;
 }
 
 .polaroid figcaption {
@@ -263,6 +264,8 @@ article p + img {
   margin-bottom: 1rem;
 }
 article iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
   max-width: 100%;
   margin: auto;
   display: block;
@@ -667,6 +670,6 @@ footer a:hover {
 
 @media (prefers-reduced-motion: reduce) {
   .polaroid:nth-child(1n) a figure:hover {
-    transform: rotate(0deg);
+    transform: scale(1.02) rotate(0deg);
   }
 }
