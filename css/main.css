@@ -251,11 +251,11 @@ article p {
 article figure {
   padding: 0;
   margin: 0;
-  display: block;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
 }
 article img {
   max-width: calc(100% - 1rem);
-  display: inline-block;
   border: thin #c5d8e1 solid;
   padding: 0.5rem;
   background-color: #fff;
@@ -268,9 +268,8 @@ article iframe {
   height: auto;
   max-width: 100%;
   margin: auto;
-  display: block;
 }
-.resp-container0 {
+.resp-container0 { /* for organ talks site */
   display: inline-block;
 }
 .resp-container {
@@ -342,6 +341,10 @@ pre {
 .inline-block {
   /* hack to get something like break-after: avoid-column; */
   display: inline-block;
+}
+.break-before {
+    -moz-column-break-before: column;
+         break-before: column;
 }
 
 /* ===================== footer ========================== */
@@ -447,6 +450,7 @@ footer a:hover {
     columns: 350px 2;
     -moz-column-gap: 25px;
     column-gap: 25px;
+    -webkit-column-break-inside: avoid;
   }
 
   article h3 {
