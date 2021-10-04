@@ -186,7 +186,10 @@ hgroup {
 .polaroid figure,
 .polaroid a figure {
   border: 15px solid #fefaee;
-  box-shadow: 3px 3px 3px #888;
+  box-shadow:
+  0.7px 1px 5.3px rgba(0, 0, 0, 0.04),
+  2.2px 3.4px 17.9px rgba(0, 0, 0, 0.06),
+  10px 15px 80px rgba(0, 0, 0, 0.1);
   -webkit-margin-start: 10px;
   margin-inline-start: 10px;
   -webkit-margin-end: 10px;
@@ -228,7 +231,10 @@ hgroup {
   }
 }
 .polaroid a figure:hover {
-  box-shadow: 3px 3px 3px #555;
+  box-shadow:
+  1.3px 2.1px 5.3px rgba(0, 0, 0, 0.04),
+  4.5px 6.9px 17.9px rgba(0, 0, 0, 0.06),
+  20px 31px 80px rgba(0, 0, 0, 0.1);
   transform: scale(1.03) rotate(1.5deg);
   z-index: 999;
 }
