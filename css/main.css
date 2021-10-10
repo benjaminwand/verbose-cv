@@ -139,11 +139,22 @@ hgroup {
   border-radius: 25px;
   background-color: #fefaee;
 }
+.choices legend {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #222;
+  padding: 0.2rem 0.7rem;
+  background-color: inherit;
+  border: 2px solid #c5d8e1;
+  border-radius: 15px;
+}
 .choices ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
   margin: 0;
-  padding: 0.85rem;
+  padding: 0.5rem 0 0 0.85rem;
 }
 .choices li {
   list-style: none;
@@ -155,16 +166,11 @@ hgroup {
   cursor: pointer;
 }
 
-.choices legend {
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  color: #222;
-  padding: 0.2rem 0.7rem;
-  background-color: inherit;
-  border: 2px solid #c5d8e1;
-  border-radius: 15px;
+.choices label {
+  display: block;
+  min-width: 35px;
+  min-height: 35px;
+
 }
 
 /* ===================== polaroids ======================== */
@@ -422,7 +428,7 @@ footer a:hover {
   .choices ul {
     display: flex;
     margin: 0 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
     border-radius: 20px;
     justify-content: space-around;
     margin: 0;
