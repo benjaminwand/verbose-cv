@@ -261,11 +261,16 @@ article p {
   text-align: left;
 }
 article figure {
+  display: block;
   padding: 0;
   margin: 0;
   -moz-column-break-inside: avoid;
        break-inside: avoid;
 }
+article figcaption {
+  text-align: center;
+}
+
 article img {
   max-width: calc(100% - 1rem);
   border: thin #c5d8e1 solid;
