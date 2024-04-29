@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Benjamin Wand - architecture drawing in OpenSCAD</title>
+    <title>Benjamin Wand - Architecture drawing in OpenSCAD</title>
     <meta
       name="description"
       content="Attempting architecture technical drawing in OpenSCAD"
@@ -63,21 +63,26 @@
             workflow.
           </li>
           <li>
-            Although single source of truth is a benefit to programming, try to
-            only display the things one needs at a point in time helps. This
-            results in <i> lots</i> of
+            Although
+            <a href="https://en.wikipedia.org/wiki/Single_source_of_truth"
+              >single source of truth</a
+            >
+            is a benefit to programming, try to only display the things one
+            needs at a point in time helps. This results in <i> lots</i> of
             <code class="OpenSCAD"> if (something) </code> in the code.
           </li>
           <li>
             Mysteriously slow is creating 2d things with projection. I should
             try finding a faster way to get those. (The reason I used projection
-            to begin with was getting images at a specific size, eg 1:200.)
+            to begin with was getting images at a specific size, eg 1:200.
+            Export as pdf can do that.)
           </li>
           <li>Next time: work with multiple files in order to scroll less.</li>
           <li>
             The walls in the image are black because they should be black in the
             floor plans. This was a mistake, I should have distinguished between
-            'walls seen from the outside' and 'walls that are cut' earlier.
+            'walls seen from the outside' and 'walls that are cut' earlier in
+            the process.
           </li>
           <li>
             That OpenSCAD is unsuitable for visualization isn't an actual
@@ -87,7 +92,7 @@
           </li>
           <li>
             Weird in OpenSCAD: which color something has when using bool
-            operations.
+            operations is pretty unpredictable to me.
           </li>
         </ul>
         <p>
@@ -96,6 +101,8 @@
             >on Github</a
           >.
         </p>
+      </section>
+      <section class="columns">
         <img src="../img/kuppelbunker.png" alt="house written in OpenSCAD" />
         <img src="../img/EB1.png" alt="house written in OpenSCAD" />
       </section>
