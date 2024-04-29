@@ -16,6 +16,18 @@
     <meta property="og:image" content="" />
     <meta property="og:description" content="" />
     <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="../css/a11y-light.css" />
+    <link
+      rel="stylesheet"
+      media=" (prefers-color-scheme: dark)"
+      href="../css/a11y-dark.css"
+    />
+    <script src="../js/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </head>
   <body>
     <header class="header_projects">
@@ -42,24 +54,20 @@
       <p class="date">Summer 2023</p>
     </header>
     <article>
+      <h2>The project</h2>
       <section class="columns">
         <p>
           I wrote a first prototype for the project of Kerry Williams from
           Alaska who would like to build large objects, like kayaks, from 3d
           printed puzzle pieces, so, now that more and more people have access
           to 3d printers, more people have the chance to build large things on
-          their own. The first prototype is a sphere shaped puzzle that I wrote
-          in
+          their own. <br />
+          The first prototype is a sphere shaped puzzle that I wrote in
           <a href="https://openscad.org">OpenSCAD</a> and the pieces are
           hexagons and pentagons, like a
           <a href="https://en.wikipedia.org/wiki/Truncated_icosahedron"
             >soccer ball / truncated icosahedron</a
-          >
-          .
-        </p>
-        <p>
-          There will be more text later, for now this article is just a
-          placeholder for the links to the project
+          >. The files are
           <a
             href="https://github.com/benjaminwand/OpenScad-random/tree/main/items/round_puzzles"
             >on GitHub</a
@@ -69,16 +77,85 @@
             href="https://www.printables.com/de/model/615424-sphere-puzzle/files"
             >on Printables</a
           >.
-          <figure>
-            <img src="../img/bluesphere.jpeg" alt="blue sphere puzzle" />
-            <figcaption>
-              photo: Kerry Williams
-            </figcaption>
-          </figure>
         </p>
+        <p>I went for a truncated icosahedron because</p>
+        <ul>
+          <li>
+            it is mathematically figured out, therefore I don't need to worry
+            about
+            <a href="https://en.wikipedia.org/wiki/Tessellation"
+              >tessellation</a
+            >
+            to begin with, and
+          </li>
+          <li>
+            I find beneficial, or a good example, that it is made of hexagons
+            and pentagons because that provides a favorable ratio of edge length
+            versus surface covered. (More about that in the video
+            <a href="https://www.youtube.com/watch?v=thOifuHs6eY"
+              >Hexagons are the Bestagons</a
+            >.)
+          </li>
+        </ul>
+        <p>
+          The maths of the truncated icosahedron is taken from
+          <a
+            href="https://www.printables.com/de/model/430670-truncated-icosahedron-rounded-soccer-form"
+            >this printable</a
+          >.
+        </p>
+        <p>
+          As you can see on the image with the blue ball, the pieces have an
+          edge inside in order to ease the maneuvering of the pieces against
+          each other and to keep the last piece from falling inside of the ball.
+        </p>
+        <figure>
+          <img src="../img/bluesphere.jpeg" alt="blue sphere puzzle" />
+          <figcaption>
+            photo: Kerry Williams
+          </figcaption>
+        </figure>
+      </section>
+      <h2>The code</h2>
+      <section class="columns">
+        <p>
+          Apart from moving around pentagons and hexagons, the code does this:
+          call one piece, and cut away the previous pieces. This way it is made
+          sure that the pieces fit neatly into each other.
+        </p>
+        <p>
+          The data for each piece looks like that:
+        </p>
+        <pre> <code class="OpenSCAD">rotate([hh,0,120]) rotate([hh,0,60])
+  piece(6, 18, [0, 0, 1, 1, 1, 0], $gap); </code></pre>
+        <p>
+          and the <code>[0, 0, 1, 1, 1, 0]</code> part encodes which sides are
+          dovetailed or initially flat. <br />
+          The dovetailed pieces 'bite' into the flat peaces, resulting in two
+          pieces that fit together.
+        </p>
+
+        <pre> <code class="OpenSCAD">for (i = interval) { // interval = which pieces
+  intersection(){
+    globe();         // the sphere
+    difference(){
+      let($gap = 0) children(i);
+      if (i > 0) for (k = [0:i-1])
+        let($gap = gap) children(k);
+    };
+  };
+}; </code></pre>
+        <p>
+          The <code>$gap</code> makes sure that the pieces can get disassembled
+          again.
+        </p>
+        <img
+          src="../img/platte_puzzle.png"
+          alt="display how puzzle pieces 'bite' into each other"
+        />
       </section>
 
-      <p class="update">Text last updated: October 15th 2023</p>
+      <p class="update">Text last updated: April 29th 2024</p>
     </article>
     <footer class="no-print">
       <ul>
