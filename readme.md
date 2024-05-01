@@ -4,8 +4,7 @@ This is a portfolio website in the making which can be seen at https://benjaminw
 ## Future topics
 Here I’m listing a couple of things that I want to add later, which is rather for myself, but please tell me if you want to read more about a specific thing.
 
-### 2024
-* 3d printed lehre
+
 ### 2019
 * All I Can Eat / Hackathon Salzburg
 ### 2018
