@@ -46,9 +46,9 @@
 
       <section class="columns">
         <p>
-          In the sometimes slow OpenSCAD one has to be mindful of computing
-          power and I had been unhappy with the approximation of the length of
-          the curve in
+          In the sometimes slow <a href="https://openscad.org">OpenSCAD</a> one
+          has to be mindful of computing power and I had been unhappy with the
+          approximation of the length of the curve in
           <a href="bezier_curves.html">my Bézier curve code</a> since it
           existed. Ideally I would like to have an f(x) shaped way to calculate
           the approximation but the recursive nature of Bézier curves is
@@ -57,12 +57,12 @@
         <p>
           ChatGPT makes coding so easy now that I could approach it with
           data-scienc-y methods, making it the first project where I analyze
-          data in a Jupyter notebook in a self-directed manner. I made 1000
-          cubic Bézier curves based on random numbers and looked at the sums of
-          lengths of the approximations of three, four and five points compared
-          to the actual lengths. They gave me, on average, 1.14, 1.05 and 1.03
-          times too short lengths, with the dispersion being worse for less
-          points too.
+          data in a Jupyter notebook as my own project. I made 1000 cubic Bézier
+          curves based on random numbers and looked at the sums of lengths of
+          the approximations of three, four and five points compared to the
+          actual lengths. They gave me, on average, 1.14, 1.05 and 1.03 times
+          too short lengths, with the dispersion being worse for less points
+          too.
         </p>
         <p>
           Then I looked at the edge cases (very long and very short
@@ -80,16 +80,8 @@
           ChatGPT.
         </p>
       </section>
-      <h2>Future</h2>
+
       <section class="columns">
-        <p>
-          I might do it again and throw thoughts, ChatGPT and Jupyter onto
-          finding a f(x) shaped method after all.
-        </p>
-        <p>
-          Also, I have to implement it into my Bézier curve code to make actual
-          use of it.
-        </p>
         <figure>
           <img
             src="../img/one_curve.png"
@@ -111,8 +103,19 @@
           </figcaption>
         </figure>
       </section>
+      <h2>Future</h2>
+      <section class="columns">
+        <p>
+          I might do it again and throw thoughts, ChatGPT and Jupyter onto
+          finding an f(x) shaped method after all.
+        </p>
+        <p>
+          Also, I have to implement it into my Bézier curve OpenSCAD code to
+          make actual use of it.
+        </p>
+      </section>
 
-      <p class="update">Text last updated: June 12th 2024</p>
+      <p class="update">Text last updated: June 13th 2024</p>
     </article>
     <footer class="no-print">
       <ul>
