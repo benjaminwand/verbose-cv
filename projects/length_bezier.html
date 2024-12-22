@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benjamin Wand - Approximation of Bézier curve length</title>
+    <meta
+      name="description"
+      content="HIER IST DER INHALT MEINER META DESCRIPTION"
+    />
+    <meta name="keywords" content="KEYWORD 1, KEYWORD 2, KEYWORD 3" />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <header class="header_projects">
+      <a class="backtoindex" href="../index.html">
+        <svg
+          class="bi bi-house"
+          width="2em"
+          height="2em"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+          /></svg
+        >Benjamin Wand - Verbose CV
+      </a>
+      <h1>Approximation for the lengths of Bézier curves</h1>
+      <p class="date">December 2024</p>
+    </header>
+    <article>
+      <section class="columns">
+        <p>
+          A good approximation for the length of Bézier curves has been lacking
+          for <a href="bezier_curves.html">my OpenSCAD Bézier curve code</a> and
+          now I have been fixing it. All the code is
+          <a href="https://github.com/benjaminwand/bezier-curve-length"
+            >on GitHub</a
+          >.
+        </p>
+        <p>
+          I've approached it this way:
+        </p>
+        <ol>
+          <li>
+            Create Bézier curves from random points. Those curves look wild.
+          </li>
+          <li>
+            Run linear regression with the distances of the points as x and the
+            length as y. This made the formulae below.
+          </li>
+          <li>
+            Test model on curves of my former design projects (<a
+              href="cookie-cutters.html"
+              >cookie cutters</a
+            >). Works fine / good prediction.
+          </li>
+        </ol>
+        <p>Given a curve with the points labeled as such:</p>
+        <img src="../img/abb1.png" alt="Bézier curve with P0-P3" />
+        <p>
+          The formula for a curve with three points is: <br /><tt>
+            L= 0.43 &middot; |P<sub>0</sub> - P<sub>1</sub>|<br />
+            + 0.53 &middot; |P<sub>0</sub> - P<sub>2</sub>|<br />
+            + 0.43 &middot; |P<sub>1</sub> - P<sub>2</sub>|<br
+          /></tt>
+        </p>
+        <p>
+          The formula for a curve with four points is: <br />
+          <tt>
+            L= 0.35 &middot; |P<sub>0</sub> - P<sub>1</sub>|<br />
+            + 0.40 &middot; |P<sub>0</sub> - P<sub>2</sub>|<br />
+            + 0.23 &middot; |P<sub>0</sub> - P<sub>3</sub>|<br />
+            - 0.09 &middot; |P<sub>1</sub> - P<sub>2</sub>|<br />
+            + 0.40 &middot; |P<sub>1</sub> - P<sub>3</sub>|<br />
+            + 0.35 &middot; |P<sub>2</sub> - P<sub>3</sub>|<br
+          /></tt>
+        </p>
+        <p>
+          The formula for a curve with five points is: <br /><tt>
+            L= 0.32 &middot; |P<sub>0</sub> - P<sub>1</sub>|<br />
+            + 0.35 &middot; |P<sub>0</sub> - P<sub>2</sub>|<br />
+            + 0.23 &middot; |P<sub>0</sub> - P<sub>3</sub>|<br />
+            + 0.10 &middot; |P<sub>0</sub> - P<sub>4</sub>|<br />
+            - 0.13 &middot; |P<sub>1</sub> - P<sub>2</sub>|<br />
+            + 0.20 &middot; |P<sub>1</sub> - P<sub>3</sub>|<br />
+            + 0.23 &middot; |P<sub>1</sub> - P<sub>4</sub>|<br />
+            - 0.13 &middot; |P<sub>2</sub> - P<sub>3</sub>|<br />
+            + 0.35 &middot; |P<sub>2</sub> - P<sub>4</sub>|<br />
+            + 0.32 &middot; |P<sub>3</sub> - P<sub>4</sub>|<br
+          /></tt>
+        </p>
+      </section>
+
+      <p class="update">Text last updated: December 22nd 2024</p>
+    </article>
+    <footer class="no-print">
+      <ul>
+        <li><a href="https://github.com/benjaminwand">Github</a></li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCE8TuNtWTf4_s8Lz4yzQ6WQ"
+            >Youtube</a
+          >
+        </li>
+
+        <li>
+          <a href="https://www.printables.com/de/@BenjaminWand_246402"
+            >Printables</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instructables.com/member/better%20call%20it%20art/"
+            >Instructables</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
