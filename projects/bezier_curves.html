@@ -114,7 +114,7 @@
 
       <h3>
         The formula:
-        <span class="code">p1 * [0...1] + p2 * [1...0]</span>
+        <span class="code">p1 &middot; [0...1] + p2 &middot; [1...0]</span>
       </h3>
       <section class="columns">
         <p>
@@ -146,8 +146,10 @@ for (i = [p1, p2]) translate(i)
       <section class="columns">
         <p>
           If a third point gets added and the curve gets curvy, the formula
-          <span class="nobr code">'p1 * [0...1] + p2 * [1...0]' </span> gets
-          called recursively.
+          <span class="nobr code"
+            >'p1 &middot; [0...1] + p2 &middot; [1...0]'
+          </span>
+          gets called recursively.
         </p>
 
         <pre> <code class="OpenSCAD">p1 = [5, 7.5];
@@ -164,6 +166,7 @@ for (i = [0 : 1/n : 1])
 
 for (i = [p1, p2, p3]) translate(i)
   color("black") sphere(0.2);</code> </pre>
+        <p>Bézier curves with four control points are most common.</p>
       </section>
 
       <h2>The production code ...</h2>
@@ -272,10 +275,11 @@ for (i=[p1, p2, p3, p4])
           and a number which of the points will be calculated 'idx'. <br />
           It asks: 'Am I given more than two points in the array 'pts'?' And if
           yes, it calls itself for the first to the second-last point multiplied
-          by n*idx and adds calling itself for the second to the last point,
-          multiplied with 1-n*idx. <br />
+          by n&middot;idx and adds calling itself for the second to the last
+          point, multiplied with 1-n&middot;idx. <br />
           If the number of points in the array is two, it does the familiar
-          <span class="code">'p1 * [0...1] + p2 * [1...0]'</span> thing.
+          <span class="code">'p1 &middot; [0...1] + p2 &middot; [1...0]'</span>
+          thing.
         </p>
         <p>
           In b_curv( ), which is called with an array of points 'pts', the
@@ -300,6 +304,20 @@ for (i=[p1, p2, p3, p4])
         </p>
       </section>
 
+      <h2>Approximating the length of the curve</h2>
+      <section class="columns">
+        <p>
+          More than four years after writing the Bézier curve code, I came up
+          with
+          <a href="length_bezier.html"
+            >a better approximation of the length of the curve</a
+          >
+          which helps automatically deciding how many pieces one wants to
+          calculate.
+        </p>
+          I'll have to implement that soon.
+        </p>
+      </section>
       <h2>Choosing locations for points</h2>
       <section class="columns">
         <img
@@ -319,7 +337,6 @@ for (i=[p1, p2, p3, p4])
           think of it as that the derivative function at the start of the curve
           points towards the second point.
         </p>
-
         <p>
           And this is why, in typography, the start and end points of the curves
           are commonly set at
