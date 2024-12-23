@@ -75,37 +75,39 @@
         <p>Given a curve with the points labeled as such:</p>
         <img src="../img/abb1.png" alt="Bézier curve with P0-P3" />
         <p>
-          The formula for a curve with three points is: <br /><tt>
-            L= 0.43 &middot; |P<sub>0</sub> - P<sub>1</sub>|<br />
-            + 0.53 &middot; |P<sub>0</sub> - P<sub>2</sub>|<br />
-            + 0.43 &middot; |P<sub>1</sub> - P<sub>2</sub>|<br
-          /></tt>
+          The formula for a curve with three points is:
         </p>
+        <pre>
+L = 0.43 &middot; |P<sub>0</sub> - P<sub>1</sub>|
+  + 0.53 &middot; |P<sub>0</sub> - P<sub>2</sub>|
+  + 0.43 &middot; |P<sub>1</sub> - P<sub>2</sub>|</pre
+        >
         <p>
-          The formula for a curve with four points is: <br />
-          <tt>
-            L= 0.35 &middot; |P<sub>0</sub> - P<sub>1</sub>|<br />
-            + 0.40 &middot; |P<sub>0</sub> - P<sub>2</sub>|<br />
-            + 0.23 &middot; |P<sub>0</sub> - P<sub>3</sub>|<br />
-            - 0.09 &middot; |P<sub>1</sub> - P<sub>2</sub>|<br />
-            + 0.40 &middot; |P<sub>1</sub> - P<sub>3</sub>|<br />
-            + 0.35 &middot; |P<sub>2</sub> - P<sub>3</sub>|<br
-          /></tt>
+          The formula for a curve with four points is:
         </p>
+        <pre>
+L = 0.35 &middot; |P<sub>0</sub> - P<sub>1</sub>|
+  + 0.40 &middot; |P<sub>0</sub> - P<sub>2</sub>|
+  + 0.23 &middot; |P<sub>0</sub> - P<sub>3</sub>|
+  - 0.09 &middot; |P<sub>1</sub> - P<sub>2</sub>|
+  + 0.40 &middot; |P<sub>1</sub> - P<sub>3</sub>|
+  + 0.35 &middot; |P<sub>2</sub> - P<sub>3</sub>|</pre
+        >
         <p>
-          The formula for a curve with five points is: <br /><tt>
-            L= 0.32 &middot; |P<sub>0</sub> - P<sub>1</sub>|<br />
-            + 0.35 &middot; |P<sub>0</sub> - P<sub>2</sub>|<br />
-            + 0.23 &middot; |P<sub>0</sub> - P<sub>3</sub>|<br />
-            + 0.10 &middot; |P<sub>0</sub> - P<sub>4</sub>|<br />
-            - 0.13 &middot; |P<sub>1</sub> - P<sub>2</sub>|<br />
-            + 0.20 &middot; |P<sub>1</sub> - P<sub>3</sub>|<br />
-            + 0.23 &middot; |P<sub>1</sub> - P<sub>4</sub>|<br />
-            - 0.13 &middot; |P<sub>2</sub> - P<sub>3</sub>|<br />
-            + 0.35 &middot; |P<sub>2</sub> - P<sub>4</sub>|<br />
-            + 0.32 &middot; |P<sub>3</sub> - P<sub>4</sub>|<br
-          /></tt>
+          The formula for a curve with five points is:
         </p>
+        <pre>
+L = 0.32 &middot; |P<sub>0</sub> - P<sub>1</sub>|
+  + 0.35 &middot; |P<sub>0</sub> - P<sub>2</sub>|
+  + 0.23 &middot; |P<sub>0</sub> - P<sub>3</sub>|
+  + 0.10 &middot; |P<sub>0</sub> - P<sub>4</sub>|
+  - 0.13 &middot; |P<sub>1</sub> - P<sub>2</sub>|
+  + 0.20 &middot; |P<sub>1</sub> - P<sub>3</sub>|
+  + 0.23 &middot; |P<sub>1</sub> - P<sub>4</sub>|
+  - 0.13 &middot; |P<sub>2</sub> - P<sub>3</sub>|
+  + 0.35 &middot; |P<sub>2</sub> - P<sub>4</sub>|
+  + 0.32 &middot; |P<sub>3</sub> - P<sub>4</sub>|</pre
+        >
 
         <p><b>Todo:</b> Implement it into the OpenSCAD code.</p>
       </section>
