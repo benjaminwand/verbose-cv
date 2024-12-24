@@ -69,6 +69,10 @@ video {
   vertical-align: middle;
 }
 
+.only-on-dark {
+display: none;
+}
+
 a {
   text-decoration: none;
   color: #2980b9;
@@ -617,6 +621,13 @@ footer a:hover {
   img {
     -webkit-filter: brightness(0.75);
     filter: brightness(0.75);
+  }
+  .only-on-dark {
+    display: block;
+  }
+
+  .only-on-light {
+    display: none;
   }
 
   .choices fieldset {
