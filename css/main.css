@@ -69,7 +69,7 @@ video {
   vertical-align: middle;
 }
 
-.only-on-dark {
+img.only-on-dark {
 display: none;
 }
 
@@ -622,11 +622,11 @@ footer a:hover {
     -webkit-filter: brightness(0.75);
     filter: brightness(0.75);
   }
-  .only-on-dark {
+  img.only-on-dark {
     display: block;
   }
 
-  .only-on-light {
+  img.only-on-light {
     display: none;
   }
 
