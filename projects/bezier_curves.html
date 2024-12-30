@@ -135,7 +135,7 @@ for (i = [0 : 1/n : 1])
   translate( p1 * i + p2 * (1-i) )
     sphere(0.2);
 
-// displaying the end points
+// highlighting the control points
 for (i = [p1, p2]) translate(i)
   color("black") sphere(0.2);</code> </pre>
         <p>
@@ -145,7 +145,7 @@ for (i = [p1, p2]) translate(i)
       <h3>... used recursively</h3>
       <section class="columns">
         <p>
-          If a third point gets added and the curve gets curvy, the formula
+          If a third point gets added, the curve gets curvy. The formula
           <span class="nobr code"
             >'p1 &middot; [0...1] + p2 &middot; [1...0]'
           </span>
@@ -164,69 +164,135 @@ for (i = [0 : 1/n : 1])
     + (p2 * i + p3 * (1-i)) * (1-i) )
       sphere(0.2);
 
+// highlighting the control points
 for (i = [p1, p2, p3]) translate(i)
   color("black") sphere(0.2);</code> </pre>
-        <p>Bézier curves with four control points are most common.</p>
       </section>
 
-      <h2>The production code ...</h2>
+      <h2>The amount of points to calculate</h2>
+      <section class="columns">
+        <p>
+          So far we had <span class="code">n = 15</span> points, but the amout
+          of points we want in production varies. Sometimes we want a specific
+          amount, sometimes their distance matters more than the amount.
+        </p>
+        <p>
+          We will either be calling the function with that number or rely on the
+          length of the curve and a global variable
+          <span class="code">'fs'</span>. I have
+          <a href="length_bezier.html"
+            >approximations for Bézier curve lengths defined by three, four and
+            control points.</a
+          >
+        </p>
+        <pre> <code class="OpenSCAD">// roughly the size of parts of curves,
+// is a global value
+fs = 0.5;
+
+// distance between two points
+function dist(a, b) = len(a)==2?
+sqrt(                 // two dimensions
+    (a[0]-b[0])^2
+    +(a[1]-b[1])^2
+    ):
+sqrt(                 // three dimensions
+    (a[0]-b[0])^2
+    +(a[1]-b[1])^2
+    +(a[2]-b[2])^2
+    );
+
+// length of curve
+  function length(pts) = [
+    // three control points
+    if (len(pts) == 3)
+        0.43 * dist(pts[0], pts[1])
+      + 0.53 * dist(pts[0], pts[2])
+      + 0.43 * dist(pts[1], pts[2])
+    // four control points
+    else if (len(pts) == 4)
+        0.35 * dist(pts[0], pts[1])
+      + 0.40 * dist(pts[0], pts[2])
+      + 0.23 * dist(pts[0], pts[3])
+      - 0.09 * dist(pts[1], pts[2])
+      + 0.40 * dist(pts[1], pts[2])
+    // five control points
+    else if (len(pts) == 5)
+        0.32 * dist(pts[0], pts[1])
+      + 0.35 * dist(pts[0], pts[2])
+      + 0.23 * dist(pts[0], pts[3])
+      + 0.10 * dist(pts[0], pts[4])
+      - 0.13 * dist(pts[1], pts[2])
+      + 0.20 * dist(pts[1], pts[3])
+      + 0.23 * dist(pts[1], pts[4])
+      - 0.13 * dist(pts[2], pts[3])
+      + 0.35 * dist(pts[2], pts[4])
+      + 0.32 * dist(pts[3], pts[4])
+    else
+        echo("Wrong number of points")]
+  [0];       // makes list into number</code> </pre>
+      </section>
+
+      <h2>Calculating the points</h2>
 
       <section class="columns">
         <p>
-          For easier copy-pasting, the code is displayed in one go, and
-          commented below. <br />
-          Please play with fs and the points to explore how it works.
+          With the amount of points decidable, let's calculate them!
         </p>
-        <pre> <code class="OpenSCAD">// --- VARIABLES ---
-// roughly the size of parts of curves
-fs = 0.5;
+        <pre> <code class="OpenSCAD">// calculate singular points
+function b_pts(pts, fn, idx) =
+  // has pts more than two points?
+  len(pts) > 2 ?
+  // it calls itself in smaller portions
+    b_pts([for(i=[0:len(pts)-2])
+        pts[i]], fn, idx) * fn*idx
+      + b_pts([for(i=[1:len(pts)-1])
+        pts[i]], fn, idx) * (1-fn*idx)
+  // at two points we do the familiar
+  // 'p1 · [0...1] + p2 · [1...0]'
+    : pts[0] * fn*idx
+      + pts[1] * (1-fn*idx);
 
-// points
+function b_curv(pts, n) =
+// determine fn
+  let (fn=
+  // is n given? if so fn = n
+  n ? n :
+  // if no n is given,
+  // are there two controlpoints?
+  len(pts) == 2 ?
+  // if yes: fn = 2
+  2 :
+  // and if no, calculate:
+  length(pts)/fs)
+  // now knowing fn,
+  // call b_pts() and concatenate points
+    [for (i= [0:fn])
+      concat(b_pts(pts, 1/(fn-1), i))];</code> </pre>
+      </section>
+      <h2>Displaying the points</h2>
+
+      <section class="columns">
+        <pre> <code class="OpenSCAD">// points
 p1 = [5.5, 0];
 p2 = [1.5, 0];
 p3 = [0, 2];
 p4 = [0, 7];
 
-// --- FUNCTIONS AND MODULES ---
-// calculates the amount of points
-// from distance of two points and fs
-function fn(a, b) =
-  round(sqrt(pow(a[0]-b[0],2)
-  + pow(a[1]-b[1], 2))/fs);
-
-// calculate each individual point
-function b_pts(pts, n, idx) =
-  len(pts)>2 ?
-    b_pts([for(i=[0:len(pts)-2])
-        pts[i]], n, idx) * n*idx
-      + b_pts([for(i=[1:len(pts)-1])
-        pts[i]], n, idx) * (1-n*idx)
-    : pts[0] * n*idx
-      + pts[1] * (1-n*idx);
-
-// calculate fn() for given points,
-// call b_pts() and concatenate points
-function b_curv(pts) =
-  let (fn=fn(pts[0], pts[len(pts)-1]))
-    [for (i= [0:fn])
-      concat(b_pts(pts, 1/fn, i))];
-
-// displaying points as a rainbow
-module rainbow (points) {
-for (i= [0 : len(points)-1 ])
-  color([cos(20*i)/2+0.5,
-    -sin(20*i)/2+0.5,
-    -cos(20*i)/2+0.5,
-    1])
-  translate(points[i]) sphere(0.5, $fn=10);
-}
-
-// --- THE ACTUAL MODEL ---
 // calculating the points
 points = b_curv([p1, p2, p3, p4]);
 
 // displaying the calculated points
 rainbow(points);
+
+// displaying points as a rainbow
+module rainbow (points) {
+  for (i= [0 : len(points)-1 ])
+  color([cos(20*i)/2+0.5,  // red
+        -sin(20*i)/2+0.5,  // green
+        -cos(20*i)/2+0.5,  // blue
+        1])                // alpha
+translate(points[i]) sphere(0.5, $fn=10);
+}
 
 // displaying [p1 .. p4]
 for (i=[p1, p2, p3, p4])
@@ -234,90 +300,60 @@ for (i=[p1, p2, p3, p4])
     cylinder(1, 0.2, 0.2, $fn=10);
 </code> </pre>
       </section>
-      <h2>... commented</h2>
+      <h2>Further comments</h2>
       <section class="columns">
-        <h3>fs</h3>
         <p>
-          Unlike 'n' in the section before, we will work with a number of points
-          that is calculated from the first and last point of the curve, and a
-          variable fs, which works roughly like $fs, it says how large
-          approximately the distance between the calculated points shall be.
+          The code above can be found
+          <a
+            href="https://github.com/benjaminwand/OpenScad-random/blob/main/modules%3Autilities/beziercurve-example.scad"
+            >on GitHub.</a
+          >
+        </p>
+        <h3>functions b_pts() and b_curv()</h3>
+        <span class="code"></span>
+        <p>
+          <span class="code">b_pts()</span> contains the recursive mechanism and
+          returns a number. It is called for each point separately. It is called
+          with an array of points <span class="code">'pts'</span>, a number in
+          how many points the curve will be calculated
+          <span class="code">'fn'</span>, and a number which of the points will
+          be calculated <span class="code">'idx'</span>. <br />
+          It asks: 'Am I given more than two points in the array
+          <span class="code">'pts'</span>?' And if so, it calls itself for the
+          first to the second-last point multiplied by
+          <span class="code">n&middot;idx</span> and adds calling itself for the
+          second to the last point, multiplied with
+          <span class=" nobr code">1 - n&middot;idx</span>. <br />
+          If the number of points in the array is two, it does the familiar
+          <span class=" nobr code"
+            >'p1 &middot; [0...1] + p2 &middot; [1...0]'</span
+          >
         </p>
         <p>
-          Recursive functions are expensive in computing power and, depending
-          what you do with it, OpenSCAD is already slow. The point of fs being a
-          global variable here is that you can use a 'larger' number during most
-          of the production and calculate a finely grained model only when you
-          need it.
+          In <span class="code">b_curv()</span>, which is called with an array
+          of points <span class="code">'pts'</span> and an optional number
+          <span class="code">n</span>, the amount of points to calculate is
+          determined, <span class="code">b_pts()</span> called, and put
+          everything into an array.
         </p>
+        <h3>Uneven distance</h3>
         <p>
           As you can tell from the rendered file, the distance of the points is
-          not perfectly even, but usually good enough, after all we are behind
-          the curve and not the points.
+          not perfectly even. But usually good enough since the points are
+          closer by in places where the curve is tighter.
         </p>
-        <h3>function fn( )</h3>
+        <h3>A hull() for the real life</h3>
         <p>
-          fn( ) calculates a number, which will be the number of the points of a
-          curve, from the distance of two points and fs.
+          The rainbow is lovely to display the points but in most cases we want
+          something like this instead:
         </p>
-        <h3>functions b_pts( ) and b_curv( )</h3>
-        <p>
-          In the production code, I split the points-calculating mechanism into
-          two functions, where b_pts( ) is the same regardless of what the model
-          does and b_curv( ) can vary, depending on what I plan to do with the
-          Bézier curve. Furthermore I find it, with this separation, easier to
-          read and maintain.
-        </p>
-        <p>
-          b_pts( ) contains the recursive mechanism and returns a number. It is
-          called for each point separately. It is called with an array of points
-          'pts', a number in how many points the curve will be calculated 'n',
-          and a number which of the points will be calculated 'idx'. <br />
-          It asks: 'Am I given more than two points in the array 'pts'?' And if
-          yes, it calls itself for the first to the second-last point multiplied
-          by n&middot;idx and adds calling itself for the second to the last
-          point, multiplied with 1-n&middot;idx. <br />
-          If the number of points in the array is two, it does the familiar
-          <span class="code">'p1 &middot; [0...1] + p2 &middot; [1...0]'</span>
-          thing.
-        </p>
-        <p>
-          In b_curv( ), which is called with an array of points 'pts', the
-          calculation of the points is organized. It calls fn( ) with the first
-          and last point in 'pts' to get the variable fn. And then from zero to
-          fn, it calls b_pts( ) in order to calculate each point, and
-          concatenates them.
-        </p>
-        <p>
-          If the item modeled it a cookie-cutter, I already use b_curv as a
-          module to build shapes.
-        </p>
-        <h3>rainbow ( )</h3>
-        <p>
-          The module 'rainbow ( )' receives an array of points and displays them
-          in a colorful manner so they are visible and provide a sense how they
-          are ordered in the array. The module has
-          <a
-            href="https://github.com/benjaminwand/OpenScad-random/blob/main/modules/rainbow.scad"
-            >its own place on GitHub.
-          </a>
-        </p>
-      </section>
 
-      <h2>Approximating the length of the curve</h2>
-      <section class="columns">
-        <p>
-          More than four years after writing the Bézier curve code, I came up
-          with
-          <a href="length_bezier.html"
-            >a better approximation of the length of the curve</a
-          >
-          which helps automatically deciding how many pieces one wants to
-          calculate.
-        </p>
-        <p>
-          I'll have to implement that soon.
-        </p>
+        <pre> <code class="OpenSCAD">for (i= [0 : len(points)-1])
+    hull(){
+       translate(points[i]) shape();
+       translate(points[i+1]) shape();
+    }
+</code> </pre>
       </section>
       <h2>Choosing locations for points</h2>
       <section class="columns">
@@ -425,7 +461,7 @@ for (i=[p1, p2, p3, p4])
           >
         </li>
       </ul>
-      <p class="update">Text last updated: December 22nd, 2024</p>
+      <p class="update">Text last updated: December 30th, 2024</p>
     </article>
     <footer class="no-print">
       <ul>
