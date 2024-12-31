@@ -152,7 +152,7 @@ for (i = [p1, p2]) translate(i)
           gets called recursively.
         </p>
 
-        <pre> <code class="OpenSCAD">p1 = [5, 7.5];
+        <pre><code class="OpenSCAD">p1 = [5, 7.5];
 p2 = [7, 2];
 p3 = [1, 1.7];
 n = 15;
@@ -185,7 +185,14 @@ for (i = [p1, p2, p3]) translate(i)
             control points.</a
           >
         </p>
-        <pre> <code class="OpenSCAD">// roughly the size of parts of curves,
+        <p>
+          The code below can be found
+          <a
+            href="https://github.com/benjaminwand/OpenScad-random/blob/main/modules%3Autilities/beziercurve-example.scad"
+            >on GitHub.</a
+          >
+        </p>
+        <pre><code class="OpenSCAD">// roughly the size of parts of curves,
 // is a global value
 fs = 0.5;
 
@@ -302,13 +309,6 @@ for (i=[p1, p2, p3, p4])
       </section>
       <h2>Further comments</h2>
       <section class="columns">
-        <p>
-          The code above can be found
-          <a
-            href="https://github.com/benjaminwand/OpenScad-random/blob/main/modules%3Autilities/beziercurve-example.scad"
-            >on GitHub.</a
-          >
-        </p>
         <h3>functions b_pts() and b_curv()</h3>
         <span class="code"></span>
         <p>
