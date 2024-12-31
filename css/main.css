@@ -333,6 +333,9 @@ article code,
 pre {
   text-align: left;
 }
+p .code {
+  font-size: 110%;
+}
 
 .date,
 .update {
