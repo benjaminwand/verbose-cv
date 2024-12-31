@@ -123,7 +123,7 @@
           calculated like this:
         </p>
 
-        <pre> <code class="OpenSCAD">// two points
+        <pre><code class="OpenSCAD">// two points
 p1 = [5, 7.5];
 p2 = [7, 2];
 
@@ -137,7 +137,7 @@ for (i = [0 : 1/n : 1])
 
 // highlighting the control points
 for (i = [p1, p2]) translate(i)
-  color("black") sphere(0.2);</code> </pre>
+  color("black") sphere(0.2);</code></pre>
         <p>
           Please copy the code into OpenSCAD to watch it rendered.
         </p>
@@ -245,7 +245,7 @@ sqrt(                 // three dimensions
         <p>
           With the amount of points decidable, let's calculate them!
         </p>
-        <pre> <code class="OpenSCAD">// calculate singular points
+        <pre><code class="OpenSCAD">// calculate singular points
 function b_pts(pts, fn, idx) =
   // has pts more than two points?
   len(pts) > 2 ?

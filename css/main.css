@@ -334,7 +334,14 @@ article ul {
 article code,
 pre {
   text-align: left;
+  margin: 0;
+  padding-top: 0;
 }
+article code,
+pre + p {
+  margin-top: 1em;
+}
+
 p .code {
   font-size: 110%;
 }

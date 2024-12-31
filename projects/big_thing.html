@@ -131,7 +131,7 @@
         <p>
           The data for each piece looks like that:
         </p>
-        <pre> <code class="OpenSCAD">rotate([hh,0,120]) rotate([hh,0,60])
+        <pre><code class="OpenSCAD">rotate([hh,0,120]) rotate([hh,0,60])
   piece(6, 18, [0, 0, 1, 1, 1, 0], $gap); </code></pre>
         <p>
           and the <code>[0, 0, 1, 1, 1, 0]</code> part encodes which sides are
@@ -140,7 +140,7 @@
           pieces that fit together.
         </p>
 
-        <pre> <code class="OpenSCAD">for (i = interval) { // interval = which pieces
+        <pre><code class="OpenSCAD">for (i = interval) { // interval = which pieces
   intersection(){
     globe();         // the sphere
     difference(){
