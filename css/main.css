@@ -280,6 +280,7 @@ article img {
   border: thin #c5d8e1 solid;
   padding: 0.5rem;
   background-color: #fff;
+  margin-bottom: 1em;
 }
 article p + img {
   margin-bottom: 1rem;
