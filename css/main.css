@@ -273,9 +273,13 @@ article figure {
 }
 article figcaption {
   text-align: center;
+  margin-top: 0.5em;
 }
 
 article img {
+  max-width: 100%;
+}
+article figure {
   max-width: calc(100% - 1rem);
   border: thin #c5d8e1 solid;
   padding: 0.5rem;
@@ -379,6 +383,11 @@ p .code {
 .break-before {
     -moz-column-break-before: column;
          break-before: column;
+}
+
+/* ===================== photo grid ======================== */
+.image-grid{
+  display: flex;
 }
 
 /* ===================== footer ========================== */
