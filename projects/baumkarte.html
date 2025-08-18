@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <script>
+      L_NO_TOUCH = false;
+      L_DISABLE_3D = false;
+    </script>
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <style>
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <style>
+      #map_4c70dc7124e91a125174dfedabb6aa7c {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        left: 0%;
+        top: 0%;
+      }
+      .leaflet-container {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="folium-map" id="map_4c70dc7124e91a125174dfedabb6aa7c"></div>
+  </body>
+  <script>
+    var map_4c70dc7124e91a125174dfedabb6aa7c = L.map(
+      "map_4c70dc7124e91a125174dfedabb6aa7c",
+      {
+        center: [52.50502486980658, 13.407078629420766],
+        crs: L.CRS.EPSG3857,
+        zoom: 11,
+        zoomControl: true,
+        preferCanvas: false
+      }
+    );
+
+    var tile_layer_23ba3074e9c5739564e28253a0f8dcc0 = L.tileLayer(
+      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      {
+        attribution:
+          'Data by \u0026copy; \u003ca target="_blank" href="http://openstreetmap.org"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target="_blank" href="http://www.openstreetmap.org/copyright"\u003eODbL\u003c/a\u003e.',
+        detectRetina: false,
+        maxNativeZoom: 18,
+        maxZoom: 18,
+        minZoom: 0,
+        noWrap: false,
+        opacity: 1,
+        subdomains: "abc",
+        tms: false
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var circle_marker_33c2d3b81b1cc9f4bf178a06c524b714 = L.circleMarker(
+      [52.514641170767845, 13.248720918413657],
+      {
+        bubblingMouseEvents: true,
+        color: "#00cc00",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_8a3dd2ff728d0663d3eec1e4f93bcaa1 = L.popup({ maxWidth: "100%" });
+
+    var html_19fe2d0a4c0d5d0df64d03edb03667cc = $(
+      `<div id="html_19fe2d0a4c0d5d0df64d03edb03667cc" style="width: 100.0%; height: 100.0%;">Friedhof Heerstraße (Pinus nigra ssp. Nigra)</div>`
+    )[0];
+    popup_8a3dd2ff728d0663d3eec1e4f93bcaa1.setContent(
+      html_19fe2d0a4c0d5d0df64d03edb03667cc
+    );
+
+    circle_marker_33c2d3b81b1cc9f4bf178a06c524b714.bindPopup(
+      popup_8a3dd2ff728d0663d3eec1e4f93bcaa1
+    );
+
+    var circle_marker_715d5c6b4949d48604a7aa8b07cfa915 = L.circleMarker(
+      [52.52556599551518, 13.259674811494829],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_3cc9128b35c234780a2fb4735b4fe080 = L.popup({ maxWidth: "100%" });
+
+    var html_60c2b36763d43d05814de4767d29a309 = $(
+      `<div id="html_60c2b36763d43d05814de4767d29a309" style="width: 100.0%; height: 100.0%;">Ruhwaldpark (Quercus robur)</div>`
+    )[0];
+    popup_3cc9128b35c234780a2fb4735b4fe080.setContent(
+      html_60c2b36763d43d05814de4767d29a309
+    );
+
+    circle_marker_715d5c6b4949d48604a7aa8b07cfa915.bindPopup(
+      popup_3cc9128b35c234780a2fb4735b4fe080
+    );
+
+    var circle_marker_c7e71f98f0035975aa4d2a753fe72b8d = L.circleMarker(
+      [52.48286633397025, 13.325693482148361],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_48b9df64848af4326e2451c57ed6aeac = L.popup({ maxWidth: "100%" });
+
+    var html_5c8df2b5a7234e509826362283892cbd = $(
+      `<div id="html_5c8df2b5a7234e509826362283892cbd" style="width: 100.0%; height: 100.0%;">Volkspark Wilmersdorf (Tilia platyphyllos)</div>`
+    )[0];
+    popup_48b9df64848af4326e2451c57ed6aeac.setContent(
+      html_5c8df2b5a7234e509826362283892cbd
+    );
+
+    circle_marker_c7e71f98f0035975aa4d2a753fe72b8d.bindPopup(
+      popup_48b9df64848af4326e2451c57ed6aeac
+    );
+
+    var circle_marker_5164fd794825825172e5098665445ff8 = L.circleMarker(
+      [52.5189356084393, 13.232513271512445],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_e0316b9c888a92830df8cbb24b10f356 = L.popup({ maxWidth: "100%" });
+
+    var html_674844547a643bc87f050270e6fd7f3e = $(
+      `<div id="html_674844547a643bc87f050270e6fd7f3e" style="width: 100.0%; height: 100.0%;">Fließwiese Ruhleben - NSG (Acer platanoides)</div>`
+    )[0];
+    popup_e0316b9c888a92830df8cbb24b10f356.setContent(
+      html_674844547a643bc87f050270e6fd7f3e
+    );
+
+    circle_marker_5164fd794825825172e5098665445ff8.bindPopup(
+      popup_e0316b9c888a92830df8cbb24b10f356
+    );
+
+    var circle_marker_987654159fb0f372939e6864bb570e50 = L.circleMarker(
+      [52.50304022866519, 13.25514736085336],
+      {
+        bubblingMouseEvents: true,
+        color: "red",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_974305bcc1a7c316be9da71867362f57 = L.popup({ maxWidth: "100%" });
+
+    var html_f17ff21ae692fb5d40c25a6086c7d5d5 = $(
+      `<div id="html_f17ff21ae692fb5d40c25a6086c7d5d5" style="width: 100.0%; height: 100.0%;">Waldschulallee 83-93, 95 (Acer platanoides)</div>`
+    )[0];
+    popup_974305bcc1a7c316be9da71867362f57.setContent(
+      html_f17ff21ae692fb5d40c25a6086c7d5d5
+    );
+
+    circle_marker_987654159fb0f372939e6864bb570e50.bindPopup(
+      popup_974305bcc1a7c316be9da71867362f57
+    );
+
+    var circle_marker_7c79e9424f9f5178953e6a10f19697f5 = L.circleMarker(
+      [52.52874773472337, 13.434220074516945],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_dd4e907e834ee480ffe0d9a99d371298 = L.popup({ maxWidth: "100%" });
+
+    var html_9ec4612bf4b456d2a0ef4e134349629a = $(
+      `<div id="html_9ec4612bf4b456d2a0ef4e134349629a" style="width: 100.0%; height: 100.0%;">Volkspark Friedrichshain (Acer pseudoplatanus)</div>`
+    )[0];
+    popup_dd4e907e834ee480ffe0d9a99d371298.setContent(
+      html_9ec4612bf4b456d2a0ef4e134349629a
+    );
+
+    circle_marker_7c79e9424f9f5178953e6a10f19697f5.bindPopup(
+      popup_dd4e907e834ee480ffe0d9a99d371298
+    );
+
+    var circle_marker_7c26cacf382da66712d941d2384d2d92 = L.circleMarker(
+      [52.52037189016055, 13.515248528166188],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_5320d76ca51e70f60dcffc1df79bb71b = L.popup({ maxWidth: "100%" });
+
+    var html_93ee3b6a633a5418394f940e77b782c3 = $(
+      `<div id="html_93ee3b6a633a5418394f940e77b782c3" style="width: 100.0%; height: 100.0%;">Gudrunstraße 20 / Friedhof (Populus nigra)</div>`
+    )[0];
+    popup_5320d76ca51e70f60dcffc1df79bb71b.setContent(
+      html_93ee3b6a633a5418394f940e77b782c3
+    );
+
+    circle_marker_7c26cacf382da66712d941d2384d2d92.bindPopup(
+      popup_5320d76ca51e70f60dcffc1df79bb71b
+    );
+
+    var circle_marker_1dce9301efeb90cb8b219e767129d9c1 = L.circleMarker(
+      [52.52978406798591, 13.475523982460063],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_66efc3cdd85162cac829bb8f29f3c1a8 = L.popup({ maxWidth: "100%" });
+
+    var html_991947b9c086a35185f79631bf54d0a8 = $(
+      `<div id="html_991947b9c086a35185f79631bf54d0a8" style="width: 100.0%; height: 100.0%;">Fennpfuhlpark (Salix alba)</div>`
+    )[0];
+    popup_66efc3cdd85162cac829bb8f29f3c1a8.setContent(
+      html_991947b9c086a35185f79631bf54d0a8
+    );
+
+    circle_marker_1dce9301efeb90cb8b219e767129d9c1.bindPopup(
+      popup_66efc3cdd85162cac829bb8f29f3c1a8
+    );
+
+    var circle_marker_cab82d7738c1a4de29a0d703dc6ef22e = L.circleMarker(
+      [52.529653924134685, 13.513574172681162],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_df89eaab9ffc85b94f626cfc4163cbb3 = L.popup({ maxWidth: "100%" });
+
+    var html_627b8ec295ea72f6ec57b844a6ee855d = $(
+      `<div id="html_627b8ec295ea72f6ec57b844a6ee855d" style="width: 100.0%; height: 100.0%;">GA um Großen Herzbergteich (Acer platanoides)</div>`
+    )[0];
+    popup_df89eaab9ffc85b94f626cfc4163cbb3.setContent(
+      html_627b8ec295ea72f6ec57b844a6ee855d
+    );
+
+    circle_marker_cab82d7738c1a4de29a0d703dc6ef22e.bindPopup(
+      popup_df89eaab9ffc85b94f626cfc4163cbb3
+    );
+
+    var circle_marker_0d8043c35a47861559b03317b9aba9bc = L.circleMarker(
+      [52.546963565555025, 13.571831899641515],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_6dad041dc11ba7b57bfc41a8548207b2 = L.popup({ maxWidth: "100%" });
+
+    var html_2b3eed7931c0e2a9b13b331bbcd76e42 = $(
+      `<div id="html_2b3eed7931c0e2a9b13b331bbcd76e42" style="width: 100.0%; height: 100.0%;">Blumberger Damm (Quercus rubra)</div>`
+    )[0];
+    popup_6dad041dc11ba7b57bfc41a8548207b2.setContent(
+      html_2b3eed7931c0e2a9b13b331bbcd76e42
+    );
+
+    circle_marker_0d8043c35a47861559b03317b9aba9bc.bindPopup(
+      popup_6dad041dc11ba7b57bfc41a8548207b2
+    );
+
+    var circle_marker_5f8078e1a9a34d116d5d36f75419f2bf = L.circleMarker(
+      [52.55742800189983, 13.580293319948845],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_df8e7455bd1368c0b300e952772e59f3 = L.popup({ maxWidth: "100%" });
+
+    var html_65357cdaac09aaca7d01ed07db543783 = $(
+      `<div id="html_65357cdaac09aaca7d01ed07db543783" style="width: 100.0%; height: 100.0%;">Ahrensfelder Berge (Robinia pseudoacacia)</div>`
+    )[0];
+    popup_df8e7455bd1368c0b300e952772e59f3.setContent(
+      html_65357cdaac09aaca7d01ed07db543783
+    );
+
+    circle_marker_5f8078e1a9a34d116d5d36f75419f2bf.bindPopup(
+      popup_df8e7455bd1368c0b300e952772e59f3
+    );
+
+    var circle_marker_17e966411001254d0c29d2b1a4434b42 = L.circleMarker(
+      [52.515685342572, 13.545417417514024],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_e8c366ae7f51e9fc47b7a807406147b6 = L.popup({ maxWidth: "100%" });
+
+    var html_8909041f52db53d68bf0879d02583acd = $(
+      `<div id="html_8909041f52db53d68bf0879d02583acd" style="width: 100.0%; height: 100.0%;">Märkische Allee Teil C (Fagus sylvatica)</div>`
+    )[0];
+    popup_e8c366ae7f51e9fc47b7a807406147b6.setContent(
+      html_8909041f52db53d68bf0879d02583acd
+    );
+
+    circle_marker_17e966411001254d0c29d2b1a4434b42.bindPopup(
+      popup_e8c366ae7f51e9fc47b7a807406147b6
+    );
+
+    var circle_marker_661372e943b8200f77703a4a2059dbf0 = L.circleMarker(
+      [52.52912954999615, 13.611386793116342],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_d00825e0ed0c75cc0265efd98346cc04 = L.popup({ maxWidth: "100%" });
+
+    var html_f8be8c976ff2775b0b65a8d6aa0a7d63 = $(
+      `<div id="html_f8be8c976ff2775b0b65a8d6aa0a7d63" style="width: 100.0%; height: 100.0%;">Schleipfuhl, 161 (Quercus robur)</div>`
+    )[0];
+    popup_d00825e0ed0c75cc0265efd98346cc04.setContent(
+      html_f8be8c976ff2775b0b65a8d6aa0a7d63
+    );
+
+    circle_marker_661372e943b8200f77703a4a2059dbf0.bindPopup(
+      popup_d00825e0ed0c75cc0265efd98346cc04
+    );
+
+    var circle_marker_dfdb442af1fb92406d1caf5cd7e617a1 = L.circleMarker(
+      [52.55664062728122, 13.560739280629331],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_115d353907c827ee6a29dccb69888304 = L.popup({ maxWidth: "100%" });
+
+    var html_5f12f22a159dd096cbbcd3ef15aa87aa = $(
+      `<div id="html_5f12f22a159dd096cbbcd3ef15aa87aa" style="width: 100.0%; height: 100.0%;">Mehrower Allee (Acer platanoides)</div>`
+    )[0];
+    popup_115d353907c827ee6a29dccb69888304.setContent(
+      html_5f12f22a159dd096cbbcd3ef15aa87aa
+    );
+
+    circle_marker_dfdb442af1fb92406d1caf5cd7e617a1.bindPopup(
+      popup_115d353907c827ee6a29dccb69888304
+    );
+
+    var circle_marker_cf9d43927de7dee44e7aa5606ce64a09 = L.circleMarker(
+      [52.441067330137344, 13.443518022186524],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_d48f6bc6ed4200b999d7855819382cb2 = L.popup({ maxWidth: "100%" });
+
+    var html_a57c75de47465724601c74068c38a612 = $(
+      `<div id="html_a57c75de47465724601c74068c38a612" style="width: 100.0%; height: 100.0%;">Britz-Süd-Grünanlage (Quercus rubra)</div>`
+    )[0];
+    popup_d48f6bc6ed4200b999d7855819382cb2.setContent(
+      html_a57c75de47465724601c74068c38a612
+    );
+
+    circle_marker_cf9d43927de7dee44e7aa5606ce64a09.bindPopup(
+      popup_d48f6bc6ed4200b999d7855819382cb2
+    );
+
+    var circle_marker_fb319fe4428753d9d705868cb8952ebb = L.circleMarker(
+      [52.479243148170184, 13.412101707980645],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_d63399c52a3e9c8a01e946a9ac844b0d = L.popup({ maxWidth: "100%" });
+
+    var html_ecc52c17aceb88ea47883369e264bd02 = $(
+      `<div id="html_ecc52c17aceb88ea47883369e264bd02" style="width: 100.0%; height: 100.0%;">Friedhof Columbiadamm (Betula spec.)</div>`
+    )[0];
+    popup_d63399c52a3e9c8a01e946a9ac844b0d.setContent(
+      html_ecc52c17aceb88ea47883369e264bd02
+    );
+
+    circle_marker_fb319fe4428753d9d705868cb8952ebb.bindPopup(
+      popup_d63399c52a3e9c8a01e946a9ac844b0d
+    );
+
+    var circle_marker_d7f3a016b3dfab901c966314fa8f01cc = L.circleMarker(
+      [52.413669122540284, 13.489415812983001],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_22eb4482ff03472d36a20ede29261359 = L.popup({ maxWidth: "100%" });
+
+    var html_bcfe3848eb3e8c6bd661054168b75815 = $(
+      `<div id="html_bcfe3848eb3e8c6bd661054168b75815" style="width: 100.0%; height: 100.0%;">Rudower Fließ-Grünanlage (Acer negundo)</div>`
+    )[0];
+    popup_22eb4482ff03472d36a20ede29261359.setContent(
+      html_bcfe3848eb3e8c6bd661054168b75815
+    );
+
+    circle_marker_d7f3a016b3dfab901c966314fa8f01cc.bindPopup(
+      popup_22eb4482ff03472d36a20ede29261359
+    );
+
+    var circle_marker_040066d612af099dbdf339306eaf4224 = L.circleMarker(
+      [52.43573658562439, 13.448834312225065],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_beefb12a371488282017c5530446c601 = L.popup({ maxWidth: "100%" });
+
+    var html_b4b222b4305d56300ce99fca846321ec = $(
+      `<div id="html_b4b222b4305d56300ce99fca846321ec" style="width: 100.0%; height: 100.0%;">BBR-Grünanlage (Acer negundo)</div>`
+    )[0];
+    popup_beefb12a371488282017c5530446c601.setContent(
+      html_b4b222b4305d56300ce99fca846321ec
+    );
+
+    circle_marker_040066d612af099dbdf339306eaf4224.bindPopup(
+      popup_beefb12a371488282017c5530446c601
+    );
+
+    var circle_marker_d4faacff0d2a008d60e8b4459343df14 = L.circleMarker(
+      [52.45146894523179, 13.443691721328177],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_147cb25bc38ce418b0df515739086915 = L.popup({ maxWidth: "100%" });
+
+    var html_56820b3199fde0ba74904483b101fb83 = $(
+      `<div id="html_56820b3199fde0ba74904483b101fb83" style="width: 100.0%; height: 100.0%;">Fennpfuhl-Grünanlage (Acer campestre)</div>`
+    )[0];
+    popup_147cb25bc38ce418b0df515739086915.setContent(
+      html_56820b3199fde0ba74904483b101fb83
+    );
+
+    circle_marker_d4faacff0d2a008d60e8b4459343df14.bindPopup(
+      popup_147cb25bc38ce418b0df515739086915
+    );
+
+    var circle_marker_3497ba7ea6b17de80c01aea2b38d463a = L.circleMarker(
+      [52.40251705613509, 13.512347081189576],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_6880964634ff2f2c8e408b46c41ae7c3 = L.popup({ maxWidth: "100%" });
+
+    var html_f51f82b8ac337ef2d916924609240730 = $(
+      `<div id="html_f51f82b8ac337ef2d916924609240730" style="width: 100.0%; height: 100.0%;">Waltersdorfer Chaussee (Acer campestre)</div>`
+    )[0];
+    popup_6880964634ff2f2c8e408b46c41ae7c3.setContent(
+      html_f51f82b8ac337ef2d916924609240730
+    );
+
+    circle_marker_3497ba7ea6b17de80c01aea2b38d463a.bindPopup(
+      popup_6880964634ff2f2c8e408b46c41ae7c3
+    );
+
+    var circle_marker_d8c0dcca0a9957197a362eae0e590bf5 = L.circleMarker(
+      [52.43116934692901, 13.425841197706125],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_4b094dcc274072153ce36ca45af5d35c = L.popup({ maxWidth: "100%" });
+
+    var html_bd9941fd46bf1061fd15ff52686dad75 = $(
+      `<div id="html_bd9941fd46bf1061fd15ff52686dad75" style="width: 100.0%; height: 100.0%;">Parkfriedhof Neukölln (Carpinus betulus)</div>`
+    )[0];
+    popup_4b094dcc274072153ce36ca45af5d35c.setContent(
+      html_bd9941fd46bf1061fd15ff52686dad75
+    );
+
+    circle_marker_d8c0dcca0a9957197a362eae0e590bf5.bindPopup(
+      popup_4b094dcc274072153ce36ca45af5d35c
+    );
+
+    var circle_marker_e641d22bae930ffc4c598cf9d825ff21 = L.circleMarker(
+      [52.453378718655586, 13.450319383696575],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_e00e5e74d12e6c4a7c7c41db5f4601ab = L.popup({ maxWidth: "100%" });
+
+    var html_3c4c7a0ea5ba1dcbb33f4c3649e8b79b = $(
+      `<div id="html_3c4c7a0ea5ba1dcbb33f4c3649e8b79b" style="width: 100.0%; height: 100.0%;">Park am Buschkrug-Spielplatz II (Carpinus betulus)</div>`
+    )[0];
+    popup_e00e5e74d12e6c4a7c7c41db5f4601ab.setContent(
+      html_3c4c7a0ea5ba1dcbb33f4c3649e8b79b
+    );
+
+    circle_marker_e641d22bae930ffc4c598cf9d825ff21.bindPopup(
+      popup_e00e5e74d12e6c4a7c7c41db5f4601ab
+    );
+
+    var circle_marker_4d8d7005ddefd68ee49d0a1aa6736f8d = L.circleMarker(
+      [52.438916176231366, 13.447334132887109],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_590e971cb0d00e77bcfe1bd7e7f7bd00 = L.popup({ maxWidth: "100%" });
+
+    var html_5293721996582fd194085d2e6f30a1c0 = $(
+      `<div id="html_5293721996582fd194085d2e6f30a1c0" style="width: 100.0%; height: 100.0%;">Fritz-Reuter-Allee-Grünanlage (Carpinus betulus)</div>`
+    )[0];
+    popup_590e971cb0d00e77bcfe1bd7e7f7bd00.setContent(
+      html_5293721996582fd194085d2e6f30a1c0
+    );
+
+    circle_marker_4d8d7005ddefd68ee49d0a1aa6736f8d.bindPopup(
+      popup_590e971cb0d00e77bcfe1bd7e7f7bd00
+    );
+
+    var circle_marker_0e1699f0f51c9ab28902693fa8a1ccf7 = L.circleMarker(
+      [52.426535639250964, 13.427489205603866],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_f9196e0e28f263ed563518bdcce1d992 = L.popup({ maxWidth: "100%" });
+
+    var html_7862408f4716d773478eafad5c556888 = $(
+      `<div id="html_7862408f4716d773478eafad5c556888" style="width: 100.0%; height: 100.0%;">Hochspannungsweg-Grünanlage (Tilia cordata)</div>`
+    )[0];
+    popup_f9196e0e28f263ed563518bdcce1d992.setContent(
+      html_7862408f4716d773478eafad5c556888
+    );
+
+    circle_marker_0e1699f0f51c9ab28902693fa8a1ccf7.bindPopup(
+      popup_f9196e0e28f263ed563518bdcce1d992
+    );
+
+    var circle_marker_612c13c2699cab63ffa6f9b6c87a629c = L.circleMarker(
+      [52.55309126062668, 13.466769508350852],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_07e527be9845e131d4106e240b4b43d3 = L.popup({ maxWidth: "100%" });
+
+    var html_7a07d8d60d2db20dc0349f3d78d5d1fe = $(
+      `<div id="html_7a07d8d60d2db20dc0349f3d78d5d1fe" style="width: 100.0%; height: 100.0%;">Park Am Weißen See (Tilia euchlora)</div>`
+    )[0];
+    popup_07e527be9845e131d4106e240b4b43d3.setContent(
+      html_7a07d8d60d2db20dc0349f3d78d5d1fe
+    );
+
+    circle_marker_612c13c2699cab63ffa6f9b6c87a629c.bindPopup(
+      popup_07e527be9845e131d4106e240b4b43d3
+    );
+
+    var circle_marker_09c3dd6725d02384593766f0a7d706c3 = L.circleMarker(
+      [52.6358097086987, 13.499212213345855],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_81265e644399744ca64a9e0b0d1bb45c = L.popup({ maxWidth: "100%" });
+
+    var html_bfeb0f35e71fe42ec5a31d553188cb4e = $(
+      `<div id="html_bfeb0f35e71fe42ec5a31d553188cb4e" style="width: 100.0%; height: 100.0%;">Schlosspark Buch (Tilia euchlora)</div>`
+    )[0];
+    popup_81265e644399744ca64a9e0b0d1bb45c.setContent(
+      html_bfeb0f35e71fe42ec5a31d553188cb4e
+    );
+
+    circle_marker_09c3dd6725d02384593766f0a7d706c3.bindPopup(
+      popup_81265e644399744ca64a9e0b0d1bb45c
+    );
+
+    var circle_marker_35bea26a720854961ca4fb7e874a3df5 = L.circleMarker(
+      [52.57548701545081, 13.391338032333831],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_ae99e18f7d04a1344160e5c89195a756 = L.popup({ maxWidth: "100%" });
+
+    var html_46af3ccb7080754c9e6be5501ba7762d = $(
+      `<div id="html_46af3ccb7080754c9e6be5501ba7762d" style="width: 100.0%; height: 100.0%;">Schönholzer Heide (Robinia pseudoacacia)</div>`
+    )[0];
+    popup_ae99e18f7d04a1344160e5c89195a756.setContent(
+      html_46af3ccb7080754c9e6be5501ba7762d
+    );
+
+    circle_marker_35bea26a720854961ca4fb7e874a3df5.bindPopup(
+      popup_ae99e18f7d04a1344160e5c89195a756
+    );
+
+    var circle_marker_9802739fe6b043b966577a4ce9ab96fd = L.circleMarker(
+      [52.63378702218159, 13.434065326234526],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_dfdbbbaa19d9c09f0e746058ca5968f2 = L.popup({ maxWidth: "100%" });
+
+    var html_4b53ad9d5637ee040501cc5731bb8f63 = $(
+      `<div id="html_4b53ad9d5637ee040501cc5731bb8f63" style="width: 100.0%; height: 100.0%;">Am Posseberg I (Robinia pseudoacacia)</div>`
+    )[0];
+    popup_dfdbbbaa19d9c09f0e746058ca5968f2.setContent(
+      html_4b53ad9d5637ee040501cc5731bb8f63
+    );
+
+    circle_marker_9802739fe6b043b966577a4ce9ab96fd.bindPopup(
+      popup_dfdbbbaa19d9c09f0e746058ca5968f2
+    );
+
+    var circle_marker_f30928dca64c2241b2ffd8f4c322e015 = L.circleMarker(
+      [52.537854721830044, 13.432650303592242],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_8c24bb2dfa982f078bd3550f9e4729ac = L.popup({ maxWidth: "100%" });
+
+    var html_eb3636a94a2301a37e84549aade4023c = $(
+      `<div id="html_eb3636a94a2301a37e84549aade4023c" style="width: 100.0%; height: 100.0%;">Ernst-Thälmann-Park (Pinus strobus)</div>`
+    )[0];
+    popup_8c24bb2dfa982f078bd3550f9e4729ac.setContent(
+      html_eb3636a94a2301a37e84549aade4023c
+    );
+
+    circle_marker_f30928dca64c2241b2ffd8f4c322e015.bindPopup(
+      popup_8c24bb2dfa982f078bd3550f9e4729ac
+    );
+
+    var circle_marker_bb78c9c3be00b761af954faf4da3c957 = L.circleMarker(
+      [52.570742554983376, 13.44917426077972],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_b8be2ecaddb710adbc5ba8dda9879b11 = L.popup({ maxWidth: "100%" });
+
+    var html_fe9e52f7e473871e95c3ef72236a536b = $(
+      `<div id="html_fe9e52f7e473871e95c3ef72236a536b" style="width: 100.0%; height: 100.0%;">Schmöckpfuhlgrabengrünzug (Salix alba)</div>`
+    )[0];
+    popup_b8be2ecaddb710adbc5ba8dda9879b11.setContent(
+      html_fe9e52f7e473871e95c3ef72236a536b
+    );
+
+    circle_marker_bb78c9c3be00b761af954faf4da3c957.bindPopup(
+      popup_b8be2ecaddb710adbc5ba8dda9879b11
+    );
+
+    var circle_marker_47907065d49f232147ccf523bb4d30a9 = L.circleMarker(
+      [52.57886424566591, 13.414414003861317],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_2ecf502d51d9a6974a644d822f405c23 = L.popup({ maxWidth: "100%" });
+
+    var html_c188d702896fcdb111bae74814b416d1 = $(
+      `<div id="html_c188d702896fcdb111bae74814b416d1" style="width: 100.0%; height: 100.0%;">Schlosspark Schönhausen (Acer platanoides)</div>`
+    )[0];
+    popup_2ecf502d51d9a6974a644d822f405c23.setContent(
+      html_c188d702896fcdb111bae74814b416d1
+    );
+
+    circle_marker_47907065d49f232147ccf523bb4d30a9.bindPopup(
+      popup_2ecf502d51d9a6974a644d822f405c23
+    );
+
+    var circle_marker_88d2f55faf6a6ceb12795d7e65b68836 = L.circleMarker(
+      [52.58316720062854, 13.36904736263783],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_f3f76e21c054f6cb7f0245a400f33ae9 = L.popup({ maxWidth: "100%" });
+
+    var html_0fe5067952200dbc7824d24919eb5804 = $(
+      `<div id="html_0fe5067952200dbc7824d24919eb5804" style="width: 100.0%; height: 100.0%;">Schönholzer Heide (Acer platanoides)</div>`
+    )[0];
+    popup_f3f76e21c054f6cb7f0245a400f33ae9.setContent(
+      html_0fe5067952200dbc7824d24919eb5804
+    );
+
+    circle_marker_88d2f55faf6a6ceb12795d7e65b68836.bindPopup(
+      popup_f3f76e21c054f6cb7f0245a400f33ae9
+    );
+
+    var circle_marker_d021d673bf67ef5f6d4f64324eed44e8 = L.circleMarker(
+      [52.521465658087656, 13.155494767035798],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_3910434addeac8e3b1ce1d2518b2ec5a = L.popup({ maxWidth: "100%" });
+
+    var html_25ede628267ce93eb759f3f048f16f7d = $(
+      `<div id="html_25ede628267ce93eb759f3f048f16f7d" style="width: 100.0%; height: 100.0%;">Heerstraße (Platanus acerifolia)</div>`
+    )[0];
+    popup_3910434addeac8e3b1ce1d2518b2ec5a.setContent(
+      html_25ede628267ce93eb759f3f048f16f7d
+    );
+
+    circle_marker_d021d673bf67ef5f6d4f64324eed44e8.bindPopup(
+      popup_3910434addeac8e3b1ce1d2518b2ec5a
+    );
+
+    var circle_marker_3100c893e2013db45c99e8715564dceb = L.circleMarker(
+      [52.54427410296595, 13.272520056202744],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_bc734675bf11ea35f4587189322bdd02 = L.popup({ maxWidth: "100%" });
+
+    var html_d0b586110d74a2bd4e9cf874812e6612 = $(
+      `<div id="html_d0b586110d74a2bd4e9cf874812e6612" style="width: 100.0%; height: 100.0%;">Wilhelm-von-Siemens-Park, extensiv (Carpinus betulus)</div>`
+    )[0];
+    popup_bc734675bf11ea35f4587189322bdd02.setContent(
+      html_d0b586110d74a2bd4e9cf874812e6612
+    );
+
+    circle_marker_3100c893e2013db45c99e8715564dceb.bindPopup(
+      popup_bc734675bf11ea35f4587189322bdd02
+    );
+
+    var circle_marker_a76730e6f0ae83bf23a99b3c16decf79 = L.circleMarker(
+      [52.459517008774505, 13.158113780992135],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_93b8e58febdfe3df940cbb3deb9f8851 = L.popup({ maxWidth: "100%" });
+
+    var html_40a3111e88df26de6f8e64d859cb5605 = $(
+      `<div id="html_40a3111e88df26de6f8e64d859cb5605" style="width: 100.0%; height: 100.0%;">Gutspark Neukladow-GA  (Robinia pseudoacacia)</div>`
+    )[0];
+    popup_93b8e58febdfe3df940cbb3deb9f8851.setContent(
+      html_40a3111e88df26de6f8e64d859cb5605
+    );
+
+    circle_marker_a76730e6f0ae83bf23a99b3c16decf79.bindPopup(
+      popup_93b8e58febdfe3df940cbb3deb9f8851
+    );
+
+    var circle_marker_77bfbd9f3f85705c200cd875440583d2 = L.circleMarker(
+      [52.516132995162444, 13.158230221517575],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_6703590cf959c423d733c4876ed9eb06 = L.popup({ maxWidth: "100%" });
+
+    var html_9a861213f6e8ff30ecf72e3ba30aa176 = $(
+      `<div id="html_9a861213f6e8ff30ecf72e3ba30aa176" style="width: 100.0%; height: 100.0%;">Nördlicher Rieselfeldabfanggraben (Robinia pseudoacacia)</div>`
+    )[0];
+    popup_6703590cf959c423d733c4876ed9eb06.setContent(
+      html_9a861213f6e8ff30ecf72e3ba30aa176
+    );
+
+    circle_marker_77bfbd9f3f85705c200cd875440583d2.bindPopup(
+      popup_6703590cf959c423d733c4876ed9eb06
+    );
+
+    var circle_marker_b69a28d91278826dc82da9799c3e7632 = L.circleMarker(
+      [52.465833657965064, 13.284892803240885],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_c90bd48ba3d9217acfef057f6ae9c676 = L.popup({ maxWidth: "100%" });
+
+    var html_0a568ddff6765151154c891977b73d79 = $(
+      `<div id="html_0a568ddff6765151154c891977b73d79" style="width: 100.0%; height: 100.0%;">Finkenpark WG (Quercus spec.)</div>`
+    )[0];
+    popup_c90bd48ba3d9217acfef057f6ae9c676.setContent(
+      html_0a568ddff6765151154c891977b73d79
+    );
+
+    circle_marker_b69a28d91278826dc82da9799c3e7632.bindPopup(
+      popup_c90bd48ba3d9217acfef057f6ae9c676
+    );
+
+    var circle_marker_f31f45c8ffc246732fd93742a0d8f4c4 = L.circleMarker(
+      [52.441670777264015, 13.395050298685888],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_c876fcc67207e8c82309abfce1261db2 = L.popup({ maxWidth: "100%" });
+
+    var html_3e7e3b6326f9026ec0d6e839800bd24f = $(
+      `<div id="html_3e7e3b6326f9026ec0d6e839800bd24f" style="width: 100.0%; height: 100.0%;">Volkspark Mariendorf - Gartendenkmal (Übl.) (Pseudotsuga menziesii)</div>`
+    )[0];
+    popup_c876fcc67207e8c82309abfce1261db2.setContent(
+      html_3e7e3b6326f9026ec0d6e839800bd24f
+    );
+
+    circle_marker_f31f45c8ffc246732fd93742a0d8f4c4.bindPopup(
+      popup_c876fcc67207e8c82309abfce1261db2
+    );
+
+    var circle_marker_57e97b46b103d79871017fc03c1e2409 = L.circleMarker(
+      [52.39329225479402, 13.416171040285093],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_62cd5890ed1c0aac00974dfee2524cbf = L.popup({ maxWidth: "100%" });
+
+    var html_31be658b777425320a709426ea464182 = $(
+      `<div id="html_31be658b777425320a709426ea464182" style="width: 100.0%; height: 100.0%;">Volkspark Lichtenrade (Pinus sylvestris)</div>`
+    )[0];
+    popup_62cd5890ed1c0aac00974dfee2524cbf.setContent(
+      html_31be658b777425320a709426ea464182
+    );
+
+    circle_marker_57e97b46b103d79871017fc03c1e2409.bindPopup(
+      popup_62cd5890ed1c0aac00974dfee2524cbf
+    );
+
+    var circle_marker_e75f360f918239b3d20747ad65259a0b = L.circleMarker(
+      [52.4568484966113, 13.355123306850702],
+      {
+        bubblingMouseEvents: true,
+        color: "#3388ff",
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: "#3388ff",
+        fillOpacity: 0.6,
+        fillRule: "evenodd",
+        lineCap: "round",
+        lineJoin: "round",
+        opacity: 1.0,
+        radius: 2,
+        stroke: true,
+        weight: 3
+      }
+    ).addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
+
+    var popup_8e57909a6914ebb09202157ff3d0921d = L.popup({ maxWidth: "100%" });
+
+    var html_6cf1882d676e39e935a6184f2a65a554 = $(
+      `<div id="html_6cf1882d676e39e935a6184f2a65a554" style="width: 100.0%; height: 100.0%;">Der Insulaner - Grünanlage (Acer platanoides)</div>`
+    )[0];
+    popup_8e57909a6914ebb09202157ff3d0921d.setContent(
+      html_6cf1882d676e39e935a6184f2a65a554
+    );
+
+    circle_marker_e75f360f918239b3d20747ad65259a0b.bindPopup(
+      popup_8e57909a6914ebb09202157ff3d0921d
+    );
+  </script>
+</html>

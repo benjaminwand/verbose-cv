@@ -384,6 +384,10 @@ p .code {
     -moz-column-break-before: column;
          break-before: column;
 }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 
 /* ===================== photo grid ======================== */
 .image-grid{
