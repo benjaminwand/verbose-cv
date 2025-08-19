@@ -84,9 +84,12 @@
         crs: L.CRS.EPSG3857,
         zoom: 11,
         zoomControl: true,
-        preferCanvas: false
+        preferCanvas: false,
+        scaleControl: true
       }
     );
+
+    L.control.scale().addTo(map_4c70dc7124e91a125174dfedabb6aa7c);
 
     var tile_layer_23ba3074e9c5739564e28253a0f8dcc0 = L.tileLayer(
       "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
