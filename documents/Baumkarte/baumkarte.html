@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_83fc55fd9ebf08ccb9620ff2508bcc0f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_83fc55fd9ebf08ccb9620ff2508bcc0f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_83fc55fd9ebf08ccb9620ff2508bcc0f = L.map(
+                "map_83fc55fd9ebf08ccb9620ff2508bcc0f",
+                {
+                    center: [52.51, 13.4],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+
+            
+
+        
+    
+            var tile_layer_c49e45c088af8b8e51e8394383197469 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            var circle_marker_c5242ea9da9a0cdb76fcfa446fc8c3c6 = L.circleMarker(
+                [52.514641170767845, 13.248720918413657],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_c5242ea9da9a0cdb76fcfa446fc8c3c6.bindTooltip(
+                `<div>
+                     
+    <b>Friedhof Heerstraße</b><br>
+    Bezirk: Charlottenburg-Wilmersdorf<br>
+    Art: Pinus nigra ssp. Nigra
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0388e6c0f4192ef234875a408a6df503 = L.circleMarker(
+                [52.52556599551518, 13.259674811494829],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_0388e6c0f4192ef234875a408a6df503.bindTooltip(
+                `<div>
+                     
+    <b>Ruhwaldpark</b><br>
+    Bezirk: Charlottenburg-Wilmersdorf<br>
+    Art: Quercus robur
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4e4c529e9b0fab4078f749621ee49a12 = L.circleMarker(
+                [52.48286633397025, 13.325693482148361],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_4e4c529e9b0fab4078f749621ee49a12.bindTooltip(
+                `<div>
+                     
+    <b>Volkspark Wilmersdorf</b><br>
+    Bezirk: Charlottenburg-Wilmersdorf<br>
+    Art: Tilia platyphyllos
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bdc8c537997bcb0f5efbfc1eae591cf1 = L.circleMarker(
+                [52.5189356084393, 13.232513271512445],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_bdc8c537997bcb0f5efbfc1eae591cf1.bindTooltip(
+                `<div>
+                     
+    <b>Fließwiese Ruhleben - NSG</b><br>
+    Bezirk: Charlottenburg-Wilmersdorf<br>
+    Art: Acer platanoides
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_268f14efd5318ec9128272ed801a63fa = L.circleMarker(
+                [52.50304022866519, 13.25514736085336],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_268f14efd5318ec9128272ed801a63fa.bindTooltip(
+                `<div>
+                     
+    <b>Waldschulallee 83-93, 95</b><br>
+    Bezirk: Charlottenburg-Wilmersdorf<br>
+    Art: Acer platanoides
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bf89bf361fb7ff248c08df9710284fd5 = L.circleMarker(
+                [52.52874773472337, 13.434220074516945],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_bf89bf361fb7ff248c08df9710284fd5.bindTooltip(
+                `<div>
+                     
+    <b>Volkspark Friedrichshain</b><br>
+    Bezirk: Friedrichshain-Kreuzberg<br>
+    Art: Acer pseudoplatanus
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ca6be71126f12904d0413ac6ccbf2e31 = L.circleMarker(
+                [52.52037189016055, 13.515248528166188],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_ca6be71126f12904d0413ac6ccbf2e31.bindTooltip(
+                `<div>
+                     
+    <b>Gudrunstraße 20 / Friedhof</b><br>
+    Bezirk: Lichtenberg<br>
+    Art: Populus nigra
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e42e3d2bfebbfe2dd7ae567db42dad8e = L.circleMarker(
+                [52.52978406798591, 13.475523982460063],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_e42e3d2bfebbfe2dd7ae567db42dad8e.bindTooltip(
+                `<div>
+                     
+    <b>Fennpfuhlpark</b><br>
+    Bezirk: Lichtenberg<br>
+    Art: Salix alba
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ba0dcd347532ae19f87173c215050628 = L.circleMarker(
+                [52.529653924134685, 13.513574172681162],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_ba0dcd347532ae19f87173c215050628.bindTooltip(
+                `<div>
+                     
+    <b>GA um Großen Herzbergteich</b><br>
+    Bezirk: Lichtenberg<br>
+    Art: Acer platanoides
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ac3aa2db763f4026644f61f559f22376 = L.circleMarker(
+                [52.546963565555025, 13.571831899641515],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_ac3aa2db763f4026644f61f559f22376.bindTooltip(
+                `<div>
+                     
+    <b>Blumberger Damm</b><br>
+    Bezirk: Marzahn-Hellersdorf<br>
+    Art: Quercus rubra
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c3410f01964d3d406e85c123f4409e5f = L.circleMarker(
+                [52.55742800189983, 13.580293319948845],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_c3410f01964d3d406e85c123f4409e5f.bindTooltip(
+                `<div>
+                     
+    <b>Ahrensfelder Berge</b><br>
+    Bezirk: Marzahn-Hellersdorf<br>
+    Art: Robinia pseudoacacia
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_03f6179399c753d79b6819c4ba9d15e5 = L.circleMarker(
+                [52.515685342572, 13.545417417514024],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_03f6179399c753d79b6819c4ba9d15e5.bindTooltip(
+                `<div>
+                     
+    <b>Märkische Allee Teil C</b><br>
+    Bezirk: Marzahn-Hellersdorf<br>
+    Art: Fagus sylvatica
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_69a3cdb482f1ee6e453a087319a747a5 = L.circleMarker(
+                [52.52912954999615, 13.611386793116342],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_69a3cdb482f1ee6e453a087319a747a5.bindTooltip(
+                `<div>
+                     
+    <b>Schleipfuhl, 161</b><br>
+    Bezirk: Marzahn-Hellersdorf<br>
+    Art: Quercus robur
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1f2c9bd53646343affa2719a85ff70ae = L.circleMarker(
+                [52.55664062728122, 13.560739280629331],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_1f2c9bd53646343affa2719a85ff70ae.bindTooltip(
+                `<div>
+                     
+    <b>Mehrower Allee</b><br>
+    Bezirk: Marzahn-Hellersdorf<br>
+    Art: Acer platanoides
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6d23b8b8ceb7a3fb4439dd77e834d3c8 = L.circleMarker(
+                [52.441067330137344, 13.443518022186524],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_6d23b8b8ceb7a3fb4439dd77e834d3c8.bindTooltip(
+                `<div>
+                     
+    <b>Britz-Süd-Grünanlage</b><br>
+    Bezirk: Neukölln<br>
+    Art: Quercus rubra
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_309fdea2b4eddbfdd40036c890330443 = L.circleMarker(
+                [52.479243148170184, 13.412101707980645],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_309fdea2b4eddbfdd40036c890330443.bindTooltip(
+                `<div>
+                     
+    <b>Friedhof Columbiadamm</b><br>
+    Bezirk: Neukölln<br>
+    Art: Betula spec.
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e3cc2da9b763c60373a0425bfa615268 = L.circleMarker(
+                [52.413669122540284, 13.489415812983001],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_e3cc2da9b763c60373a0425bfa615268.bindTooltip(
+                `<div>
+                     
+    <b>Rudower Fließ-Grünanlage</b><br>
+    Bezirk: Neukölln<br>
+    Art: Acer negundo
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1cb056f4fc172a95d9c8a585812fc55e = L.circleMarker(
+                [52.43573658562439, 13.448834312225065],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_1cb056f4fc172a95d9c8a585812fc55e.bindTooltip(
+                `<div>
+                     
+    <b>BBR-Grünanlage</b><br>
+    Bezirk: Neukölln<br>
+    Art: Acer negundo
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_29740c8ce9bdb407c8d50ef68cab582c = L.circleMarker(
+                [52.45146894523179, 13.443691721328177],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_29740c8ce9bdb407c8d50ef68cab582c.bindTooltip(
+                `<div>
+                     
+    <b>Fennpfuhl-Grünanlage</b><br>
+    Bezirk: Neukölln<br>
+    Art: Acer campestre
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d9cf0c69c3f428b13c3162e117cd674d = L.circleMarker(
+                [52.40251705613509, 13.512347081189576],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_d9cf0c69c3f428b13c3162e117cd674d.bindTooltip(
+                `<div>
+                     
+    <b>Waltersdorfer Chaussee</b><br>
+    Bezirk: Neukölln<br>
+    Art: Acer campestre
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9ec7340423777ca7229346316d00772c = L.circleMarker(
+                [52.43116934692901, 13.425841197706125],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_9ec7340423777ca7229346316d00772c.bindTooltip(
+                `<div>
+                     
+    <b>Parkfriedhof Neukölln</b><br>
+    Bezirk: Neukölln<br>
+    Art: Carpinus betulus
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_26e1c0749528db73765a752996ba071f = L.circleMarker(
+                [52.453378718655586, 13.450319383696575],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_26e1c0749528db73765a752996ba071f.bindTooltip(
+                `<div>
+                     
+    <b>Park am Buschkrug-Spielplatz II</b><br>
+    Bezirk: Neukölln<br>
+    Art: Carpinus betulus
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eae15f56570ebdc178194a91c0aa1ee4 = L.circleMarker(
+                [52.438916176231366, 13.447334132887109],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_eae15f56570ebdc178194a91c0aa1ee4.bindTooltip(
+                `<div>
+                     
+    <b>Fritz-Reuter-Allee-Grünanlage</b><br>
+    Bezirk: Neukölln<br>
+    Art: Carpinus betulus
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_691b3d414df75bf26e1f035e670b33f7 = L.circleMarker(
+                [52.426535639250964, 13.427489205603866],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_691b3d414df75bf26e1f035e670b33f7.bindTooltip(
+                `<div>
+                     
+    <b>Hochspannungsweg-Grünanlage</b><br>
+    Bezirk: Neukölln<br>
+    Art: Tilia cordata
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e30a7af9ea26cb5c10ef8e58d3a0e217 = L.circleMarker(
+                [52.55309126062668, 13.466769508350852],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_e30a7af9ea26cb5c10ef8e58d3a0e217.bindTooltip(
+                `<div>
+                     
+    <b>Park Am Weißen See</b><br>
+    Bezirk: Pankow<br>
+    Art: Tilia euchlora
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c0c05914413276aeaafd3d3cc0892d04 = L.circleMarker(
+                [52.6358097086987, 13.499212213345855],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_c0c05914413276aeaafd3d3cc0892d04.bindTooltip(
+                `<div>
+                     
+    <b>Schlosspark Buch</b><br>
+    Bezirk: Pankow<br>
+    Art: Tilia euchlora
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4d806047f003c2cf0465c3765092cd24 = L.circleMarker(
+                [52.57548701545081, 13.391338032333831],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_4d806047f003c2cf0465c3765092cd24.bindTooltip(
+                `<div>
+                     
+    <b>Schönholzer Heide</b><br>
+    Bezirk: Pankow<br>
+    Art: Robinia pseudoacacia
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b6bcd31637a0f29366bc0a80d9737f9e = L.circleMarker(
+                [52.63378702218159, 13.434065326234526],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_b6bcd31637a0f29366bc0a80d9737f9e.bindTooltip(
+                `<div>
+                     
+    <b>Am Posseberg I</b><br>
+    Bezirk: Pankow<br>
+    Art: Robinia pseudoacacia
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_675018f49926564314523e68e1978d19 = L.circleMarker(
+                [52.537854721830044, 13.432650303592242],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_675018f49926564314523e68e1978d19.bindTooltip(
+                `<div>
+                     
+    <b>Ernst-Thälmann-Park</b><br>
+    Bezirk: Pankow<br>
+    Art: Pinus strobus
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ef6c909fae859cb00389b50fa61edcdb = L.circleMarker(
+                [52.570742554983376, 13.44917426077972],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_ef6c909fae859cb00389b50fa61edcdb.bindTooltip(
+                `<div>
+                     
+    <b>Schmöckpfuhlgrabengrünzug</b><br>
+    Bezirk: Pankow<br>
+    Art: Salix alba
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2f04caccb499e3dfb4e2900e2b972b99 = L.circleMarker(
+                [52.57886424566591, 13.414414003861317],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_2f04caccb499e3dfb4e2900e2b972b99.bindTooltip(
+                `<div>
+                     
+    <b>Schlosspark Schönhausen</b><br>
+    Bezirk: Pankow<br>
+    Art: Acer platanoides
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5de9260482a86a87acdbba45a59372a8 = L.circleMarker(
+                [52.58316720062854, 13.36904736263783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_5de9260482a86a87acdbba45a59372a8.bindTooltip(
+                `<div>
+                     
+    <b>Schönholzer Heide</b><br>
+    Bezirk: Pankow<br>
+    Art: Acer platanoides
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_35167751c9447be407b78ce5822fbe92 = L.circleMarker(
+                [52.521465658087656, 13.155494767035798],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_35167751c9447be407b78ce5822fbe92.bindTooltip(
+                `<div>
+                     
+    <b>Heerstraße</b><br>
+    Bezirk: Spandau<br>
+    Art: Platanus acerifolia
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a247bcc6fd76232c837c85bdcb4873d2 = L.circleMarker(
+                [52.54427410296595, 13.272520056202744],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_a247bcc6fd76232c837c85bdcb4873d2.bindTooltip(
+                `<div>
+                     
+    <b>Wilhelm-von-Siemens-Park, extensiv</b><br>
+    Bezirk: Spandau<br>
+    Art: Carpinus betulus
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0671263bb4d927e7ded964ac7a95688a = L.circleMarker(
+                [52.459517008774505, 13.158113780992135],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_0671263bb4d927e7ded964ac7a95688a.bindTooltip(
+                `<div>
+                     
+    <b>Gutspark Neukladow-GA </b><br>
+    Bezirk: Spandau<br>
+    Art: Robinia pseudoacacia
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3566ff2bbf069ebb155b356d3d59a21a = L.circleMarker(
+                [52.516132995162444, 13.158230221517575],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_3566ff2bbf069ebb155b356d3d59a21a.bindTooltip(
+                `<div>
+                     
+    <b>Nördlicher Rieselfeldabfanggraben</b><br>
+    Bezirk: Spandau<br>
+    Art: Robinia pseudoacacia
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_281993ce628cbdfbb20df2f03f72390d = L.circleMarker(
+                [52.465833657965064, 13.284892803240885],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_281993ce628cbdfbb20df2f03f72390d.bindTooltip(
+                `<div>
+                     
+    <b>Finkenpark WG</b><br>
+    Bezirk: Steglitz-Zehlendorf<br>
+    Art: Quercus spec.
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ef32237aac59f474a7abb9b835de547a = L.circleMarker(
+                [52.441670777264015, 13.395050298685888],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_ef32237aac59f474a7abb9b835de547a.bindTooltip(
+                `<div>
+                     
+    <b>Volkspark Mariendorf - Gartendenkmal (Übl.)</b><br>
+    Bezirk: Tempelhof-Schöneberg<br>
+    Art: Pseudotsuga menziesii
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_07402142fe0d51df99653c55f08101ba = L.circleMarker(
+                [52.39329225479402, 13.416171040285093],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_07402142fe0d51df99653c55f08101ba.bindTooltip(
+                `<div>
+                     
+    <b>Volkspark Lichtenrade</b><br>
+    Bezirk: Tempelhof-Schöneberg<br>
+    Art: Pinus sylvestris
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_86c36a3653d7accdad1e343b138d6176 = L.circleMarker(
+                [52.4568484966113, 13.355123306850702],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_83fc55fd9ebf08ccb9620ff2508bcc0f);
+        
+    
+            circle_marker_86c36a3653d7accdad1e343b138d6176.bindTooltip(
+                `<div>
+                     
+    <b>Der Insulaner - Grünanlage</b><br>
+    Bezirk: Tempelhof-Schöneberg<br>
+    Art: Acer platanoides
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
