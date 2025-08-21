@@ -322,7 +322,7 @@ article p + h3 {
   break-after: avoid-column; /* not working yet */
 }
 
-article section ~ h2
+article section ~ h2,
 article table ~ h2
 {
   margin-top: 3.5rem;
