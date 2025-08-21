@@ -16,6 +16,15 @@
     <meta property="og:image" content="" />
     <meta property="og:description" content="" />
     <link rel="stylesheet" href="../css/main.css" />
+    <style>
+      /* OBJECTID (1. Spalte) nur auf kleinen Bildschirmen verstecken */
+      @media (max-width: 600px) {
+        #baumtabelle th:nth-child(1),
+        #baumtabelle td:nth-child(1) {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header_projects">
@@ -77,7 +86,7 @@
 
       <h2>The table</h2>
       <div>
-        <table border="1" class="dataframe" width="100%" id="baum999">
+        <table border="1" class="dataframe" width="100%" id="baumtabelle">
           <thead>
             <tr style="text-align: center;">
               <th>OBJECTID</th>

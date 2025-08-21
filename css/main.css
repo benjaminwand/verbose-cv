@@ -504,13 +504,6 @@ footer a:hover {
     text-align: center;
   }
 }
-/* ========== OBJECTID Spalte ausblenden wenn Bildschirmbreite <= 600px =============== */
-@media (max-width: 600px) {
-  #baum999  table th:nth-child(1),
-  #baum999  table td:nth-child(1) {
-    display: none;
-  }
-}
 
 /* ===================== print ========================== */
 @media print,
