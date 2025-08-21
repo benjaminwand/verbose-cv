@@ -62,19 +62,22 @@
           each. This is where they are:
         </p>
 
-        <div
-          style="display:flex; flex-direction:column; height:min(100vh, 650px);"
-        >
+        <div style="max-width:100%;">
           <iframe
             src="../documents/Baumkarte/baumkarte.html"
-            style="flex:1; "
+            style="
+              width:100%;
+              aspect-ratio: 4 / 5;       /* Höhe ≈ Breite*1.25 */
+              max-height: min(95vh, 650px, calc(100vw * 1.25));  /* Höhe <= Breite*1.25 */
+              display:block;
+            "
           ></iframe>
         </div>
       </section>
 
       <h2>The table</h2>
       <div>
-        <table border="1" class="dataframe" width="100%">
+        <table border="1" class="dataframe" width="100%" id="baum999">
           <thead>
             <tr style="text-align: center;">
               <th>OBJECTID</th>
