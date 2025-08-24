@@ -2,7 +2,7 @@ OBJECTID;Baum ID;Standort Nr;Kennzeich;Objektname;Kategorie;Art;Art Botanisch;Ga
 1651;00008100:000c02f7;999;474;Friedhof Heerstraße;grün;Österreichische Schwarzkiefer;Pinus nigra ssp. Nigra;KIEFER;PINUS;;;7;132;20;Charlottenburg-Wilmersdorf;Anlagebaum;;;1474840.8663;6893719.4874
 37288;00008100:000df7fb;999;127;Ruhwaldpark;blau;Sommer-Eiche, Stiel-Eiche;Quercus robur;EICHE;QUERCUS;1965;58;10;137;17;Charlottenburg-Wilmersdorf;Anlagebaum;;;1476060.2481;6895718.1396
 29443;00008100:000db623;999;13;Volkspark Wilmersdorf;blau;Sommer-Linde;Tilia platyphyllos;LINDE;TILIA;1948;75;;150;25;Charlottenburg-Wilmersdorf;Anlagebaum;;;1483409.4129;6887909.2333
-36563;00008100:000df349;999;203;Fließwiese Ruhleben - NSG;blau;Spitz-Ahorn;Acer platanoides;AHORN;ACER;1990;33;4;42;12;Charlottenburg-Wilmersdorf;Anlagebaum;;;1473036.6393;6894505.078
+36563;00008100:000df349;999;203;Fließwiese Ruhleben - NSG;grün;Spitz-Ahorn;Acer platanoides;AHORN;ACER;1990;33;4;42;12;Charlottenburg-Wilmersdorf;Anlagebaum;;;1473036.6393;6894505.078
 39602;00008100:000e112b;999;363;Waldschulallee 83-93, 95;rot;Spitz-Ahorn;Acer platanoides;AHORN;ACER;;;12;160;25;Charlottenburg-Wilmersdorf;Anlagebaum;;;1475556.2546;6891597.6862
 125264;00008100:001650cb;999;60102;Volkspark Friedrichshain;blau;Berg-Ahorn, Weiss-Ahorn;Acer pseudoplatanus;AHORN;ACER;1895;128;16;327;25;Friedrichshain-Kreuzberg;Anlagebaum;;;1495490.5379;6896300.3193
 230221;00008100:001f6af0;999;18FH01;Gudrunstraße 20 / Friedhof;blau;Schwarz-Pappel;Populus nigra;PAPPEL;POPULUS;;;5;139;32;Lichtenberg;Anlagebaum;;;1504510.5841;6894767.8372
@@ -33,7 +33,7 @@ OBJECTID;Baum ID;Standort Nr;Kennzeich;Objektname;Kategorie;Art;Art Botanisch;Ga
 385872;00008100:002d3302;999;245;Schönholzer Heide;blau;Spitz-Ahorn;Acer platanoides;AHORN;ACER;1981;42;5;56;22;Pankow;Anlagebaum;;;1488235.5448;6906264.2742
 572115;00008100:001247a8;999;01885-Str;Heerstraße;blau;Ahornblättrige Platane;Platanus acerifolia;PLATANE;PLATANUS;1963;60;;116;17;Spandau;Straßenbaum;Heerstraße;;1464462.9786;6894967.9413
 400195;00008100:002e1e06;999;30461;Wilhelm-von-Siemens-Park, extensiv;blau;Hainbuche;Carpinus betulus;HAINBUCHE;CARPINUS;;;;145;20;Spandau;Anlagebaum;;;1477490.1742;6899141.8665
-321670;00008100:00263f79;999;8;Gutspark Neukladow-GA ;blau;Robinie;Robinia pseudoacacia;ROBINIE;ROBINIA;1958;65;12;151;22;Spandau;Anlagebaum;;;1464754.5259;6883642.3182
+321670;00008100:00263f79;999;8;Gutspark Neukladow-GA ;grün;Robinie;Robinia pseudoacacia;ROBINIE;ROBINIA;1958;65;12;151;22;Spandau;Anlagebaum;;;1464754.5259;6883642.3182
 367892;00008100:002a9753;999;30996;Nördlicher Rieselfeldabfanggraben;blau;Robinie;Robinia pseudoacacia;ROBINIE;ROBINIA;1970;53;10;138;20;Spandau;Anlagebaum;;;1464767.488;6893992.3813
 47098;00008100:000f0556;999;100945;Finkenpark WG;blau;Eiche;Quercus spec.;EICHE;QUERCUS;;;;58;;Steglitz-Zehlendorf;Anlagebaum;;;1478867.5021;6884796.4154
 261459;00008100:0020ceb0;999;133;Volkspark Mariendorf - Gartendenkmal (Übl.);blau;Douglasfichte, Douglasie;Pseudotsuga menziesii;DOUGLASIE;PSEUDOTSUGA;;;;92;23;Tempelhof-Schöneberg;Anlagebaum;;;1491130.1784;6880382.5779
