@@ -14,7 +14,7 @@ OBJECTID;Baum ID;Standort Nr;Kennzeich;Objektname;Kategorie;Art;Art Botanisch;Ga
 333555;00008100:00280fbc;999;2300161;Schleipfuhl, 161;blau;Sommer-Eiche, Stiel-Eiche;Quercus robur;EICHE;QUERCUS;;;3;67;18;Marzahn-Hellersdorf;Anlagebaum;;;1515212.6468;6896370.1849
 838059;00008100:002f2cb4;999;44858;Mehrower Allee;blau;Spitz-Ahorn;Acer platanoides;AHORN;ACER;;;11;91;12;Marzahn-Hellersdorf;Straßenbaum;Mehrower Allee;25;1509574.5915;6901405.8363
 8236;00008100:000c6499;999;221.053;Britz-Süd-Grünanlage;blau;Amerikanische Rot-Eiche;Quercus rubra;EICHE;QUERCUS;;;;151;;Neukölln;Anlagebaum;;;1496525.5807;6880272.3771
-305151;00008100:00238c66;999;5029;Friedhof Columbiadamm;blau;Birke;Betula spec.;BIRKE;BETULA;1921;102;;133;;Neukölln;Anlagebaum;;;1493028.3326;6887246.9747
+305151;00008100:00238c66;999;5029;Friedhof Columbiadamm;rot;Birke;Betula spec.;BIRKE;BETULA;1921;102;;133;;Neukölln;Anlagebaum;;;1493028.3326;6887246.9747
 13527;00008100:000c962a;999;241.102;Rudower Fließ-Grünanlage;blau;Eschen-Ahorn;Acer negundo;AHORN;ACER;2014;9;;69;;Neukölln;Anlagebaum;;;1501634.8994;6875270.538
 388417;00008100:002d48f1;999;221.083;BBR-Grünanlage;blau;Eschen-Ahorn;Acer negundo;AHORN;ACER;;;;78;;Neukölln;Anlagebaum;;;1497117.3874;6879298.9484
 375188;00008100:002ae2c1;999;321.032-1;Fennpfuhl-Grünanlage;blau;Feld-Ahorn;Acer campestre;AHORN;ACER;;;;176;;Neukölln;Anlagebaum;;;1496544.9168;6882172.119
@@ -38,4 +38,4 @@ OBJECTID;Baum ID;Standort Nr;Kennzeich;Objektname;Kategorie;Art;Art Botanisch;Ga
 47098;00008100:000f0556;999;100945;Finkenpark WG;blau;Eiche;Quercus spec.;EICHE;QUERCUS;;;;58;;Steglitz-Zehlendorf;Anlagebaum;;;1478867.5021;6884796.4154
 261459;00008100:0020ceb0;999;133;Volkspark Mariendorf - Gartendenkmal (Übl.);blau;Douglasfichte, Douglasie;Pseudotsuga menziesii;DOUGLASIE;PSEUDOTSUGA;;;;92;23;Tempelhof-Schöneberg;Anlagebaum;;;1491130.1784;6880382.5779
 411214;00008100:002f73af;999;18501;Volkspark Lichtenrade;blau;Gemeine Kiefer, Wald-Kiefer;Pinus sylvestris;KIEFER;PINUS;2007;16;4;85;15;Tempelhof-Schöneberg;Anlagebaum;;;1493481.3286;6871552.535
-91609;00008100:0013fe09;999;17267;Der Insulaner - Grünanlage;blau;Spitz-Ahorn;Acer platanoides;AHORN;ACER;1973;50;;160;18;Tempelhof-Schöneberg;Anlagebaum;;;1486685.526;6883154.8116
+91609;00008100:0013fe09;999;17267;Der Insulaner - Grünanlage;rot;Spitz-Ahorn;Acer platanoides;AHORN;ACER;1973;50;;160;18;Tempelhof-Schöneberg;Anlagebaum;;;1486685.526;6883154.8116
