@@ -36,8 +36,8 @@ OBJECTID;Baum ID;Standort Nr;Kennzeich;Objektname;Kategorie;Art;Art Botanisch;Ga
 321670;00008100:00263f79;999;8;Gutspark Neukladow-GA ;grün;Robinie;Robinia pseudoacacia;ROBINIE;ROBINIA;1958;65;12;151;22;Spandau;Anlagebaum;;;1464754.5259;6883642.3182
 367892;00008100:002a9753;999;30996;Nördlicher Rieselfeldabfanggraben;blau;Robinie;Robinia pseudoacacia;ROBINIE;ROBINIA;1970;53;10;138;20;Spandau;Anlagebaum;;;1464767.488;6893992.3813
 47098;00008100:000f0556;999;100945;Finkenpark WG;grün;Eiche;Quercus spec.;EICHE;QUERCUS;;;;58;;Steglitz-Zehlendorf;Anlagebaum;;;1478867.5021;6884796.4154
-261459;00008100:0020ceb0;999;133;Volkspark Mariendorf - Gartendenkmal (Übl.);blau;Douglasfichte, Douglasie;Pseudotsuga menziesii;DOUGLASIE;PSEUDOTSUGA;;;;92;23;Tempelhof-Schöneberg;Anlagebaum;;;1491130.1784;6880382.5779
-411214;00008100:002f73af;999;18501;Volkspark Lichtenrade;blau;Gemeine Kiefer, Wald-Kiefer;Pinus sylvestris;KIEFER;PINUS;2007;16;4;85;15;Tempelhof-Schöneberg;Anlagebaum;;;1493481.3286;6871552.535
+261459;00008100:0020ceb0;999;133;Volkspark Mariendorf - Gartendenkmal (Übl.);grün;Douglasfichte, Douglasie;Pseudotsuga menziesii;DOUGLASIE;PSEUDOTSUGA;;;;92;23;Tempelhof-Schöneberg;Anlagebaum;;;1491130.1784;6880382.5779
+411214;00008100:002f73af;999;18501;Volkspark Lichtenrade;grün;Gemeine Kiefer, Wald-Kiefer;Pinus sylvestris;KIEFER;PINUS;2007;16;4;85;15;Tempelhof-Schöneberg;Anlagebaum;;;1493481.3286;6871552.535
 91609;00008100:0013fe09;999;17267;Der Insulaner - Grünanlage;rot;Spitz-Ahorn;Acer platanoides;AHORN;ACER;1973;50;;160;18;Tempelhof-Schöneberg;Anlagebaum;;;1486685.526;6883154.8116
 
 999;00008100:000bfe4d;2337;00474;Friedhof Heerstraße;blau;"Gemeine Kiefer, Wald-Kiefer";Pinus sylvestris;KIEFER;PINUS;;;10;142;25;Charlottenburg-Wilmersdorf;Anlagebaum;;;1475386.3491;6893478.7741
