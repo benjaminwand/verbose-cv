@@ -38,7 +38,6 @@
 </head>
 <body>
     
-    <div id="mapid" style="width:100%; height:100%;"></div>
     
             <div class="folium-map" id="mapid" ></div>
         
@@ -82,7 +81,7 @@
     
             var tilelayer_topplus = L.tileLayer(
                 "http://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/default/WEBMERCATOR/{z}/{y}/{x}.png",
-                {"attribution": "Map data: \u00a9 http://www.govdata.de/dl-de/by-2-0 dl-de/by-2-0", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+                {"attribution": "Map data: \u00a9 http://www.govdata.de/dl-de/by-2-0", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             ).addTo(mapid);
         
     
@@ -830,7 +829,7 @@
             );
         
     
-            var layer_control_226e8aa87676859995a149a4828945ac = {
+            var layer_control_main = {
                 base_layers : {
                     "OpenStreetMap" : tilelayer_osm,
                     "\u00d6PNVKarte" : tilelayer_oepnv,
@@ -841,8 +840,8 @@
                 },
             };
             L.control.layers(
-                layer_control_226e8aa87676859995a149a4828945ac.base_layers,
-                layer_control_226e8aa87676859995a149a4828945ac.overlays,
+                layer_control_main.base_layers,
+                layer_control_main.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
             ).addTo(mapid);
             tilelayer_oepnv.remove();
