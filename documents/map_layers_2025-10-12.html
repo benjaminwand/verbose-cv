@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cc8d2f44ff6e67fa8948e4b0d4c27eb1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_cc8d2f44ff6e67fa8948e4b0d4c27eb1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cc8d2f44ff6e67fa8948e4b0d4c27eb1 = L.map(
+                "map_cc8d2f44ff6e67fa8948e4b0d4c27eb1",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+
+            
+
+        
+    
+            var tile_layer_08ea1710bc5dde0a18649352f723a3ac = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u00a9 OpenStreetMap contributors", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_3b0ca040724d952fdbd5513f42ea389c = L.tileLayer(
+                "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u00a9 OpenStreetMap contributors, SRTM | Map style \u00a9 OpenTopoMap (CC-BY-SA)", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_c0801a5df1b4906cadfd31aac70df8fa = L.tileLayer(
+                "https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png",
+                {"attribution": "Map memomaps.de CC-BY-SA, map data \u00a9 OpenStreetMap contributors", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_e25d909e2be3b693fd218145841601c3 = L.tileLayer(
+                "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png",
+                {"attribution": "\u00a9 CyclOSM / OSM contributors", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_27d30f8d4ec0726cacef5a5ee984e1f8 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; OSM \u0026copy; CARTO", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_cb104d8387f0c7de9637c44e9d3887a9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; OSM \u0026copy; CARTO", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_37498c6a8d398abcb2d5d001aef67c5c = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u00a9 Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_8975c1357da0eed5446b28f17d8dfba2 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u00a9 Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_246c0a9d16952ad59d32ad46db5ceca2 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u00a9 Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_0bf65687637170754e1e597edb887631 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u00a9 Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_b08fdacbb8f5d3f71e9d4508f00fec9c = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u00a9 Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_090d32da7f70d9fe20c5ab83749e96dd = L.tileLayer(
+                "http://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/default/WEBMERCATOR/{z}/{y}/{x}.png",
+                {"attribution": "Map data: \u00a9 http://www.govdata.de/dl-de/by-2-0 dl-de/by-2-0", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_69035e466b961841bfaa35c51d49b369 = L.tileLayer(
+                "https://s3.amazonaws.com/te512.safecast.org/{z}/{x}/{y}.png",
+                {"attribution": "Map data: \u00a9 \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors | Map style: \u00a9 \u003ca href=\"https://blog.safecast.org/about/\"\u003eSafeCast\u003c/a\u003e (\u003ca href=\"https://creativecommons.org/licenses/by-sa/3.0/\"\u003eCC-BY-SA\u003c/a\u003e)", "detectRetina": false, "maxNativeZoom": 16, "maxZoom": 16, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var tile_layer_167a56937f8c472675bc0401c585a308 = L.tileLayer(
+                "https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png",
+                {"attribution": "Map data: \u00a9 \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors | Map style: \u00a9 \u003ca href=\"https://www.OpenRailwayMap.org\"\u003eOpenRailwayMap\u003c/a\u003e (\u003ca href=\"https://creativecommons.org/licenses/by-sa/3.0/\"\u003eCC-BY-SA\u003c/a\u003e)", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+        
+    
+            var layer_control_e77b9cac169c5a7fe8fccac4c353f382 = {
+                base_layers : {
+                    "OpenStreetMap" : tile_layer_08ea1710bc5dde0a18649352f723a3ac,
+                    "OpenTopoMap" : tile_layer_3b0ca040724d952fdbd5513f42ea389c,
+                    "\u00d6PNV Karte" : tile_layer_c0801a5df1b4906cadfd31aac70df8fa,
+                    "CyclOSM" : tile_layer_e25d909e2be3b693fd218145841601c3,
+                    "CartoDB Positron" : tile_layer_27d30f8d4ec0726cacef5a5ee984e1f8,
+                    "CartoDB DarkMatter" : tile_layer_cb104d8387f0c7de9637c44e9d3887a9,
+                    "Esri WorldStreetMap" : tile_layer_37498c6a8d398abcb2d5d001aef67c5c,
+                    "Esri WorldTopoMap" : tile_layer_8975c1357da0eed5446b28f17d8dfba2,
+                    "Esri WorldTerrain" : tile_layer_246c0a9d16952ad59d32ad46db5ceca2,
+                    "Esri WorldImagery" : tile_layer_0bf65687637170754e1e597edb887631,
+                    "Esri NatGeoWorldMap" : tile_layer_b08fdacbb8f5d3f71e9d4508f00fec9c,
+                    "TopPlusOpen Color" : tile_layer_090d32da7f70d9fe20c5ab83749e96dd,
+                },
+                overlays :  {
+                    "SafeCast" : tile_layer_69035e466b961841bfaa35c51d49b369,
+                    "OpenRailwayMap" : tile_layer_167a56937f8c472675bc0401c585a308,
+                },
+            };
+            L.control.layers(
+                layer_control_e77b9cac169c5a7fe8fccac4c353f382.base_layers,
+                layer_control_e77b9cac169c5a7fe8fccac4c353f382.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_cc8d2f44ff6e67fa8948e4b0d4c27eb1);
+            tile_layer_3b0ca040724d952fdbd5513f42ea389c.remove();
+            tile_layer_c0801a5df1b4906cadfd31aac70df8fa.remove();
+            tile_layer_e25d909e2be3b693fd218145841601c3.remove();
+            tile_layer_27d30f8d4ec0726cacef5a5ee984e1f8.remove();
+            tile_layer_cb104d8387f0c7de9637c44e9d3887a9.remove();
+            tile_layer_37498c6a8d398abcb2d5d001aef67c5c.remove();
+            tile_layer_8975c1357da0eed5446b28f17d8dfba2.remove();
+            tile_layer_246c0a9d16952ad59d32ad46db5ceca2.remove();
+            tile_layer_0bf65687637170754e1e597edb887631.remove();
+            tile_layer_b08fdacbb8f5d3f71e9d4508f00fec9c.remove();
+            tile_layer_090d32da7f70d9fe20c5ab83749e96dd.remove();
+            tile_layer_69035e466b961841bfaa35c51d49b369.remove();
+            tile_layer_167a56937f8c472675bc0401c585a308.remove();
+        
+</script>
+</html>
