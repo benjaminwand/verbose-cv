@@ -1,6 +1,6 @@
 OBJECTID;Baum ID;Standort Nr;Kennzeich;Objektname;Kategorie;Art;Art Botanisch;Gattung;Gattung Botanisch;Pflanzjahr;Standalter;Krone Durch-schnitt (m);Stammumfang (cm);Höhe (m);Bezirk;Kategorie;Straße;Haus Nr;x;y
 1651;00008100:000c02f7;999;474;Friedhof Heerstraße;grün;Österreichische Schwarzkiefer;Pinus nigra ssp. Nigra;KIEFER;PINUS;;;7;132;20;Charlottenburg-Wilmersdorf;Anlagebaum;;;1474840.8663;6893719.4874
-37288;00008100:000df7fb;999;127;Ruhwaldpark;blau;Sommer-Eiche, Stiel-Eiche;Quercus robur;EICHE;QUERCUS;1965;58;10;137;17;Charlottenburg-Wilmersdorf;Anlagebaum;;;1476060.2481;6895718.1396
+37288;00008100:000df7fb;999;127;Ruhwaldpark;grün;Sommer-Eiche, Stiel-Eiche;Quercus robur;EICHE;QUERCUS;1965;58;10;137;17;Charlottenburg-Wilmersdorf;Anlagebaum;;;1476060.2481;6895718.1396
 29443;00008100:000db623;999;13;Volkspark Wilmersdorf;grün;Sommer-Linde;Tilia platyphyllos;LINDE;TILIA;1948;75;;150;25;Charlottenburg-Wilmersdorf;Anlagebaum;;;1483409.4129;6887909.2333
 36563;00008100:000df349;999;203;Fließwiese Ruhleben - NSG;grün;Spitz-Ahorn;Acer platanoides;AHORN;ACER;1990;33;4;42;12;Charlottenburg-Wilmersdorf;Anlagebaum;;;1473036.6393;6894505.078
 39602;00008100:000e112b;999;363;Waldschulallee 83-93, 95;rot;Spitz-Ahorn;Acer platanoides;AHORN;ACER;;;12;160;25;Charlottenburg-Wilmersdorf;Anlagebaum;;;1475556.2546;6891597.6862
@@ -40,4 +40,4 @@ OBJECTID;Baum ID;Standort Nr;Kennzeich;Objektname;Kategorie;Art;Art Botanisch;Ga
 411214;00008100:002f73af;999;18501;Volkspark Lichtenrade;grün;Gemeine Kiefer, Wald-Kiefer;Pinus sylvestris;KIEFER;PINUS;2007;16;4;85;15;Tempelhof-Schöneberg;Anlagebaum;;;1493481.3286;6871552.535
 91609;00008100:0013fe09;999;17267;Der Insulaner - Grünanlage;rot;Spitz-Ahorn;Acer platanoides;AHORN;ACER;1973;50;;160;18;Tempelhof-Schöneberg;Anlagebaum;;;1486685.526;6883154.8116
 
-999;00008100:000bfe4d;2337;00474;Friedhof Heerstraße;blau;"Gemeine Kiefer, Wald-Kiefer";Pinus sylvestris;KIEFER;PINUS;;;10;142;25;Charlottenburg-Wilmersdorf;Anlagebaum;;;1475386.3491;6893478.7741
+999;00008100:000bfe4d;2337;00474;Friedhof Heerstraße;grün;"Gemeine Kiefer, Wald-Kiefer";Pinus sylvestris;KIEFER;PINUS;;;10;142;25;Charlottenburg-Wilmersdorf;Anlagebaum;;;1475386.3491;6893478.7741
