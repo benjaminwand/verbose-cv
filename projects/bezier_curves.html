@@ -222,6 +222,7 @@ sqrt(                 // three dimensions
       + 0.23 * dist(pts[0], pts[3])
       - 0.09 * dist(pts[1], pts[2])
       + 0.40 * dist(pts[1], pts[2])
+      + 0.35 * dist(pts[2], pts[3])
     // five control points
     else if (len(pts) == 5)
         0.32 * dist(pts[0], pts[1])
@@ -270,7 +271,7 @@ function b_curv(pts, n) =
   // if yes: fn = 2
   2 :
   // and if no, calculate:
-  length(pts)/fs)
+  round(length(pts)/fs))
   // now knowing fn,
   // call b_pts() and concatenate points
     [for (i= [0:fn])
@@ -465,7 +466,7 @@ for (i=[p1, p2, p3, p4])
           >
         </li>
       </ul>
-      <p class="update">Text last updated: December 31st, 2024</p>
+      <p class="update">Text last updated: June 18th, 2026</p>
     </article>
     <footer class="no-print">
       <ul>
