@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schwarzplan</title>
+
+  <link
+    href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    html, body, #map {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+  <script>
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: './schwarzplan.json',
+      center: [13.405, 52.52],
+      zoom: 14
+    });
+
+    map.addControl(new maplibregl.NavigationControl());
+  </script>
+
+
+
+<div id="search-box" style="
+  position:absolute; top:10px; left:10px; z-index:1000;
+  background:white; padding:8px; border-radius:4px;
+  box-shadow:0 1px 5px #999; width:320px;
+  font:14px sans-serif;
+">
+  <div style="display:flex; gap:4px">
+    <input id="address" type="text"
+      placeholder="Ort oder Adresse suchen"
+      value="Blaukehlchenweg, Leverkusen"
+      style="flex:1; min-width:0; padding:7px;">
+    <button id="search">Suchen</button>
+  </div>
+
+  <select id="results" size="1" style="
+    display:none; width:100%; margin-top:8px; padding:6px;
+    white-space:normal;
+  " aria-label="Suchergebnisse">
+  </select>
+  <div id="search-status" style="margin-top:6px"></div>
+</div>
+
+<script>
+const addressInput = document.getElementById('address');
+const searchButton = document.getElementById('search');
+const resultsSelect = document.getElementById('results');
+const status = document.getElementById('search-status');
+
+let searchResults = [];
+
+async function searchAddress() {
+  const query = addressInput.value.trim();
+  if (!query) return;
+
+  searchButton.disabled = true;
+  resultsSelect.style.display = 'none';
+  status.textContent = 'Suche läuft …';
+
+  try {
+    const url = new URL(
+      'https://nominatim.openstreetmap.org/search'
+    );
+    url.searchParams.set('q', query);
+    url.searchParams.set('format', 'jsonv2');
+    url.searchParams.set('limit', '8');
+    url.searchParams.set('countrycodes', 'de');
+    url.searchParams.set('addressdetails', '1');
+    url.searchParams.set('accept-language', 'de');
+
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('HTTP ' + response.status);
+    }
+
+    searchResults = await response.json();
+    resultsSelect.replaceChildren();
+
+    if (searchResults.length === 0) {
+      status.textContent = 'Keine Treffer gefunden.';
+      return;
+    }
+
+    searchResults.forEach((result, index) => {
+      const option = document.createElement('option');
+      option.value = index;
+      option.textContent = result.display_name;
+      resultsSelect.appendChild(option);
+    });
+
+    resultsSelect.size = Math.min(searchResults.length, 6);
+    resultsSelect.style.display = 'block';
+    resultsSelect.selectedIndex = 0;
+    status.textContent =
+      searchResults.length + ' Treffer. Bitte auswählen.';
+  } catch (error) {
+    status.textContent = 'Suche fehlgeschlagen: ' + error.message;
+  } finally {
+    searchButton.disabled = false;
+  }
+}
+
+function goToSelectedResult() {
+  const index = Number(resultsSelect.value);
+  const result = searchResults[index];
+  if (!result) return;
+
+  const bounds = result.boundingbox?.map(Number);
+
+  if (bounds && bounds.length === 4) {
+    const [south, north, west, east] = bounds;
+    const width = Math.abs(east - west);
+    const height = Math.abs(north - south);
+
+    if (width > 0.01 || height > 0.01) {
+      map.fitBounds(
+        [[west, south], [east, north]],
+        { padding: 50, maxZoom: 17, duration: 1000 }
+      );
+    } else {
+      map.flyTo({
+        center: [Number(result.lon), Number(result.lat)],
+        zoom: 17
+      });
+    }
+  } else {
+    map.flyTo({
+      center: [Number(result.lon), Number(result.lat)],
+      zoom: 17
+    });
+  }
+
+  status.textContent = result.display_name;
+}
+
+searchButton.addEventListener('click', searchAddress);
+
+addressInput.addEventListener('keydown', event => {
+  if (event.key === 'Enter') searchAddress();
+});
+
+resultsSelect.addEventListener('change', goToSelectedResult);
+</script>
+
+
+<script>
+document.getElementById('search').addEventListener('click', async () => {
+  const query = document.getElementById('address').value.trim();
+  if (!query) return;
+
+  const url = new URL('https://nominatim.openstreetmap.org/search');
+  url.searchParams.set('q', query);
+  url.searchParams.set('format', 'jsonv2');
+  url.searchParams.set('limit', '1');
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+
+    const results = await response.json();
+    if (!results.length) {
+      alert('Keine Adresse gefunden.');
+      return;
+    }
+
+    const result = results[0];
+    map.flyTo({
+      center: [Number(result.lon), Number(result.lat)],
+      zoom: 16
+    });
+  } catch (error) {
+    alert('Suche fehlgeschlagen: ' + error.message);
+  }
+});
+
+document.getElementById('address').addEventListener('keydown', event => {
+  if (event.key === 'Enter') {
+    document.getElementById('search').click();
+  }
+});
+</script>
+
+
+</body>
+</html>
