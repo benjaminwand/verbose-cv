@@ -19,8 +19,6 @@
       "maxzoom": 13
     }
   },
-  "sprite": "https://americanamap.org/sprites/sprite",
-  "glyphs": "https://font.americanamap.org/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -60838,7 +60836,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -61141,7 +61139,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -61444,7 +61442,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -61747,7 +61745,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -62050,7 +62048,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -62353,7 +62351,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -62669,7 +62667,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -63022,7 +63020,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -63342,7 +63340,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -63639,7 +63637,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -63773,7 +63771,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -63883,7 +63881,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -63999,7 +63997,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -64138,7 +64136,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -64254,7 +64252,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -64384,7 +64382,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -64524,7 +64522,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -64691,7 +64689,7 @@
             ]
           ]
         ],
-        "visibility": "visible",
+        "visibility": "none",
         "icon-padding": 2,
         "symbol-spacing": [
           "interpolate",
@@ -64722,7 +64720,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": "hsl(30, 44%, 96%)",
@@ -64798,7 +64796,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -65125,7 +65123,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -65460,7 +65458,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -65842,7 +65840,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -66150,7 +66148,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -66458,7 +66456,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -66766,7 +66764,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -67093,7 +67091,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -67439,7 +67437,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -67821,7 +67819,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -68123,7 +68121,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -68425,7 +68423,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -68727,7 +68725,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -69029,7 +69027,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -69331,7 +69329,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -69632,7 +69630,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -69985,7 +69983,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -70309,7 +70307,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -70608,7 +70606,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -70903,7 +70901,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -71206,7 +71204,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -71509,7 +71507,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -71812,7 +71810,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -72115,7 +72113,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -72418,7 +72416,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -72721,7 +72719,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -73037,7 +73035,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -73390,7 +73388,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -73710,7 +73708,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-sort-key": [
           "+",
           ["coalesce", ["get", "layer"], 0],
@@ -74007,7 +74005,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -74141,7 +74139,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -74251,7 +74249,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -74367,7 +74365,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -74506,7 +74504,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -74622,7 +74620,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -74752,7 +74750,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -74892,7 +74890,7 @@
       "layout": {
         "line-cap": "butt",
         "line-join": "bevel",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "line-color": [
@@ -75059,7 +75057,7 @@
             ]
           ]
         ],
-        "visibility": "visible",
+        "visibility": "none",
         "icon-padding": 2,
         "symbol-spacing": [
           "interpolate",
