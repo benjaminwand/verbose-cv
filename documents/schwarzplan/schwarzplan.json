@@ -7,7 +7,7 @@
     "openmaptiles": {
       "url": "https://tiles.openstreetmap.us/vector/openmaptiles.json",
       "type": "vector"
-    },
+    }
   },
   "layers": [
     {
@@ -170,25 +170,6 @@
         },
         "line-opacity": {"base": 1, "stops": [[0, 0.4], [4, 1]]},
         "line-width": {"base": 1.2, "stops": [[2, 4], [12, 25], [16, 50]]}
-      }
-    },
-    {
-      "id": "hillshading",
-      "type": "hillshade",
-      "source": "dem",
-      "layout": {"visibility": "none"},
-      "paint": {
-        "hillshade-exaggeration": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          12,
-          0.5,
-          17,
-          0.3
-        ],
-        "hillshade-shadow-color": "hsla(30, 14%, 63%, 1)",
-        "hillshade-highlight-color": "hsla(30, 44%, 99%, 1)"
       }
     },
     {
