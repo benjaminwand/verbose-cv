@@ -85,11 +85,16 @@ async function searchAddress() {
     url.searchParams.set('accept-language', 'de');
 
     const response = await fetch(url);
+
     if (!response.ok) {
       throw new Error('HTTP ' + response.status);
     }
 
     searchResults = await response.json();
+
+    console.log("Nominatim results:", searchResults);
+    console.log("Result count:", searchResults.length);
+
     resultsSelect.replaceChildren();
 
     if (searchResults.length === 0) {
@@ -105,18 +110,31 @@ async function searchAddress() {
     });
 
     resultsSelect.size = Math.min(searchResults.length, 6);
+    resultsSelect.selectedIndex = -1;
+
+    console.log("Options:", resultsSelect.options.length);
+    console.log("Select size:", resultsSelect.size);
+    console.log("Selected index:", resultsSelect.selectedIndex);
+    console.log("Select element:", resultsSelect);
+
     resultsSelect.style.display = 'block';
-    resultsSelect.selectedIndex = 0;
     status.textContent =
       searchResults.length + ' Treffer. Bitte auswählen.';
   } catch (error) {
     status.textContent = 'Suche fehlgeschlagen: ' + error.message;
+    console.error(error);
   } finally {
     searchButton.disabled = false;
   }
 }
 
+
+
 function goToSelectedResult() {
+  console.log("goToSelectedResult fired");
+  console.log("Selected index:", resultsSelect.selectedIndex);
+  console.log("Selected value:", resultsSelect.value);
+
   const index = Number(resultsSelect.value);
   const result = searchResults[index];
   if (!result) return;
@@ -156,44 +174,6 @@ addressInput.addEventListener('keydown', event => {
 });
 
 resultsSelect.addEventListener('change', goToSelectedResult);
-</script>
-
-
-<script>
-document.getElementById('search').addEventListener('click', async () => {
-  const query = document.getElementById('address').value.trim();
-  if (!query) return;
-
-  const url = new URL('https://nominatim.openstreetmap.org/search');
-  url.searchParams.set('q', query);
-  url.searchParams.set('format', 'jsonv2');
-  url.searchParams.set('limit', '1');
-
-  try {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error('HTTP ' + response.status);
-
-    const results = await response.json();
-    if (!results.length) {
-      alert('Keine Adresse gefunden.');
-      return;
-    }
-
-    const result = results[0];
-    map.flyTo({
-      center: [Number(result.lon), Number(result.lat)],
-      zoom: 16
-    });
-  } catch (error) {
-    alert('Suche fehlgeschlagen: ' + error.message);
-  }
-});
-
-document.getElementById('address').addEventListener('keydown', event => {
-  if (event.key === 'Enter') {
-    document.getElementById('search').click();
-  }
-});
 </script>
 
 
