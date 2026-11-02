@@ -109,17 +109,17 @@ async function searchAddress() {
       resultsSelect.appendChild(option);
     });
 
-    resultsSelect.size = Math.min(searchResults.length, 6);
-    resultsSelect.selectedIndex = -1;
+  resultsSelect.size = Math.min(searchResults.length, 6);
+  resultsSelect.selectedIndex = 0;
 
-    console.log("Options:", resultsSelect.options.length);
-    console.log("Select size:", resultsSelect.size);
-    console.log("Selected index:", resultsSelect.selectedIndex);
-    console.log("Select element:", resultsSelect);
+  resultsSelect.style.display = 'block';
 
-    resultsSelect.style.display = 'block';
+  if (searchResults.length === 1) {
+    goToSelectedResult();
+  } else {
     status.textContent =
       searchResults.length + ' Treffer. Bitte auswählen.';
+  }
   } catch (error) {
     status.textContent = 'Suche fehlgeschlagen: ' + error.message;
     console.error(error);
@@ -127,7 +127,8 @@ async function searchAddress() {
     searchButton.disabled = false;
   }
 }
-
+  
+  
 
 
 function goToSelectedResult() {
