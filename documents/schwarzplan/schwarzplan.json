@@ -303,19 +303,12 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "water",
-      "layout": {"visibility": "none"},
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
-        "fill-color": [
-          "case",
-          [
-            "any",
-            ["==", ["get", "intermittent"], 1],
-            ["==", ["get", "brunnel"], "tunnel"]
-          ],
-          "hsla(211, 60%, 85%, 0.3)",
-          "hsl(211, 50%, 85%)"
-        ],
-        "fill-outline-color": "hsla(211, 50%, 85%, 0.5)"
+        "fill-color": "#eaf4f8",
+        "fill-opacity": 1
       }
     },
     {
@@ -486,16 +479,18 @@
           ["all", ["has", "adm0_l"], ["has", "adm0_r"]]
         ]
       ],
-      "layout": {"line-join": "round", "visibility": "none"},
+      "layout": {"line-join": "round", "visibility": "visible"},
       "paint": {
-        "line-color": {
-          "base": 1.2,
-          "stops": [[3, "hsl(0, 2%, 47%)"], [7, "hsl(0, 2%, 37%)"]]
-        },
-        "line-opacity": {"base": 1, "stops": [[0, 0.4], [4, 1], [5, 0.8]]},
-        "line-width": {"stops": [[2, 1], [4, 1.5], [10, 2.25]]},
-        "line-dasharray": {"stops": [[3, [10, 1, 3, 1]]]},
-        "line-blur": 0
+        "line-color": "#777777",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          2, 0.4,
+          5, 0.7,
+          9, 1.0
+        ],
+        "line-opacity": 0.5
       }
     },
     {
