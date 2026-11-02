@@ -75147,6 +75147,7 @@
       ],
       "layout": {
         "symbol-placement": "line",
+        "visibility": "none", 
         "text-font": ["Americana-Bold"],
         "text-size": {"stops": [[3, 6], [7, 10]]},
         "text-field": [
@@ -75212,6 +75213,7 @@
       ],
       "layout": {
         "symbol-placement": "line",
+        "visibility": "none",
         "text-font": ["Americana-Bold"],
         "text-size": {"stops": [[3, 6], [7, 10]]},
         "text-field": [
